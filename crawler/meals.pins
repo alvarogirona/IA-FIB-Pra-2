@@ -1,0 +1,2849 @@
+
+([YakiUdon] of  FirstCourse
+  (dishClassification Japanese)
+  (dishIngredients
+    [Udon Noodles]
+    [Sesame Seed Oil]
+    [Onion]
+    [Cabbage]
+    [Shiitake Mushrooms]
+    [Spring Onions]
+    [Mirin]
+    [Soy Sauce]
+    [Caster Sugar]
+    [Worcestershire Sauce])
+  (ingredientsWeight
+    [250g]
+    [2 tbs]
+    [1 sliced]
+    [0.25]
+    [10]
+    [4]
+    [4 tbsp]
+    [2 tbs]
+    [1 tblsp ]
+    [1 tblsp ]
+  (dishName "Yaki Udon"))
+                
+([DuckConfit] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Sea Salt]
+    [Bay Leaf]
+    [Garlic]
+    [Thyme]
+    [Duck Legs]
+    [White Wine])
+  (ingredientsWeight
+    [Handful]
+    [4]
+    [4 cloves]
+    [Handful]
+    [4]
+    [100ml]
+  (dishName "Duck Confit"))
+                
+([Chicken&MushroomHotpot] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Butter]
+    [Onion]
+    [Mushrooms]
+    [Plain Flour]
+    [Chicken Stock Cube]
+    [Nutmeg]
+    [Mustard Powder]
+    [Chicken]
+    [Sweetcorn]
+    [Potatoes]
+    [Butter])
+  (ingredientsWeight
+    [50g]
+    [1 chopped]
+    [100g ]
+    [40g]
+    [1]
+    [pinch]
+    [pinch]
+    [250g]
+    [2 Handfuls]
+    [2 large]
+    [1 knob]
+  (dishName "Chicken & mushroom Hotpot"))
+                
+([FrenchLentilsWithGarlicAndThyme] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Olive Oil]
+    [Onion]
+    [Garlic]
+    [Carrot]
+    [French Lentils]
+    [Thyme]
+    [Bay Leaf]
+    [Salt]
+    [Celery])
+  (ingredientsWeight
+    [3 tablespoons]
+    [1]
+    [2 cloves]
+    [1]
+    [2 1/4 cups]
+    [1 teaspoon]
+    [3]
+    [1 tablespoon]
+    [2 sticks]
+  (dishName "French Lentils With Garlic and Thyme"))
+                
+([BlackberryFool] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Hazlenuts]
+    [Butter]
+    [Caster Sugar]
+    [Lemon]
+    [Plain Flour]
+    [Baking Powder]
+    [Blackberrys]
+    [Sugar]
+    [Caster Sugar]
+    [Lemon Juice]
+    [Double Cream]
+    [Yogurt]
+    [Mint])
+  (ingredientsWeight
+    [50g]
+    [125g]
+    [150g]
+    [Grated]
+    [150g]
+    [½ tsp]
+    [600g]
+    [75g]
+    [2 tbs]
+    [1 tbs]
+    [300ml ]
+    [100ml]
+    [Garnish with]
+  (dishName "Blackberry Fool"))
+                
+([TandooriChicken] of  FirstCourse
+  (dishClassification Indian)
+  (dishIngredients
+    [lemons]
+    [paprika]
+    [red onions]
+    [chicken thighs]
+    [vegetable oil]
+    [Greek yogurt]
+    [ginger]
+    [garlic clove]
+    [garam masala]
+    [ground cumin]
+    [chilli powder]
+    [turmeric])
+  (ingredientsWeight
+    [2 Juice]
+    [4 tsp]
+    [2 finely chopped]
+    [16 skinnless]
+    [For brushing]
+    [300ml ]
+    [large piece]
+    [4]
+    [¾ tsp]
+    [¾ tsp]
+    [½ tsp]
+    [¼ tsp]
+  (dishName "Tandoori chicken"))
+                
+([LambBiryani] of  FirstCourse
+  (dishClassification Indian)
+  (dishIngredients
+    [Cashew nuts]
+    [Khus khus]
+    [Cumin seeds]
+    [Onions]
+    [Ginger garlic paste]
+    [Garlic]
+    [Mint]
+    [Cilantro]
+    [Saffron]
+    [Ghee]
+    [Basmati rice]
+    [Full fat yogurt]
+    [Cumin Seeds]
+    [Bay leaf]
+    [Cinnamon]
+    [Cloves]
+    [Cardamom]
+    [Lamb]
+    [Red Chilli powder]
+    [Biryani masala])
+  (ingredientsWeight
+    [12]
+    [½ tbsp]
+    [½ tbsp]
+    [3 sliced thinly]
+    [2 tsp]
+    [4 whole]
+    [Leaves]
+    [Leaves]
+    [½ tsp dissolved in ½ cup warm milk]
+    [2 tbsp]
+    [2 Cups]
+    [½ cup]
+    [1 tbsp]
+    [½]
+    [1 thin piece]
+    [3]
+    [2]
+    [1 lb]
+    [1 tsp]
+    [1 tbsp]
+  (dishName "Lamb Biryani"))
+                
+([RappiePie] of  FirstCourse
+  (dishClassification Canadian)
+  (dishIngredients
+    [Butter]
+    [Onions]
+    [Chicken Stock]
+    [Chicken Breast]
+    [Potatoes]
+    [Salt]
+    [Black Pepper])
+  (ingredientsWeight
+    [2 tbs]
+    [2 chopped]
+    [4 qt ]
+    [1.5kg]
+    [4kg]
+    [2 tbs]
+    [1tbsp]
+  (dishName "Rappie Pie"))
+                
+([IrishStew] of  FirstCourse
+  (dishClassification Irish)
+  (dishIngredients
+    [whole wheat]
+    [lamb loin chops]
+    [olive oil]
+    [shallots]
+    [carrots]
+    [turnips]
+    [celeriac]
+    [charlotte potatoes]
+    [white wine]
+    [caster sugar]
+    [fresh thyme]
+    [oregano]
+    [chicken stock])
+  (ingredientsWeight
+    [300g soaked overnight in water]
+    [2kg cut into 3cm cubes]
+    [120ml]
+    [24 Skinned]
+    [4 large]
+    [2]
+    [1]
+    [350g]
+    [150ml]
+    [1 tsp]
+    [4 sprigs]
+    [4 sprigs]
+    [450ml]
+  (dishName "Irish stew"))
+                
+([CreamyTomatoSoup] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Olive Oil]
+    [Onions]
+    [Celery]
+    [Carrots]
+    [Potatoes]
+    [Bay Leaf]
+    [Tomato Puree]
+    [Sugar]
+    [White Vinegar]
+    [Chopped Tomatoes]
+    [Passata]
+    [Vegetable Stock Cube]
+    [Whole Milk])
+  (ingredientsWeight
+    [3 tbsp]
+    [2 chopped]
+    [2 sticks]
+    [300g]
+    [500g]
+    [4]
+    [5 tblsp ]
+    [2 tblsp ]
+    [2 tblsp ]
+    [1½ kg]
+    [500g]
+    [3]
+    [400ml]
+  (dishName "Creamy Tomato Soup"))
+                
+([PearTarteTatin] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Pears]
+    [Caster Sugar]
+    [Butter]
+    [Star Anise]
+    [Cardamom]
+    [Cinnamon]
+    [Brandy]
+    [Puff Pastry])
+  (ingredientsWeight
+    [8]
+    [100g ]
+    [100g ]
+    [2]
+    [3 Pods]
+    [1 large]
+    [2 tbs]
+    [500g]
+  (dishName "Pear Tarte Tatin"))
+                
+([FullEnglishBreakfast] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Sausages]
+    [Bacon]
+    [Mushrooms]
+    [Tomatoes]
+    [Black Pudding]
+    [Eggs]
+    [Bread]
+    [Baked Beans])
+  (ingredientsWeight
+    [4]
+    [4]
+    [4]
+    [3]
+    [2 sliced]
+    [2]
+    [1 Slice]
+    [100g ]
+  (dishName "Full English Breakfast"))
+                
+([JamRoly-Poly] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Butter]
+    [Self-raising Flour]
+    [Vanilla]
+    [Suet]
+    [Milk]
+    [Raspberry Jam]
+    [Custard])
+  (ingredientsWeight
+    [50g]
+    [250g]
+    [1 small]
+    [50g]
+    [150ml]
+    [100g ]
+    [to serve]
+  (dishName "Jam Roly-Poly"))
+                
+([RoastedEggplantWithTahini,PineNuts,AndLentils] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Olive Oil]
+    [Carrots]
+    [Celery]
+    [Onion]
+    [Garlic]
+    [Brown Lentils]
+    [Bay Leaves]
+    [Water]
+    [Salt]
+    [Apple Cider Vinegar]
+    [Pepper]
+    [Egg Plants]
+    [Rosemary]
+    [Pine nuts]
+    [Parsley])
+  (ingredientsWeight
+    [2 tablespoons]
+    [2 small cut into chunks]
+    [2 small stalks]
+    [1 medium finely diced]
+    [6 medium cloves sliced]
+    [12 ounces (340g)]
+    [2]
+    [4 cups]
+    [Pinch]
+    [2 teaspoons (10ml)]
+    [Pinch]
+    [2 large]
+    [4 sprigs]
+    [1/4 cup ]
+    [2 tablespoons]
+  (dishName "Roasted Eggplant With Tahini, Pine Nuts, and Lentils"))
+                
+([LaksaKingPrawnNoodles] of  FirstCourse
+  (dishClassification Malaysian)
+  (dishIngredients
+    [Olive Oil]
+    [red chili]
+    [Thai red curry paste]
+    [vegetable stock cube]
+    [coconut milk]
+    [fish sauce]
+    [rice noodles]
+    [lime]
+    [king prawns]
+    [coriander])
+  (ingredientsWeight
+    [1 tbsp]
+    [1 finely sliced]
+    [2 ½ tbsp]
+    [1]
+    [400ml can]
+    [2 tsp]
+    [100g]
+    [2 juice of 1, the other halved]
+    [150g]
+    [½ small pack]
+  (dishName "Laksa King Prawn Noodles"))
+                
+([FettucineAlfredo] of  FirstCourse
+  (dishClassification Italian)
+  (dishIngredients
+    [Clotted Cream]
+    [Butter]
+    [Corn Flour]
+    [Parmesan Cheese]
+    [Nutmeg]
+    [Fettuccine]
+    [Parsley])
+  (ingredientsWeight
+    [227g]
+    [25g]
+    [1 tsp ]
+    [100g ]
+    [Grated]
+    [250g]
+    [Chopped]
+  (dishName "Fettucine alfredo"))
+                
+([CoqAuVin] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Olive Oil]
+    [Bacon]
+    [Shallots]
+    [Chicken Legs]
+    [Chicken Thighs]
+    [Chicken Breasts]
+    [Garlic]
+    [Brandy]
+    [Red Wine]
+    [Chicken Stock]
+    [tomato puree]
+    [thyme]
+    [Rosemary]
+    [bay leaves]
+    [parsley]
+    [chestnut mushroom]
+    [plain flour]
+    [butter])
+  (ingredientsWeight
+    [1½ tbsp]
+    [3 rashers (100g) chopped dry-cured]
+    [12 small]
+    [2 (460g)]
+    [4 (650g)]
+    [2 (280g)]
+    [3 finely chopped]
+    [3 tbsp]
+    [600ml]
+    [150ml]
+    [2 tsp]
+    [3 sprigs]
+    [2 sprigs]
+    [2]
+    [garnish]
+    [250g]
+    [2 tbsp]
+    [1 tsp]
+  (dishName "Coq au vin"))
+                
+([Ratatouille] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Aubergine]
+    [Courgettes]
+    [Yellow Pepper]
+    [Tomato]
+    [Olive Oil]
+    [Basil]
+    [Onion]
+    [Garlic Clove]
+    [Red Wine Vinegar]
+    [Sugar])
+  (ingredientsWeight
+    [2 large]
+    [4]
+    [2]
+    [4 large]
+    [5 tbs]
+    [Bunch]
+    [1 medium]
+    [3 finely chopped]
+    [1 tsp ]
+    [1 tsp ]
+  (dishName "Ratatouille"))
+                
+([DundeeCake] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Almonds]
+    [Butter]
+    [Muscovado Sugar]
+    [Orange]
+    [Apricot Jam]
+    [Plain Flour]
+    [Baking Powder]
+    [Eggs]
+    [Ground Almonds]
+    [Milk]
+    [Dried Fruit]
+    [Glace Cherry]
+    [Milk]
+    [Caster Sugar])
+  (ingredientsWeight
+    [100g ]
+    [180g]
+    [180g]
+    [Zest of 1]
+    [3 tbs]
+    [225g]
+    [1 tsp ]
+    [3 Large]
+    [100g ]
+    [2 tbs]
+    [500g]
+    [100g ]
+    [1 tbs]
+    [2 tsp]
+  (dishName "Dundee cake"))
+                
+([Kedgeree] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Smoked Haddock]
+    [Bay Leaves]
+    [Milk]
+    [Eggs]
+    [Parsley]
+    [Coriander]
+    [Vegetable Oil]
+    [Onion]
+    [Coriander]
+    [Curry Powder]
+    [Rice])
+  (ingredientsWeight
+    [300g]
+    [2]
+    [300ml ]
+    [4]
+    [Handful]
+    [Handful]
+    [2 tbs]
+    [1 chopped]
+    [1 tsp ]
+    [2 tsp]
+    [300g]
+  (dishName "Kedgeree"))
+                
+([ChickenHamAndLeekPie] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Chicken Stock]
+    [Chicken Breast]
+    [Butter]
+    [Leek]
+    [Garlic]
+    [Plain Flour]
+    [Milk]
+    [White Wine]
+    [Double Cream]
+    [Ham]
+    [Sea Salt]
+    [Pepper]
+    [Plain Flour]
+    [Butter]
+    [Free-range Egg, Beaten]
+    [Cold Water]
+    [Free-range Egg, Beaten])
+  (ingredientsWeight
+    [450ml]
+    [3]
+    [75g]
+    [2 sliced]
+    [2 cloves minced]
+    [50g]
+    [200ml]
+    [3 tbs]
+    [150ml]
+    [150g]
+    [spinkling]
+    [pinch]
+    [350g]
+    [200g]
+    [1]
+    [1 tbls]
+    [1]
+  (dishName "Chicken Ham and Leek Pie"))
+                
+([SpottedDick] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Self-raising Flour]
+    [Salt]
+    [Suet]
+    [Currants]
+    [Caster Sugar]
+    [Lemon]
+    [Orange]
+    [Milk]
+    [Custard])
+  (ingredientsWeight
+    [250g]
+    [pinch]
+    [125g]
+    [175g]
+    [80g]
+    [Zest of 1]
+    [Zest of 1]
+    [150ml]
+    [to serve]
+  (dishName "Spotted Dick"))
+                
+([SweetAndSourPork] of  FirstCourse
+  (dishClassification Chinese)
+  (dishIngredients
+    [Pork]
+    [Egg]
+    [Water]
+    [Salt]
+    [Sugar]
+    [Soy Sauce]
+    [Starch]
+    [Tomato Puree]
+    [Vinegar]
+    [Coriander])
+  (ingredientsWeight
+    [200g]
+    [1]
+    [Dash]
+    [1/2 tsp]
+    [1 tsp ]
+    [10g]
+    [10g]
+    [30g]
+    [10g]
+    [Dash]
+  (dishName "Sweet and Sour Pork"))
+                
+([LancashireHotpot] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Butter]
+    [Lamb]
+    [Lamb Kidney]
+    [Onions]
+    [Carrots]
+    [Plain Flour]
+    [Worcestershire Sauce]
+    [Chicken Stock]
+    [Bay Leaves]
+    [Potatoes])
+  (ingredientsWeight
+    [100g ]
+    [900g]
+    [3]
+    [2 medium]
+    [4 sliced]
+    [25g]
+    [2 tsp]
+    [500ml]
+    [2]
+    [900g]
+  (dishName "Lancashire hotpot"))
+                
+([SalmonEggsEggsBenedict] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Eggs]
+    [White Wine Vinegar]
+    [English Muffins]
+    [Butter]
+    [Smoked Salmon]
+    [Lemon Juice]
+    [White Wine Vinegar]
+    [Egg]
+    [Unsalted Butter])
+  (ingredientsWeight
+    [4]
+    [2 tbs]
+    [2]
+    [To serve]
+    [8 slices]
+    [2 tsp]
+    [2 tsp]
+    [3 Yolkes]
+    [125g]
+  (dishName "Salmon Eggs Eggs Benedict"))
+                
+([Spinach&RicottaCannelloni] of  FirstCourse
+  (dishClassification Italian)
+  (dishIngredients
+    [Olive Oil]
+    [Garlic]
+    [Caster Sugar]
+    [Red Wine Vinegar]
+    [Chopped Tomatoes]
+    [Basil Leaves]
+    [Mascarpone]
+    [Milk]
+    [Parmesan]
+    [Mozzarella]
+    [Spinach]
+    [Parmesan]
+    [Ricotta]
+    [Nutmeg]
+    [Cannellini Beans])
+  (ingredientsWeight
+    [3 tbsp]
+    [8 cloves chopped]
+    [3 tbsp]
+    [2 tblsp ]
+    [3 400g Cans]
+    [Bunch]
+    [2 tubs]
+    [3 tbsp]
+    [85g]
+    [2 sliced]
+    [1kg]
+    [100g ]
+    [3 tubs]
+    [pinch]
+    [400g]
+  (dishName "Spinach & Ricotta Cannelloni"))
+                
+([ToadInTheHole] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [sausages]
+    [vegetable oil]
+    [plain flour]
+    [eggs]
+    [horseradish]
+    [milk]
+    [cherry tomatoes])
+  (ingredientsWeight
+    [8]
+    [3 tbsp]
+    [100g]
+    [2 medium]
+    [1 tbsp grated]
+    [225ml]
+    [200g]
+  (dishName "Toad In The Hole"))
+                
+([LambRoganJosh] of  FirstCourse
+  (dishClassification Indian)
+  (dishIngredients
+    [Onion]
+    [Sunflower Oil]
+    [Garlic]
+    [Ginger]
+    [Madras Paste]
+    [Paprika]
+    [cinnamon stick]
+    [Cardamom]
+    [Clove]
+    [Bay Leaf]
+    [Tomato Purée]
+    [Lamb]
+    [Greek yogurt]
+    [Coriander])
+  (ingredientsWeight
+    [2 quartered]
+    [4 tbsp]
+    [4 cloves]
+    [Thumb sized peeled and very finely grated]
+    [2 tbsp]
+    [2 tsp]
+    [1]
+    [6 bashed to break shells]
+    [4]
+    [2]
+    [1 tbsp]
+    [1kg cubed]
+    [150ml]
+    [Garnish chopped ]
+  (dishName "Lamb Rogan josh"))
+                
+([StickyToffeePuddingUltimate] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Medjool dates]
+    [water]
+    [vanilla extract]
+    [self-raising flour]
+    [bicarbonate of soda]
+    [eggs]
+    [butter]
+    [demerara sugar]
+    [black treacle]
+    [milk]
+    [ice cream]
+    [muscovado sugar]
+    [butter]
+    [double cream]
+    [black treacle])
+  (ingredientsWeight
+    [225g]
+    [175ml Boiling]
+    [1 tsp]
+    [175g]
+    [1 tsp]
+    [2]
+    [85g]
+    [140g]
+    [2 tbsp]
+    [100ml]
+    [1 scoop]
+    [175g]
+    [50g]
+    [225ml]
+    [1 tbsp]
+  (dishName "Sticky Toffee Pudding Ultimate"))
+                
+([BakedSalmonWithFennel&Tomatoes] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Fennel]
+    [Parsley]
+    [Lemon]
+    [Cherry Tomatoes]
+    [Olive Oil]
+    [Salmon]
+    [Black Olives])
+  (ingredientsWeight
+    [2 medium]
+    [2 tbs chopped]
+    [Juice of 1]
+    [175g]
+    [1 tbs]
+    [350g]
+    [to serve]
+  (dishName "Baked salmon with fennel & tomatoes"))
+                
+([ThaiGreenCurry] of  FirstCourse
+  (dishClassification Thai)
+  (dishIngredients
+    [potatoes]
+    [green beans]
+    [sunflower oil]
+    [garlic]
+    [Thai green curry paste]
+    [coconut milk]
+    [Thai fish sauce]
+    [Sugar]
+    [Chicken]
+    [lime]
+    [basil]
+    [Rice])
+  (ingredientsWeight
+    [225g new]
+    [100g ]
+    [1 tbsp]
+    [1 clove]
+    [4 tsp ]
+    [400ml]
+    [2 tsp]
+    [1 tsp]
+    [450g boneless]
+    [2 fresh kaffir leaves]
+    [handfull]
+    [Boiled]
+  (dishName "Thai Green Curry"))
+                
+([MincedBeefPie] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Vegetable Oil]
+    [Minced Beef]
+    [Onion]
+    [Tomato Puree]
+    [Plain Flour]
+    [Mushrooms]
+    [Beef Stock]
+    [Worcestershire Sauce]
+    [Shortcrust Pastry]
+    [Egg Yolks])
+  (ingredientsWeight
+    [2 tbs]
+    [500g]
+    [1 chopped]
+    [1 tbls]
+    [1 ½ tbsp]
+    [75g]
+    [250ml]
+    [Dash]
+    [400g]
+    [1]
+  (dishName "Minced Beef Pie"))
+                
+([FruitAndCreamCheeseBreakfastPastries] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Cream Cheese]
+    [Sugar]
+    [Vanilla Extract]
+    [Flour]
+    [Puff Pastry]
+    [Strawberries]
+    [Raspberries]
+    [Blackberries])
+  (ingredientsWeight
+    [1 1/4 oz ]
+    [1 1/4 cup]
+    [1 teaspoon]
+    []
+    [2]
+    []
+    []
+    []
+  (dishName "Fruit and Cream Cheese Breakfast Pastries"))
+                
+([PeanutButterCheesecake] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Butter]
+    [Peanut Cookies]
+    [Gelatine Leafs]
+    [Ricotta]
+    [Peanut Butter]
+    [Golden Syrup]
+    [Milk]
+    [Double Cream]
+    [Light Brown Soft Sugar]
+    [Peanut Brittle])
+  (ingredientsWeight
+    [50g]
+    [175g]
+    [5]
+    [500g]
+    [175g]
+    [175g]
+    [150ml]
+    [275ml]
+    [2 tblsp ]
+    [Crushed]
+  (dishName "Peanut Butter Cheesecake"))
+                
+([HotAndSourSoup] of  FirstCourse
+  (dishClassification Chinese)
+  (dishIngredients
+    [Mushrooms]
+    [Wood Ear Mushrooms]
+    [Tofu]
+    [Pork]
+    [Chicken Stock]
+    [Salt]
+    [Sugar]
+    [Sesame Seed Oil]
+    [Pepper]
+    [Hotsauce]
+    [Vinegar]
+    [Soy Sauce]
+    [Cornstarch]
+    [Water]
+    [Spring Onions])
+  (ingredientsWeight
+    [1/3 cup]
+    [1/3 cup]
+    [2/3 Cup]
+    [1/2 cup ]
+    [2-1/2 cups]
+    [1/2 tsp]
+    [1/4 tsp]
+    [1 tsp ]
+    [1/4 tsp]
+    [1/2 tsp]
+    [1-½ cups]
+    [1 tsp ]
+    [1 tbs]
+    [2 tbs]
+    [1/4 cup]
+  (dishName "Hot and Sour Soup"))
+                
+([PotatoGratinWithChicken] of  FirstCourse
+  (dishClassification Unknown)
+  (dishIngredients
+    [Potatoes]
+    [Onions]
+    [Olive Oil]
+    [Chicken Stock]
+    [Creme Fraiche]
+    [Parmesan]
+    [Chicken Breasts]
+    [Bacon]
+    [Spinach]
+    [Peas])
+  (ingredientsWeight
+    [800g]
+    [3]
+    [2 tblsp]
+    [100ml]
+    [1 pot]
+    [Topping]
+    [4]
+    [4]
+    [Topping]
+    [Topping]
+  (dishName "Potato Gratin with Chicken"))
+                
+([ChilliPrawnLinguine] of  FirstCourse
+  (dishClassification Italian)
+  (dishIngredients
+    [Linguine Pasta]
+    [Sugar Snap Peas]
+    [Olive Oil]
+    [Garlic Clove]
+    [Red Chilli]
+    [King Prawns]
+    [Cherry Tomatoes]
+    [Basil Leaves]
+    [Lettuce]
+    [Bread]
+    [Fromage Frais]
+    [Lime]
+    [Caster Sugar])
+  (ingredientsWeight
+    [280g]
+    [200g]
+    [2 tblsp ]
+    [2 cloves chopped]
+    [1 large]
+    [24 Skinned]
+    [12]
+    [Handful]
+    [Leaves]
+    [to serve]
+    [2 tbsp]
+    [Grated Zest of 2]
+    [2 tsp]
+  (dishName "Chilli prawn linguine"))
+                
+([FishPie] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Floury Potatoes]
+    [Olive Oil]
+    [Semi-skimmed Milk]
+    [White Fish Fillets]
+    [Plain flour]
+    [Nutmeg]
+    [Double Cream]
+    [Jerusalem Artichokes]
+    [Leek]
+    [Prawns]
+    [Parsley]
+    [Dill]
+    [Lemon]
+    [Gruyère]
+    [Lemon])
+  (ingredientsWeight
+    [900g]
+    [2 tbsp]
+    [600ml]
+    [800g]
+    [1 tbsp]
+    [Grating]
+    [3 tbsp]
+    [200g]
+    [1 finely sliced]
+    [200g peeled raw]
+    [Large handful]
+    [Handful]
+    [Grated zest of 1]
+    [25g grated]
+    [Juice of 1]
+  (dishName "Fish pie"))
+                
+([BeefAndOysterPie] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Beef]
+    [Olive Oil]
+    [Shallots]
+    [Garlic]
+    [Bacon]
+    [Thyme]
+    [Bay Leaf]
+    [Stout]
+    [Beef Stock]
+    [Corn Flour]
+    [Oysters]
+    [Plain Flour]
+    [Salt]
+    [Butter]
+    [Eggs])
+  (ingredientsWeight
+    [900g]
+    [3 tbs]
+    [3]
+    [2 cloves minced]
+    [125g]
+    [1 tbs chopped]
+    [2]
+    [330ml]
+    [400ml]
+    [2 tbs]
+    [8]
+    [400g]
+    [pinch]
+    [250g]
+    [To Glaze]
+  (dishName "Beef and Oyster pie"))
+                
+([TreacleTart] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Plain Flour]
+    [Butter]
+    [Golden Syrup]
+    [Breadcrumbs]
+    [Lemons]
+    [Eggs])
+  (ingredientsWeight
+    [250g]
+    [135g]
+    [400g]
+    [150g]
+    [Zest of 2]
+    [1 beaten]
+  (dishName "Treacle Tart"))
+                
+([ChickpeaFajitas] of  FirstCourse
+  (dishClassification Mexican)
+  (dishIngredients
+    [Chickpeas]
+    [Olive Oil]
+    [Paprika]
+    [Tomatoes]
+    [Red Onions]
+    [Red Wine Vinegar]
+    [Avocado]
+    [Lime]
+    [Lime]
+    [Sour Cream]
+    [Harissa Spice]
+    [Corn Tortillas]
+    [Coriander])
+  (ingredientsWeight
+    [400g]
+    [1 tblsp ]
+    [pinch]
+    [2 small cut chunks]
+    [1 finely sliced]
+    [2 tsp]
+    [1]
+    [Juice of 1]
+    [Chopped]
+    [100g ]
+    [2 tsp]
+    [4]
+    [to serve]
+  (dishName "Chickpea Fajitas"))
+                
+([FrenchOmelette] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Eggs]
+    [Butter]
+    [Parmesan]
+    [Tarragon]
+    [Parsley]
+    [Chives]
+    [Gruyère])
+  (ingredientsWeight
+    [3]
+    [2 knobs]
+    [1 tsp ]
+    [3 chopped]
+    [1 tbs chopped]
+    [1 tbs chopped]
+    [4 tbs]
+  (dishName "French Omelette"))
+                
+([BakewellTart] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [plain flour]
+    [chilled butter]
+    [cold water]
+    [raspberry jam]
+    [butter]
+    [caster sugar]
+    [ground almonds]
+    [free-range egg, beaten]
+    [almond extract]
+    [flaked almonds])
+  (ingredientsWeight
+    [175g/6oz]
+    [75g/2½oz]
+    [2-3 tbsp]
+    [1 tbsp]
+    [125g/4½oz]
+    [125g/4½oz]
+    [125g/4½oz]
+    [1]
+    [½ tsp]
+    [50g/1¾oz]
+  (dishName "Bakewell tart"))
+                
+([SaltfishAndAckee] of  FirstCourse
+  (dishClassification Jamaican)
+  (dishIngredients
+    [Salt Cod]
+    [Ackee]
+    [Onion]
+    [Paprika]
+    [Curry Powder]
+    [Jerusalem Artichokes]
+    [Hotsauce]
+    [Red Pepper]
+    [Yellow Pepper]
+    [Tomatoes]
+    [Salt]
+    [Pepper]
+    [Self-raising Flour]
+    [Suet]
+    [Salt]
+    [Olive Oil])
+  (ingredientsWeight
+    [450g]
+    [400g]
+    [1 chopped]
+    [1 tsp ]
+    [2 tsp]
+    [2 tsp]
+    [1 tsp ]
+    [1 sliced]
+    [1 sliced]
+    [200g]
+    [to taste]
+    [to taste]
+    [250g]
+    [30g]
+    [pinch]
+    [for frying]
+  (dishName "Saltfish and Ackee"))
+                
+([CanadianButterTarts] of  FirstCourse
+  (dishClassification Canadian)
+  (dishIngredients
+    [Shortcrust Pastry]
+    [Eggs]
+    [Muscovado Sugar]
+    [Raisins]
+    [Vanilla Extract]
+    [Butter]
+    [Single Cream]
+    [Walnuts])
+  (ingredientsWeight
+    [375g]
+    [2 large]
+    [175g]
+    [100g ]
+    [1 tsp ]
+    [50g]
+    [4 tsp]
+    [50g]
+  (dishName "Canadian Butter Tarts"))
+                
+([KungPoPrawns] of  FirstCourse
+  (dishClassification Chinese)
+  (dishIngredients
+    [Prawns]
+    [Soy Sauce]
+    [Tomato Puree]
+    [Corn Flour]
+    [Caster Sugar]
+    [Sunflower Oil]
+    [Peanuts]
+    [Chilli]
+    [Brown Sugar]
+    [Garlic Clove]
+    [Water Chestnut]
+    [Ginger])
+  (ingredientsWeight
+    [400g]
+    [2 tbs]
+    [1 tsp ]
+    [1 tsp ]
+    [1 tsp ]
+    [1 tsp ]
+    [85g]
+    [3 Large]
+    [1 tbs]
+    [6 cloves]
+    [450g]
+    [to taste]
+  (dishName "Kung Po Prawns"))
+                
+([EnglishBreakfast] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Sausages]
+    [Bacon]
+    [Mushrooms]
+    [Tomatoes]
+    [Black Pudding]
+    [Eggs]
+    [Bread])
+  (ingredientsWeight
+    [2]
+    [3]
+    [2]
+    [2]
+    [1 Slice]
+    [2]
+    [1 Slice]
+  (dishName "English Breakfast"))
+                
+([ChickenKaraage] of  FirstCourse
+  (dishClassification Japanese)
+  (dishIngredients
+    [Chicken thigh]
+    [Ginger]
+    [Garlic]
+    [Soy sauce]
+    [Sake]
+    [Granulated sugar]
+    [Potato starch]
+    [Vegetable oil]
+    [Lemon])
+  (ingredientsWeight
+    [450 grams Boneless skin]
+    [1 tablespoon]
+    [1 clove]
+    [2 tablespoons]
+    [1 tablespoon]
+    [2 teaspoon]
+    [1/3 cup]
+    [1/3 cup]
+    [1/3 cup]
+  (dishName "Chicken Karaage"))
+                
+([ChocolateGateau] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Plain chocolate]
+    [Butter]
+    [Milk]
+    [Eggs]
+    [Granulated Sugar]
+    [Flour])
+  (ingredientsWeight
+    [250g]
+    [175g]
+    [2 tablespoons]
+    [5]
+    [175g]
+    [125g]
+  (dishName "Chocolate Gateau"))
+                
+([VegetarianCasserole] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Rapeseed Oil]
+    [Onion]
+    [Garlic]
+    [Paprika]
+    [Cumin]
+    [Thyme]
+    [Carrots]
+    [Celery]
+    [Red Pepper]
+    [Yellow Pepper]
+    [Tomato]
+    [Vegetable Stock Cube]
+    [Courgettes]
+    [Thyme]
+    [Lentils])
+  (ingredientsWeight
+    [1]
+    [1]
+    [3 cloves]
+    [1 tsp ]
+    [½ tsp]
+    [1 tblsp ]
+    [3 Medium]
+    [2 small stalks]
+    [1]
+    [1]
+    [2 x 400g tins]
+    [250ml]
+    [2 sliced]
+    [2 sprigs]
+    [250g]
+  (dishName "Vegetarian Casserole"))
+                
+([PilchardPuttanesca] of  FirstCourse
+  (dishClassification Italian)
+  (dishIngredients
+    [Spaghetti]
+    [Olive Oil]
+    [Onion]
+    [Garlic]
+    [Red Chilli]
+    [Tomato Puree]
+    [Pilchards]
+    [Black Olives]
+    [Parmesan])
+  (ingredientsWeight
+    [300g]
+    [1 tbls]
+    [1 finely chopped ]
+    [2 cloves minced]
+    [1]
+    [1 tbls]
+    [425g]
+    [70g]
+    [Shaved]
+  (dishName "Pilchard puttanesca"))
+                
+([BeefBourguignon] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Goose Fat]
+    [Beef Shin]
+    [Bacon]
+    [Challots]
+    [Chestnut Mushroom]
+    [Garlic Clove]
+    [Bouquet Garni]
+    [Tomato Puree]
+    [Red Wine]
+    [Celeriac]
+    [Olive Oil]
+    [Thyme]
+    [Rosemary]
+    [Bay Leaf]
+    [Cardamom])
+  (ingredientsWeight
+    [3 tsp]
+    [600g]
+    [100g ]
+    [350g]
+    [250g]
+    [2 sliced]
+    [1]
+    [1 tbs]
+    [750 ml ]
+    [600g]
+    [2 tbs]
+    [sprigs of fresh]
+    [sprigs of fresh]
+    [2]
+    [4]
+  (dishName "Beef Bourguignon"))
+                
+([Apple&BlackberryCrumble] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Plain Flour]
+    [Caster Sugar]
+    [Butter]
+    [Braeburn Apples]
+    [Butter]
+    [Demerara Sugar]
+    [Blackberrys]
+    [Cinnamon]
+    [Ice Cream])
+  (ingredientsWeight
+    [120g]
+    [60g]
+    [60g]
+    [300g]
+    [30g]
+    [30g]
+    [120g]
+    [¼ teaspoon]
+    [to serve]
+  (dishName "Apple & Blackberry Crumble"))
+                
+([SeafoodFideuà] of  FirstCourse
+  (dishClassification Spanish)
+  (dishIngredients
+    [Mussels]
+    [Prawns]
+    [Saffron]
+    [Vermicelli]
+    [Olive Oil]
+    [Onions]
+    [Garlic]
+    [Paprika]
+    [Monkfish]
+    [Baby Squid]
+    [Fish Stock]
+    [Tomatoes]
+    [Lemon]
+    [Parsley])
+  (ingredientsWeight
+    [400g]
+    [8]
+    [2 pinches]
+    [350g]
+    [5 tblsp ]
+    [1 large]
+    [3 cloves]
+    [2 tbs]
+    [1 tail]
+    [4]
+    [650ml]
+    [2 large]
+    [Juice of 1]
+    [Topping]
+  (dishName "Seafood fideuà"))
+                
+([BeefLoMein] of  FirstCourse
+  (dishClassification Chinese)
+  (dishIngredients
+    [Beef]
+    [Salt]
+    [Pepper]
+    [Sesame Seed Oil]
+    [Egg]
+    [Starch]
+    [Oil]
+    [Noodles]
+    [Onion]
+    [Minced Garlic]
+    [Ginger]
+    [Bean Sprouts]
+    [Mushrooms]
+    [Water]
+    [Oyster Sauce]
+    [Sugar]
+    [Soy Sauce])
+  (ingredientsWeight
+    [1/2 lb]
+    [pinch]
+    [pinch]
+    [2 tsp]
+    [1/2 ]
+    [3 tbs]
+    [5 tbs]
+    [1/4 lb]
+    [1/2 cup ]
+    [1 tsp ]
+    [1 tsp ]
+    [1 cup ]
+    [1 cup ]
+    [1 cup ]
+    [1 tbs]
+    [1 tsp ]
+    [1 tsp ]
+  (dishName "Beef Lo Mein"))
+                
+([LambAndPotatoPie] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Lamb Shoulder]
+    [Flour]
+    [Vegetable Oil]
+    [Onion]
+    [Carrots]
+    [Vegetable Stock]
+    [Potatoes]
+    [Shortcrust Pastry]
+    [Eggs])
+  (ingredientsWeight
+    [500g]
+    [1 tbls]
+    [Dash]
+    [1 sliced]
+    [2 sliced]
+    [350ml/12fl]
+    [500g]
+    [450g]
+    [To Glaze]
+  (dishName "Lamb and Potato pie"))
+                
+([SummerPistou] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Rapeseed Oil]
+    [Leek]
+    [Courgettes]
+    [Vegetable Stock]
+    [Cannellini Beans]
+    [Green Beans]
+    [Tomatoes]
+    [Garlic Clove]
+    [Basil]
+    [Parmesan])
+  (ingredientsWeight
+    [1 tbs]
+    [2 finely chopped]
+    [1 large]
+    [1L]
+    [400g]
+    [200g]
+    [3 chopped]
+    [3 chopped]
+    [Small pack]
+    [40g]
+  (dishName "Summer Pistou"))
+                
+([ThreeFishPie] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Potatoes]
+    [Butter]
+    [Milk]
+    [Gruyère]
+    [Butter]
+    [Leek]
+    [Plain Flour]
+    [White Wine]
+    [Milk]
+    [Parsley]
+    [Salmon]
+    [Haddock]
+    [Smoked Haddock]
+    [Eggs])
+  (ingredientsWeight
+    [1kg]
+    [Knob]
+    [Dash]
+    [50g]
+    [75g]
+    [2 sliced]
+    [75g]
+    [150ml]
+    [568ml]
+    [2 tbs chopped]
+    [250g]
+    [250g]
+    [250g]
+    [6]
+  (dishName "Three Fish Pie"))
+                
+([JerkChickenWithRice&Peas] of  FirstCourse
+  (dishClassification Jamaican)
+  (dishIngredients
+    [Chicken Thighs]
+    [Lime]
+    [Spring Onions]
+    [Ginger]
+    [Garlic]
+    [Onion]
+    [Red Chilli]
+    [Thyme]
+    [Lime]
+    [Soy Sauce]
+    [Vegetable Oil]
+    [Brown Sugar]
+    [Allspice]
+    [Basmati Rice]
+    [Coconut Milk]
+    [Spring Onions]
+    [Thyme]
+    [Garlic]
+    [Allspice]
+    [Kidney Beans])
+  (ingredientsWeight
+    [12]
+    [1/2 ]
+    [1  bunch]
+    [1 tbs chopped]
+    [3 cloves]
+    [1/2 ]
+    [3 chopped]
+    [1/2 teaspoon]
+    [Juice of 1]
+    [2 tbs]
+    [2 tbs]
+    [3 tbs]
+    [1 tbs]
+    [200g]
+    [400g]
+    [1  bunch]
+    [2 sprigs]
+    [2 cloves chopped]
+    [1 tbs]
+    [800g]
+  (dishName "Jerk chicken with rice & peas"))
+                
+([NewYorkCheesecake] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Butter]
+    [Sour Cream]
+    [Sugar]
+    [Cream Cheese]
+    [Caster Sugar]
+    [Plain Flour]
+    [Lemon Juice]
+    [Eggs]
+    [Sour Cream]
+    [Sour Cream]
+    [Caster Sugar]
+    [Lemon Juice])
+  (ingredientsWeight
+    [85g]
+    [140g]
+    [1tbsp]
+    [900g]
+    [250g]
+    [3 tbs]
+    [1 ½ teaspoons]
+    [3 Large]
+    [250ml]
+    [150ml]
+    [1 tbsp]
+    [2 tsp]
+  (dishName "New York cheesecake"))
+                
+([ProvençalOmeletteCake] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Eggs]
+    [Olive Oil]
+    [Courgettes]
+    [Spring Onions]
+    [Red Pepper]
+    [Garlic Clove]
+    [Red Chilli]
+    [Cream Cheese]
+    [Milk]
+    [Chives]
+    [Basil]
+    [Rocket]
+    [Parmesan])
+  (ingredientsWeight
+    [10]
+    [1 tbs]
+    [2 finely chopped]
+    [3 finely chopped]
+    [4]
+    [1 clove peeled crushed]
+    [1]
+    [300g]
+    [6 tblsp]
+    [4 tbs]
+    [2 tbs]
+    [to serve]
+    [to serve]
+  (dishName "Provençal Omelette Cake"))
+                
+([Broccoli&StiltonSoup] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Rapeseed Oil]
+    [Onion]
+    [Celery]
+    [Leek]
+    [Potatoes]
+    [Butter]
+    [Vegetable Stock]
+    [Broccoli]
+    [Stilton Cheese])
+  (ingredientsWeight
+    [2 tblsp ]
+    [1 finely chopped ]
+    [1]
+    [1 sliced]
+    [1 medium]
+    [1 knob]
+    [1 litre hot]
+    [1 Head chopped]
+    [140g]
+  (dishName "Broccoli & Stilton soup"))
+                
+([PoudingChomeur] of  FirstCourse
+  (dishClassification Canadian)
+  (dishIngredients
+    [Butter]
+    [Sugar]
+    [Eggs]
+    [Vanilla Extract]
+    [Flour]
+    [Baking Powder]
+    [Milk]
+    [Maple Syrup]
+    [Brown Sugar]
+    [Single Cream]
+    [Butter])
+  (ingredientsWeight
+    [½ cup ]
+    [1 cup ]
+    [2]
+    [1 tsp ]
+    [2 cups ]
+    [1 tsp ]
+    [1 1/4 cup]
+    [1 1/2 cup ]
+    [1 1/2 cup ]
+    [1 1/2 cup ]
+    [1/3 cup]
+  (dishName "Pouding chomeur"))
+                
+([NanaimoBars] of  FirstCourse
+  (dishClassification Canadian)
+  (dishIngredients
+    [Custard]
+    [Caster Sugar]
+    [Cocoa]
+    [Egg]
+    [Digestive Biscuits]
+    [Desiccated Coconut]
+    [Almonds]
+    [Butter]
+    [Double Cream]
+    [Custard Powder]
+    [Icing Sugar]
+    [Dark Chocolate]
+    [Butter])
+  (ingredientsWeight
+    [125g]
+    [50g]
+    [5 tbs]
+    [1 beaten]
+    [200g shredded]
+    [100g ]
+    [50g]
+    [100g ]
+    [4 tbs]
+    [3 tbs]
+    [250g]
+    [150g]
+    [50g]
+  (dishName "Nanaimo Bars"))
+                
+([Ribollita] of  FirstCourse
+  (dishClassification Italian)
+  (dishIngredients
+    [Olive Oil]
+    [Onion]
+    [Carrot]
+    [Celery]
+    [Garlic]
+    [Cannellini Beans]
+    [Canned tomatoes]
+    [Water]
+    [Rosemary]
+    [Thyme]
+    [Kale]
+    [Wholegrain Bread]
+    [Red Onion]
+    [Parmesan])
+  (ingredientsWeight
+    [5 tablespoons]
+    [1 chopped]
+    [1 chopped]
+    [1 stalk chopped]
+    [1 tablespoon minced]
+    [2 cups]
+    [1]
+    [4 cups]
+    [1 fresh sprig]
+    [1 fresh sprig]
+    [1 pound chopped]
+    [4 thick slices]
+    [1 thinly sliced]
+    [½ cup freshly grated]
+  (dishName "Ribollita"))
+                
+([PumpkinPie] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Pumpkin]
+    [Shortcrust Pastry]
+    [Plain Flour]
+    [Caster Sugar]
+    [Salt]
+    [Nutmeg]
+    [Cinnamon]
+    [Eggs]
+    [Butter]
+    [Milk]
+    [Icing Sugar])
+  (ingredientsWeight
+    [750g]
+    [350g]
+    [Dusting]
+    [140g]
+    [½ tsp]
+    [½ tsp]
+    [1 tsp ]
+    [2 Beaten ]
+    [25g]
+    [175g]
+    [1 tblsp ]
+  (dishName "Pumpkin Pie"))
+                
+([BrownStewChicken] of  FirstCourse
+  (dishClassification Jamaican)
+  (dishIngredients
+    [Chicken]
+    [Tomato]
+    [Onions]
+    [Garlic Clove]
+    [Red Pepper]
+    [Carrots]
+    [Lime]
+    [Thyme]
+    [Allspice]
+    [Soy Sauce]
+    [Cornstarch]
+    [Coconut Milk]
+    [Vegetable Oil])
+  (ingredientsWeight
+    [1 whole]
+    [1 chopped]
+    [2 chopped]
+    [2 chopped]
+    [1 chopped]
+    [1 chopped]
+    [1]
+    [2 tsp]
+    [1 tsp ]
+    [2 tbs]
+    [2 tsp]
+    [2 cups ]
+    [1 tbs]
+  (dishName "Brown Stew Chicken"))
+                
+([Wontons] of  FirstCourse
+  (dishClassification Chinese)
+  (dishIngredients
+    [Pork]
+    [Garlic Clove]
+    [Ginger]
+    [Soy Sauce]
+    [Sesame Seed Oil]
+    [Carrots]
+    [Celery]
+    [Spring Onions]
+    [Wonton Skin]
+    [Oil]
+    [Water])
+  (ingredientsWeight
+    [1lb]
+    [3 chopped]
+    [1 tsp ]
+    [1 tbs]
+    [1 tsp ]
+    [3 finely chopped]
+    [3 finely chopped]
+    [6 chopped]
+    [1 Packet]
+    [Fry]
+    [Bottle]
+  (dishName "Wontons"))
+                
+([RecheadoMasalaFish] of  FirstCourse
+  (dishClassification Indian)
+  (dishIngredients
+    [Mackerel]
+    [Red Chili]
+    [Ginger]
+    [Garlic]
+    [Pepper]
+    [Cumin]
+    [Turmeric]
+    [Cinnamon stick]
+    [Clove]
+    [Cardamom]
+    [Sugar]
+    [Tamarind ball]
+    [Vinegar]
+    [Oil])
+  (ingredientsWeight
+    [4]
+    [18 dried]
+    [1 inch]
+    [8 cloves]
+    [1.5 tsp]
+    [1 tsp]
+    [½ tsp]
+    []
+    [4]
+    [2]
+    [1 tbsp]
+    [2 marble sized]
+    [2.5 tbsp]
+    [for frying]
+  (dishName "Recheado Masala Fish"))
+                
+([ChristmasPuddingFlapjack] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [salted butter]
+    [dark soft brown sugar]
+    [golden syrup]
+    [orange]
+    [rolled oats]
+    [Christmas pudding])
+  (ingredientsWeight
+    [250g]
+    [225g]
+    [150g]
+    [Zest of 1]
+    [500g]
+    [250g]
+  (dishName "Christmas Pudding Flapjack"))
+                
+([AppleFrangipanTart] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [digestive biscuits]
+    [butter]
+    [Bramley apples]
+    [butter, softened]
+    [caster sugar]
+    [free-range eggs, beaten]
+    [ground almonds]
+    [almond extract]
+    [flaked almonds])
+  (ingredientsWeight
+    [175g/6oz]
+    [75g/3oz]
+    [200g/7oz]
+    [75g/3oz]
+    [75g/3oz]
+    [2]
+    [75g/3oz]
+    [1 tsp]
+    [50g/1¾oz]
+  (dishName "Apple Frangipan Tart"))
+                
+([ChickenParmentier] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Potatoes]
+    [Butter]
+    [Double Cream]
+    [Egg Yolks]
+    [Butter]
+    [Shallots]
+    [Carrots]
+    [Celery]
+    [Garlic Clove]
+    [White Wine]
+    [Tomato Puree]
+    [Tinned Tomatos]
+    [Chicken Stock]
+    [Chicken]
+    [Black Olives]
+    [Parsley]
+    [Gruyere cheese])
+  (ingredientsWeight
+    [1.5kg]
+    [30g]
+    [5 tblsp ]
+    [2]
+    [30g]
+    [7]
+    [3 chopped]
+    [2 sticks]
+    [1 finely chopped ]
+    [4 tbsp]
+    [1 tbls]
+    [400g]
+    [350ml]
+    [600g]
+    [16]
+    [2 tbs]
+    [50g]
+  (dishName "Chicken Parmentier"))
+                
+([CajunSpicedFishTacos] of  FirstCourse
+  (dishClassification Mexican)
+  (dishIngredients
+    [cajun]
+    [cayenne pepper]
+    [white fish]
+    [vegetable oil]
+    [flour tortilla]
+    [avocado]
+    [little gem lettuce]
+    [spring onion]
+    [salsa]
+    [sour cream]
+    [lemon]
+    [garlic])
+  (ingredientsWeight
+    [2 tbsp]
+    [1 tsp]
+    [4 fillets]
+    [1 tsp]
+    [8]
+    [1 sliced]
+    [2 shredded]
+    [4 shredded]
+    [1 x 300ml]
+    [1 pot]
+    [1]
+    [1 clove finely chopped]
+  (dishName "Cajun spiced fish tacos"))
+                
+([ChocolateSouffle] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Single Cream]
+    [Caster Sugar]
+    [Dark Chocolate]
+    [Butter]
+    [Butter]
+    [Caster Sugar]
+    [Dark Chocolate]
+    [Double Cream]
+    [Egg Yolks]
+    [Egg White]
+    [Double Cream]
+    [Icing Sugar])
+  (ingredientsWeight
+    [142ml]
+    [25g]
+    [100g ]
+    [25g]
+    [drizzle]
+    [50g]
+    [175g]
+    [2 tbs]
+    [4]
+    [5]
+    [2 tbs]
+    [to serve]
+  (dishName "Chocolate Souffle"))
+                
+([SteakDiane] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Canola Oil]
+    [Beef Fillet]
+    [Beef Stock]
+    [Butter]
+    [Garlic]
+    [Challots]
+    [Mushrooms]
+    [Brandy]
+    [Heavy Cream]
+    [Dijon Mustard]
+    [Worcestershire Sauce]
+    [Tabasco Sauce]
+    [Parsley]
+    [Chives]
+    [Salt]
+    [Pepper])
+  (ingredientsWeight
+    [2 tbs]
+    [4]
+    [1 1/2 cup ]
+    [2 tbs]
+    [2 cloves minced]
+    [1 medium finely diced]
+    [4 oz ]
+    [¼ cup]
+    [¼ cup]
+    [1 tbs]
+    [1 tbs]
+    [Dash]
+    [1 tbs minced]
+    [1 tbs minced]
+    [to taste]
+    [to taste]
+  (dishName "Steak Diane"))
+                
+([SalmonPrawnRisotto] of  FirstCourse
+  (dishClassification Italian)
+  (dishIngredients
+    [butter]
+    [onion]
+    [rice]
+    [white wine]
+    [vegetable stock]
+    [lemon]
+    [King Prawns]
+    [salmon]
+    [asparagus]
+    [black pepper]
+    [Parmesan])
+  (ingredientsWeight
+    [50g/2oz]
+    [1 finely chopped ]
+    [150g]
+    [125ml ]
+    [1 litre hot]
+    [The juice and zest of one]
+    [240g large]
+    [150g]
+    [100g tips blanched briefly in boiling water]
+    [ground]
+    [50g shavings]
+  (dishName "Salmon Prawn Risotto"))
+                
+([MadeiraCake] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Butter]
+    [Caster Sugar]
+    [Eggs]
+    [Self-raising Flour]
+    [Milk]
+    [Lemon]
+    [Mixed Peel])
+  (ingredientsWeight
+    [175g]
+    [175g]
+    [3]
+    [250g]
+    [3 tbs]
+    [Zest of 1]
+    [To Glaze]
+  (dishName "Madeira Cake"))
+                
+([KatsuChickenCurry] of  FirstCourse
+  (dishClassification Japanese)
+  (dishIngredients
+    [chicken breast]
+    [plain flour]
+    [egg]
+    [breadcrumbs]
+    [vegetable oil]
+    [sunflower oil]
+    [onions]
+    [garlic]
+    [carrot]
+    [plain flour]
+    [curry powder]
+    [chicken stock]
+    [honey]
+    [soy sauce]
+    [bay leaf]
+    [garam masala])
+  (ingredientsWeight
+    [4 pounded to 1cm thickness]
+    [2 tablespoons]
+    [1 beaten]
+    [100g fine]
+    [230ml frying]
+    [2 tablespoons]
+    [2 sliced]
+    [5 chopped cloves]
+    [2 sliced]
+    [2 tablespoons]
+    [4 teaspoons]
+    [600ml]
+    [2 teaspoons]
+    [4 teaspoons]
+    [1]
+    [1 teaspoon]
+  (dishName "Katsu Chicken curry"))
+                
+([SpicyArrabiataPenne] of  FirstCourse
+  (dishClassification Italian)
+  (dishIngredients
+    [penne rigate]
+    [olive oil]
+    [garlic]
+    [chopped tomatoes]
+    [red chile flakes]
+    [italian seasoning]
+    [basil]
+    [Parmigiano-Reggiano])
+  (ingredientsWeight
+    [1 pound]
+    [1/4 cup]
+    [3 cloves]
+    [1 tin ]
+    [1/2 teaspoon]
+    [1/2 teaspoon]
+    [6 leaves]
+    [spinkling]
+  (dishName "Spicy Arrabiata Penne"))
+                
+([BraisedBeefChilli] of  FirstCourse
+  (dishClassification Mexican)
+  (dishIngredients
+    [Beef]
+    [Onions]
+    [Garlic]
+    [Olive oil]
+    [Chorizo]
+    [Cumin]
+    [All spice]
+    [Cloves]
+    [Cinnamon stick]
+    [Bay Leaves]
+    [Oregano]
+    [Ancho Chillies]
+    [Balsamic Vinegar]
+    [Plum Tomatoes]
+    [Tomato Ketchup]
+    [Dark Brown Sugar]
+    [Borlotti Beans])
+  (ingredientsWeight
+    [1kg]
+    [3]
+    [4 cloves]
+    [Dash]
+    [300g]
+    [2 tsp]
+    [2 tsp]
+    [1 tsp]
+    [1 large]
+    [3]
+    [2 tsp dried]
+    [2 ancho]
+    [3 tbsp]
+    [2 x 400g]
+    [2 tbsp]
+    [2 tbsp]
+    [2 x 400g tins]
+  (dishName "Braised Beef Chilli"))
+                
+([GeneralTso'SChicken] of  FirstCourse
+  (dishClassification Chinese)
+  (dishIngredients
+    [Chicken Breast]
+    [Plain Flour]
+    [Egg]
+    [Starch]
+    [Baking Powder]
+    [Salt]
+    [Onion Salt]
+    [Garlic Powder]
+    [Water]
+    [Chicken Stock]
+    [Duck Sauce]
+    [Soy Sauce]
+    [Honey]
+    [Rice Vinegar]
+    [Sesame Seed Oil]
+    [Gochujang]
+    [Starch]
+    [Garlic]
+    [Spring Onions]
+    [Ginger])
+  (ingredientsWeight
+    [1 1/2 ]
+    [3/4 cup ]
+    [1]
+    [2 tbs]
+    [1 tbs]
+    [1 tsp ]
+    [1/2 tsp]
+    [1/4 tsp]
+    [3/4 cup ]
+    [1/2 cup ]
+    [1/4 cup]
+    [3 tbs]
+    [2 tbs]
+    [1 tbs]
+    [2 tbs]
+    [1/2 tbs]
+    [2 tbs]
+    [1 clove]
+    [2 chopped]
+    [1 tsp ]
+  (dishName "General Tso's Chicken"))
+                
+([SugarPie] of  FirstCourse
+  (dishClassification Canadian)
+  (dishIngredients
+    [Brown Sugar]
+    [Butter]
+    [Eggs]
+    [Vanilla Extract]
+    [Salt]
+    [Plain Flour]
+    [Milk])
+  (ingredientsWeight
+    [2 cups ]
+    [¼ cup]
+    [2]
+    [1 tsp ]
+    [1 tsp ]
+    [½ cup ]
+    [1 1/2 cups ]
+  (dishName "Sugar Pie"))
+                
+([LambTagine] of  FirstCourse
+  (dishClassification Moroccan)
+  (dishIngredients
+    [Olive Oil]
+    [Onion]
+    [Carrots]
+    [Lamb Leg]
+    [Garlic]
+    [Cumin]
+    [Ginger]
+    [Saffron]
+    [Cinnamon]
+    [Honey]
+    [Apricot]
+    [Vegetable Stock Cube]
+    [Butternut Squash]
+    [Couscous]
+    [Parsley])
+  (ingredientsWeight
+    [2 tblsp ]
+    [1 finely sliced]
+    [2 chopped]
+    [500g]
+    [2 cloves minced]
+    [½ tsp]
+    [½ tsp]
+    [¼ tsp]
+    [1 tsp ]
+    [1 tblsp ]
+    [100g ]
+    [1]
+    [1 medium chopped]
+    [Steamed]
+    [Chopped]
+  (dishName "Lamb Tagine"))
+                
+([Shakshuka] of  FirstCourse
+  (dishClassification Egyptian)
+  (dishIngredients
+    [Olive Oil]
+    [Red Onions]
+    [Red Chilli]
+    [Garlic]
+    [Coriander]
+    [Cherry Tomatoes]
+    [Caster Sugar]
+    [Eggs]
+    [Feta])
+  (ingredientsWeight
+    [1 tbs]
+    [2 chopped]
+    [1 finely chopped ]
+    [1 clove]
+    [Chopped]
+    [800g]
+    [1 tbs]
+    [4]
+    [Spinkling]
+  (dishName "Shakshuka"))
+                
+([Mushroom&ChestnutRotolo] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Mushrooms]
+    [Chestnuts]
+    [Challots]
+    [Garlic]
+    [Rosemary]
+    [Wild Mushrooms]
+    [Soy Sauce]
+    [White Wine]
+    [Lasagne Sheets]
+    [Breadcrumbs]
+    [Sage]
+    [Truffle Oil])
+  (ingredientsWeight
+    [30g]
+    [240g]
+    [3]
+    [3 cloves]
+    [3 sprigs]
+    [500g]
+    [2 tblsp ]
+    [125ml ]
+    [350g]
+    [4 tbsp]
+    [1/2 handful ]
+    [to serve]
+  (dishName "Mushroom & Chestnut Rotolo"))
+                
+([EscovitchFish] of  FirstCourse
+  (dishClassification Jamaican)
+  (dishIngredients
+    [Red Snapper]
+    [Vegetable Oil]
+    [Garlic]
+    [Ginger]
+    [Thyme]
+    [Bay Leaf]
+    [Red Pepper]
+    [Yellow Pepper]
+    [Onion]
+    [Carrots]
+    [Sugar]
+    [Allspice]
+    [Worcestershire Sauce]
+    [Scotch Bonnet]
+    [Lime]
+    [Malt Vinegar]
+    [Pepper])
+  (ingredientsWeight
+    [2 Pounds]
+    [1/2 cup ]
+    [1 clove peeled crushed]
+    [1/2 tsp]
+    [2 sprigs]
+    [1]
+    [0.5]
+    [0.5]
+    [1 sliced]
+    [1 chopped]
+    [1 tbs]
+    [1/2 tsp]
+    [1 tsp ]
+    [1]
+    [1]
+    [3/4 cup ]
+    [pinch]
+  (dishName "Escovitch Fish"))
+                
+([FrenchOnionSoup] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Butter]
+    [Olive Oil]
+    [Onion]
+    [Sugar]
+    [Garlic Clove]
+    [Plain Flour]
+    [Dry White Wine]
+    [Beef Stock]
+    [Bread]
+    [Gruyère])
+  (ingredientsWeight
+    [50g]
+    [1 tbs]
+    [1 kg]
+    [1 tsp ]
+    [4 sliced]
+    [2 tbs]
+    [250ml]
+    [1L]
+    [4 sliced]
+    [140g]
+  (dishName "French Onion Soup"))
+                
+([CrockPotChickenBakedTacos] of  FirstCourse
+  (dishClassification Mexican)
+  (dishIngredients
+    [Chicken Breasts]
+    [Vinaigrette Dressing]
+    [Cumin]
+    [Smoked Paprika]
+    [Garlic]
+    [Refried Beans]
+    [Hard Taco Shells]
+    [Shredded Mexican Cheese]
+    [Grape Tomatoes]
+    [Jalapeno]
+    [Avocado]
+    [Green Salsa]
+    [Sour Cream]
+    [Milk])
+  (ingredientsWeight
+    [4 - 6]
+    [1 bottle]
+    [1½ tablespoon]
+    [1 tablespoon]
+    [1 teaspoon]
+    [1 can]
+    [12]
+    [2 cups]
+    [Halved]
+    [Sliced and Seeded]
+    [Peeled and Sliced]
+    [2 tablespoons]
+    [3 tablespoons]
+    [1 tablespoon]
+  (dishName "Crock Pot Chicken Baked Tacos"))
+                
+([BreadAndButterPudding] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [butter]
+    [bread]
+    [sultanas]
+    [cinnamon]
+    [milk]
+    [double cream]
+    [eggs]
+    [sugar]
+    [nutmeg])
+  (ingredientsWeight
+    [25g/1oz]
+    [8 thin slices]
+    [50g/2oz]
+    [2 tsp]
+    [350ml/12fl]
+    [50ml/2fl oz]
+    [2 free-range]
+    [25g/1oz]
+    [grated, to taste]
+  (dishName "Bread and Butter Pudding"))
+                
+([SquashLinguine] of  FirstCourse
+  (dishClassification Italian)
+  (dishIngredients
+    [Butternut Squash]
+    [Garlic]
+    [Olive Oil]
+    [Linguine Pasta]
+    [Sage])
+  (ingredientsWeight
+    [350g]
+    [3 parts ]
+    [3 tbs]
+    [350g]
+    [Small bunch]
+  (dishName "Squash linguine"))
+                
+([KeyLimePie] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Digestive Biscuits]
+    [Butter]
+    [Condensed Milk]
+    [Egg Yolks]
+    [Lime]
+    [Double Cream]
+    [Icing Sugar]
+    [Lime])
+  (ingredientsWeight
+    [300g]
+    [150g]
+    [400g]
+    [3]
+    [4]
+    [300ml ]
+    [1 tbls]
+    [to serve]
+  (dishName "Key Lime Pie"))
+                
+([Prawn&FennelBisque] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Tiger Prawns]
+    [Olive Oil]
+    [Onion]
+    [Fennel]
+    [Carrots]
+    [Dry White Wine]
+    [Brandy]
+    [Chopped Tomatoes]
+    [Fish Stock]
+    [Paprika]
+    [Double Cream]
+    [Prawns])
+  (ingredientsWeight
+    [450g]
+    [4 tbs]
+    [1 large]
+    [1 large]
+    [2 chopped]
+    [150ml]
+    [1 tbs]
+    [400g]
+    [1L]
+    [2 pinches]
+    [150ml]
+    [8]
+  (dishName "Prawn & Fennel Bisque"))
+                
+([HoneyTeriyakiSalmon] of  FirstCourse
+  (dishClassification Japanese)
+  (dishIngredients
+    [Salmon]
+    [Olive oil]
+    [Soy Sauce]
+    [Sake]
+    [Sesame Seed])
+  (ingredientsWeight
+    [1 lb]
+    [1 tablespoon]
+    [2 tablespoons]
+    [2 tablespoons]
+    [4 tablespoons]
+  (dishName "Honey Teriyaki Salmon"))
+                
+([SaltedCaramelCheescake] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Digestive Biscuits]
+    [Pretzels]
+    [Butter]
+    [Cream Cheese]
+    [Vanilla Extract]
+    [Icing Sugar]
+    [Caramel]
+    [Sea Salt]
+    [Double Cream]
+    [Caramel Sauce]
+    [Toffee Popcorn]
+    [Pretzels])
+  (ingredientsWeight
+    [250g]
+    [75g]
+    [135g]
+    [450g]
+    [1tsp]
+    [100g ]
+    [150g]
+    [1tsp]
+    [300ml ]
+    [drizzle]
+    [Top]
+    [Top]
+  (dishName "Salted Caramel Cheescake"))
+                
+([StovetopEggplantWithHarissa,Chickpeas,AndCuminYogurt] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Olive Oil]
+    [Egg Plants]
+    [Harissa]
+    [Chickpeas]
+    [Cherry Tomatoes]
+    [Greek yogurt]
+    [Ground cumin]
+    [Parsley])
+  (ingredientsWeight
+    [4 tablespoons]
+    [6 small]
+    [½ tablespoon]
+    [1 can]
+    [2 cups halved]
+    [1 1/2 cups]
+    [1 tablespoon]
+    [½ cup ]
+  (dishName "Stovetop Eggplant With Harissa, Chickpeas, and Cumin Yogurt"))
+                
+([ChocChipPecanPie] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Plain Flour]
+    [Butter]
+    [Cream Cheese]
+    [Icing Sugar]
+    [Butter]
+    [Maple Syrup]
+    [Light Brown Soft Sugar]
+    [Dark Brown Soft Sugar]
+    [Eggs]
+    [Vanilla Extract]
+    [Pecan Nuts]
+    [Dark Chocolate Chips])
+  (ingredientsWeight
+    [300g]
+    [75g]
+    [100g ]
+    [1 tbls]
+    [150g]
+    [200ml]
+    [250g]
+    [100g ]
+    [4]
+    [1 tsp ]
+    [400g]
+    [200g]
+  (dishName "Choc Chip Pecan Pie"))
+                
+([SalmonAvocadoSalad] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Salmon]
+    [Avocado]
+    [Cucumber]
+    [Spinach]
+    [Mint]
+    [Lime]
+    [Honey]
+    [Olive Oil])
+  (ingredientsWeight
+    [400g]
+    [3]
+    [1]
+    [400g]
+    [4 tbs]
+    [zest and juice of 1]
+    [2 tsp]
+    [3 tbs]
+  (dishName "Salmon Avocado Salad"))
+                
+([WhiteChocolateCremeBrulee] of  FirstCourse
+  (dishClassification French)
+  (dishIngredients
+    [Double Cream]
+    [White Chocolate Chips]
+    [Vanilla]
+    [Egg Yolks]
+    [Caster Sugar]
+    [Caster Sugar])
+  (ingredientsWeight
+    [568ml]
+    [100g ]
+    [Pod of]
+    [6]
+    [2 tbs]
+    [Top]
+  (dishName "White chocolate creme brulee"))
+                
+([ChocolateRaspberryBrownies] of  FirstCourse
+  (dishClassification American)
+  (dishIngredients
+    [Dark Chocolate]
+    [Milk Chocolate]
+    [Salted Butter]
+    [Light Brown Soft Sugar]
+    [Eggs]
+    [Plain Flour]
+    [Cocoa]
+    [Raspberries])
+  (ingredientsWeight
+    [200g]
+    [100g ]
+    [250g]
+    [400g]
+    [4 large]
+    [140g]
+    [50g]
+    [200g]
+  (dishName "Chocolate Raspberry Brownies"))
+                
+([Bubble&Squeak] of  FirstCourse
+  (dishClassification British)
+  (dishIngredients
+    [Butter]
+    [Bacon]
+    [Onion]
+    [Garlic Clove]
+    [Brussels Sprouts]
+    [Potatoes])
+  (ingredientsWeight
+    [1 tbs]
+    [4]
+    [1 finely sliced]
+    [1 chopped]
+    [20]
+    [400g]
+  (dishName " Bubble & Squeak"))
+                
