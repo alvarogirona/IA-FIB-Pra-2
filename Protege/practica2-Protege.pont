@@ -1,4 +1,4 @@
-; Wed May 08 19:18:57 CEST 2019
+; Wed May 08 19:26:09 CEST 2019
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -72,14 +72,14 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot calcium
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot middaySnack
 		(type INSTANCE)
 ;+		(allowed-classes SimpleMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot calcium
+		(type FLOAT)
+		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot protein
@@ -115,14 +115,14 @@
 ;+		(allowed-classes FirstCourse)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot potassium
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot dishDifficulty
 		(type INTEGER)
 		(default 0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot potassium
+		(type FLOAT)
+		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot drinkName
@@ -148,24 +148,24 @@
 		(type FLOAT)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot name_
-		(type STRING)
-		(default "")
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot dishClassification
 		(type SYMBOL)
 		(allowed-values Vegan Spanish French Mexican Italian Japanese Chinese Thai)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot dessert
-		(type INSTANCE)
-;+		(allowed-classes Dessert)
+	(single-slot name_
+		(type STRING)
+		(default "")
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot beverage
 		(type INSTANCE)
 ;+		(allowed-classes Beverage)
+		(create-accessor read-write))
+	(single-slot dessert
+		(type INSTANCE)
+;+		(allowed-classes Dessert)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot polyunsaturatedFat
 		(type FLOAT)
@@ -202,11 +202,6 @@
 		(allowed-values Vegan Spanish French Mexican Italian Japanese Chinese Thai)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot dishIngredients
-		(type INSTANCE)
-;+		(allowed-classes Ingredient)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
 	(single-slot dishName
 		(type STRING)
 ;+		(cardinality 1 1)
@@ -239,12 +234,12 @@
 (defclass Ingredient
 	(is-a USER)
 	(role concrete)
-	(single-slot saturedFat
+	(single-slot monounsaturatedFat
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot monounsaturatedFat
+	(single-slot saturedFat
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -253,14 +248,14 @@
 		(type SYMBOL)
 		(allowed-values curated raw)
 		(create-accessor read-write))
-	(single-slot name_
-		(type STRING)
-		(default "")
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot fiber
 		(type FLOAT)
 		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+		(default "")
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot calories
@@ -283,15 +278,15 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot ingredientClassification
-		(type SYMBOL)
-		(allowed-values dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein ischemicCardiopathy arterialHypertension diabetes osteoporosis inflammatoryJoints goutHyperuricemia)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
 	(single-slot carbohydrates
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot ingredientClassification
+		(type SYMBOL)
+		(allowed-values dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein ischemicCardiopathy arterialHypertension diabetes osteoporosis inflammatoryJoints goutHyperuricemia)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot iron
 		(type FLOAT)
@@ -327,14 +322,14 @@
 ;+		(allowed-classes CompleteMenu)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot breakfast
-		(type INSTANCE)
-;+		(allowed-classes SimpleMenu)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot lunch
 		(type INSTANCE)
 ;+		(allowed-classes CompleteMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot breakfast
+		(type INSTANCE)
+;+		(allowed-classes SimpleMenu)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
@@ -358,14 +353,14 @@
 ;+		(allowed-classes FirstCourse)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot beverage
-		(type INSTANCE)
-;+		(allowed-classes Beverage)
-		(create-accessor read-write))
 	(single-slot dessert
 		(type INSTANCE)
 ;+		(allowed-classes Dessert)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot beverage
+		(type INSTANCE)
+;+		(allowed-classes Beverage)
 		(create-accessor read-write))
 	(single-slot secondCourse
 		(type INSTANCE)
