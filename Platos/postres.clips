@@ -1,0 +1,23 @@
+  ([Postre1] of Dessert
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Flan de leche de oveja")
+	(ingredients [LecheOveja] [Huevo] [Pinon] [Membrillo] [Nata] [Azucar])
+	(ingredientsWeights 62.5 32.5 18.75 2.5 12.5 25 3.125)
+    (link "https://www.hogarmania.com/cocina/recetas/postres/201503/flan-leche-oveja-28433.html"))
+
+  ([Postre2] of Dessert
+	(availability 8 9 10 11)
+	(dishClassification Spanish)
+	(dishName "Crema fría de mango")
+	(ingredients [Mango] [Huevo]  [Azucar] [Sal] [AceiteOliva])
+	(ingredientsWeights 375.0 48.75 12.5 0.25 10)
+    (link "https://www.hogarmania.com/cocina/recetas/postres/201606/crema-fria-mango-33155.html"))
+
+  ([Postre3] of Dessert
+	(availability 2 3 4 5)
+	(dishClassification Spanish)
+	(dishName "Bizcocho de cacahuete borracho")
+	(ingredients [Harina] [Cacahuete] [Azucar] [Huevo] [AceiteOliva] [Levadura] [Mango] [Fresa])
+	(ingredientsWeights 20 10 20 6.5 6 1.6 50 42)
+    (link "https://www.hogarmania.com/cocina/recetas/postres/201904/bizcocho-cacahuete-borracho-42992.html"))

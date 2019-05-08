@@ -1,0 +1,307 @@
+([Primero] of  FirstCourse
+  (dishClassification Japanese)
+  (availability)
+  (link)
+  (ingredients 
+    )
+  (ingredientsWeights 
+    )
+  (dishName ""))
+
+([Primero1] of  FirstCourse
+  (dishClassification Spanish)
+  (availability
+    2
+  )
+  (link 
+    "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201905/ensalada-lechugas-variadas-aguacate-fresas-43254.html"
+  )
+  (ingredients 
+    [Lechuga] 
+    [Fresa] 
+    [AceiteOliva] 
+    [Sal] 
+    [Aguacate] 
+    [Pan] 
+    [Vinagre])
+  (ingredientsWeights 
+    75.0 
+    25.0 
+    10.0 
+    3.0 
+    50.0 
+    30.0 
+    10.0)
+  (dishName 
+    "Ensalada de lechugas variadas, aguacate y fresas"
+  )
+)
+
+([Primero2] of  FirstCourse
+  (dishClassification Spanish)
+  (availability
+    1 2 3 4 5 6 7 8 9 10 11 12
+  )
+  (link 
+    "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201905/ensalada-rabanitos-salmon-43230.html"
+  )
+  (ingredients
+    [Lechuga]
+    [SalmonAhumado]
+    [AceiteOliva]
+    [Sal]
+    [Rabanito]
+    [AceitunaNegra]
+    [Mostaza]
+  )
+  (ingredientsWeights
+    75.0
+    25.0
+    10.0
+    3.0
+    70.0
+    19.2
+    15.0
+  )
+  (dishName 
+    "Ensalada de rabanitos y salmón"
+  )
+)
+
+([Primero3] of  FirstCourse
+  (dishClassification Spanish)
+  (availability
+    1 2 3 4 5 6 7 8 9 10 11 12
+  )
+  (link
+    "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201905/pastel-espinacas-provenzal-queso-43222.html"
+  )
+  (ingredients
+    [Espinaca]
+    [Zanahoria]
+    [QuesoParmesano]
+    [Harina]
+    [AceiteOliva]
+    [Pimienta]
+    [Ajo]
+    [Pan]
+    [Ajo]
+    [Leche]
+    [Sal]
+  )
+  (ingredientsWeights 
+    333.33
+    50.0
+    10.0
+    6.66
+    10.0
+    10.0
+    60.0
+    5.0
+    2.0
+    100.0
+    3.0
+  )
+  (dishName 
+    "Pastel de espinacas con provenzal de queso"
+  )
+)
+
+([Primero4] of  FirstCourse
+  (dishClassification Spanish)
+  (availability 1 2 3 4 5 6 7 8 9 10 11 12)
+  (link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201905/patatas-bacalao-43198.html")
+  (ingredients 
+    [Patata]
+    [ColaBacalao]
+    [Cebolla]
+    [Ajo]
+    [Sal]
+    [Bacalao]
+    [Puerro]
+    [Tomate]
+    [PimientoVerde]
+    [AceiteOliva]
+    [Perejil]
+  )
+  (ingredientsWeights 
+    250.0
+    60.0
+    100.0
+    2.0
+    3.0
+    100.0
+    25.0
+    110.0
+    45.0
+    10.0
+    1.0
+  )
+  (dishName "Patatas con bacalao"))
+
+
+([Primero5] of  FirstCourse
+  (dishClassification Spanish)
+  (availability 1 2 3 4 5 6 7 8 9 10 11 12)
+  (link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201904/ensalada-escarola-aguacate-nueces-43182.html")
+  (ingredients 
+    [Escarola]
+    [Nuez]
+    [Vinagre]
+    [Aguacate]
+    [AceiteOliva]
+    [Sal]
+  )
+  (ingredientsWeights 
+    75.0
+    15.0
+    10.0
+    50.0
+    10.0
+    3.0
+  )
+  (dishName "Ensalada de escarola, aguacate y nueces")
+)
+
+
+([Primero6] of  FirstCourse
+  (dishClassification Spanish)
+  (availability 1 2 3 4 5 6 7 8 9 10 11 12)
+  (link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201904/ensalada-lechugas-variadas-higos-moras-43086.html")
+  (ingredients 
+    [Lechuga]
+    [Mora]
+    [AceiteOliva]
+    [Miel]
+    [Higo]
+    [Avellana]
+    [Vinagre]
+    [Sal]
+  )
+  (ingredientsWeights 
+    50.0
+    0.6
+    10.0
+    10.0
+    160.0
+    7.5
+    10.0
+    3.0
+  )
+  (dishName "Ensalada de lechugas variadas con higos, moras y avellanas")
+)
+
+
+([Primero7] of  FirstCourse
+  (dishClassification Spanish)
+  (availability)
+  (link "https://www.hogarmania.com/cocina/recetas/legumbres/201904/garbanzos-calabacin-huevo-escalfado-43082.html")
+  (ingredients 
+    [Garbanzo]
+    [Zanahoria]
+    [Ajo]
+    [Huevo]
+    [AceiteOliva]
+    [Oregano]
+    [Cebolla]
+    [Puerro]
+    [Calabacin]
+    [CaldoVerdura]
+    [Sal]
+    [Perejil]
+  )
+  (ingredientsWeights 
+    62.5
+    25.0
+    22.5
+    60.0
+    10.0
+    1.0
+    25.0
+    25.0
+    50.0
+    2000
+    3.0
+    1.0
+  )
+  (dishName "Garbanzos con calabacín y huevo escalfado")
+)
+
+
+([Primero8] of  FirstCourse
+  (dishClassification Spanish)
+  (availability)
+  (link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201904/ensalada-escarola-cebolla-cacahuetes-43076.html")
+  (ingredients 
+    [Escalora]
+    [AceitunaNegra]
+    [AceiteOliva]
+    [Sal]
+    [Cebolla]
+    [Cacahuete]
+    [Vinagre]
+  )
+  (ingredientsWeights 
+    75.0
+    14.4
+    10.0
+    3.0
+    25.0
+    10.0
+    10.0
+  )
+  (dishName "Ensalada de escarola, cebolla y cacahuetes")
+)
+
+([Primero9] of  FirstCourse
+  (dishClassification Japanese)
+  (availability)
+  (link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201904/ensalada-lechugas-variadas-pasta-fresas-42998.html")
+  (ingredients 
+    [Lechuga]
+    [Fresa]
+    [AceiteOliva]
+    [Sal]
+    [Pasta]
+    [Nuez]
+    [Vinagre] 
+  )
+  (ingredientsWeights 
+    75.0
+    50.0
+    10.0
+    3.0
+    25.0
+    10.0
+    10.0
+  )
+  (dishName "Ensalada de lechugas variadas, pasta y fresas")
+)
+
+([Primero10] of  FirstCourse
+  (dishClassification Japanese)
+  (availability)
+  (link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201904/ensalada-calabacin-canonigos-queso-43010.html")
+  (ingredients 
+    [Calabacin]
+    [Queso]
+    [AceiteOliva]
+    [Sal]
+    [Canonigo]
+    [Membrillo]
+    [Vinagre]
+  )
+  (ingredientsWeights 
+    50.0
+    25.0
+    10.0
+    3.0
+    25.0
+    25.0
+    10.0
+  )
+  (dishName "Ensalada de calabacín, canónigos y queso")
+)
+
+
+;% PRIMERA IMPORTACIÓN ACABA AQUÍ

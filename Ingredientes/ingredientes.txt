@@ -1,0 +1,27 @@
+NOTAS:
+    - Almendra 2g
+    - Conejo 1000g
+    - Cebolla 100g
+    - Tomate 220g
+    - Aceite/vinagre 10g
+    - Salsas
+    - Pimiento Verde 180g
+    - Pan 30g
+    - Aceituna 4.8g
+    - Rabanito 70g
+    - Zanahoria 100g
+    - Ajo 15g
+    - Diente ajo 2g
+    - Cola bacalao 60g
+    - Sal 3g
+    - Puerro 100g
+    - perejil 1g
+    - Aguacate 50g
+    - Nuez 5g
+    - Mora 0.2g
+    - Miel 10g
+    - Higo 40g
+    - Huevo 60g
+    - Oregano 1g
+    - Calabacin 200g
+    - fresa 25g
