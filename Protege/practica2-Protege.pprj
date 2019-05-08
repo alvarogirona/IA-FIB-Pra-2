@@ -1,4 +1,4 @@
-; Wed May 08 19:26:09 CEST 2019
+; Thu May 09 01:16:37 CEST 2019
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,11 +20,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[practica2-Protege_ProjectKB_Class78]
-		[practica2-Protege_ProjectKB_Class79]
-		[practica2-Protege_ProjectKB_Class80]
-		[practica2-Protege_ProjectKB_Class81]
-		[practica2-Protege_ProjectKB_Class82]))
+		[practica2-Protege_ProjectKB_Class721]
+		[practica2-Protege_ProjectKB_Class722]
+		[practica2-Protege_ProjectKB_Class723]
+		[practica2-Protege_ProjectKB_Class724]
+		[practica2-Protege_ProjectKB_Class725]))
 
 ([CLSES_TAB] of  Widget
 
@@ -65,9 +65,6 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_559711_Class3] of  Map
-)
-
 ([KB_729440_Class0] of  String
 
 	(name "factory_class_name")
@@ -76,9 +73,9 @@
 ([KB_729440_Class1] of  Map
 
 	(entries
-		[practica2-Protege_ProjectKB_Class83]
-		[practica2-Protege_ProjectKB_Class84]
-		[practica2-Protege_ProjectKB_Class85]))
+		[practica2-Protege_ProjectKB_Class726]
+		[practica2-Protege_ProjectKB_Class727]
+		[practica2-Protege_ProjectKB_Class728]))
 
 ([KB_729440_Class100] of  String
 
@@ -171,6 +168,9 @@
 
 	(name "classes_file_name")
 	(string_value "practica2-Protege.pont"))
+
+([KB_948166_Class3] of  Map
+)
 
 ([LAYOUT_PROPERTIES] of  Property_List
 
@@ -558,6 +558,52 @@
 	(property_list [practica2-Protege_ProjectKB_Class73])
 	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
 
+([practica2-Protege_ProjectKB_Class721] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([practica2-Protege_ProjectKB_Class722] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([practica2-Protege_ProjectKB_Class723] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([practica2-Protege_ProjectKB_Class724] of  String
+
+	(name "SecondCourse")
+	(string_value "%3ANAME"))
+
+([practica2-Protege_ProjectKB_Class725] of  String
+
+	(name "Ingredient")
+	(string_value "name"))
+
+([practica2-Protege_ProjectKB_Class726] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([practica2-Protege_ProjectKB_Class727] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([practica2-Protege_ProjectKB_Class728] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
 ([practica2-Protege_ProjectKB_Class73] of  Property_List
 )
 
@@ -579,57 +625,11 @@
 ([practica2-Protege_ProjectKB_Class77] of  Property_List
 )
 
-([practica2-Protege_ProjectKB_Class78] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([practica2-Protege_ProjectKB_Class79] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
 ([practica2-Protege_ProjectKB_Class8] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [practica2-Protege_ProjectKB_Class9])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.properties.OWLPropertiesTab"))
-
-([practica2-Protege_ProjectKB_Class80] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([practica2-Protege_ProjectKB_Class81] of  String
-
-	(name "SecondCourse")
-	(string_value "%3ANAME"))
-
-([practica2-Protege_ProjectKB_Class82] of  String
-
-	(name "Ingredient")
-	(string_value "name"))
-
-([practica2-Protege_ProjectKB_Class83] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([practica2-Protege_ProjectKB_Class84] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([practica2-Protege_ProjectKB_Class85] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
 
 ([practica2-Protege_ProjectKB_Class9] of  Property_List
 )
