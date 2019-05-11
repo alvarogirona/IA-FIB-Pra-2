@@ -66,7 +66,7 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
 	(dishName "Flan de huevo")
-	(ingredients [Huevo] [Azucar] [leche] [Nata] [Vainilla])
+	(ingredients [Huevo] [Azucar] [Leche] [Nata] [Vainilla])
 	(ingredientsWeights 19.5 30.0 50.0 12.0 1.5)
   (link "https://www.hogarmania.com/cocina/recetas/postres/201808/flan-huevo-40923.html"))
 
@@ -75,7 +75,7 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
 	(dishName "Yogur natural")
-	(ingredients [Yogurt])
+	(ingredients [Yogur])
 	(ingredientsWeights 150.0)
   (link ""))
 
