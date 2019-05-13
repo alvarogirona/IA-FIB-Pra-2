@@ -1,4 +1,4 @@
-; Thu May 09 02:26:31 CEST 2019
+; Mon May 13 21:55:36 CEST 2019
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -7,65 +7,83 @@
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
 	(role abstract)
-	(single-slot chromium
+	(single-slot copper
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot availability
-		(type INTEGER)
-		(cardinality 1 12)
-		(create-accessor read-write))
-	(single-slot secondCourse
+	(single-slot dinner
 		(type INSTANCE)
-;+		(allowed-classes SecondCourse)
+;+		(allowed-classes CompleteMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Age
+		(type INTEGER)
+		(range 0 150)
+		(default 0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot ingredientClassification
 		(type SYMBOL)
 		(allowed-values dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein ischemicCardiopathy arterialHypertension diabetes osteoporosis inflammatoryJoints goutHyperuricemia)
 		(create-accessor read-write))
+	(single-slot dishName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot link
+		(type STRING)
+		(default "")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot drinkPrice
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Diet
+		(type SYMBOL)
+		(allowed-values Omnivora Vegetariana Vegana)
+		(default Omnivora)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot middaySnack
+		(type INSTANCE)
+;+		(allowed-classes SimpleMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot dishClassification
+		(type SYMBOL)
+		(allowed-values Vegan Spanish French Mexican Italian Japanese Chinese Thai)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
 	(single-slot cholesterol
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot copper
+	(single-slot vitamineB12
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot drinkClassification
-		(type SYMBOL)
-		(allowed-values Spanish)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot magnesium
+	(single-slot protein
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot saturedFat
-		(type FLOAT)
-		(default 0.0)
+	(single-slot drinkName
+		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot breakfast
+	(multislot appetizer
 		(type INSTANCE)
-;+		(allowed-classes SimpleMenu)
-;+		(cardinality 1 1)
+;+		(allowed-classes Appetizer)
 		(create-accessor read-write))
-	(single-slot iode
+	(multislot ingredientsWeights
 		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot vitamineB6
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot fiber
+	(single-slot carbohydrates
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -76,32 +94,27 @@
 		(cardinality 1 ?VARIABLE)
 ;+		(inverse-slot inverse_of_dishIngredients)
 		(create-accessor read-write))
-	(single-slot calories
+	(multislot Levels+%28Nombre+temporal%29
+;+		(comment "Es el nivel que tiene de una vitamina, zinc, etc.\n\nP.e. si tiene el primer valor é 1 significa que esta bajo de \"calcium\".\n\n(Siguiendo el orden de aparición en los ingredientes)")
+		(type INTEGER)
+		(range 0 10)
+		(cardinality 29 29)
+		(create-accessor read-write))
+	(single-slot monounsaturatedFat
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot zinc
+	(single-slot iode
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot vitamineB9
+	(single-slot dishPrice
 		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot sodium
-		(type FLOAT)
-		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot vitamineB3
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot carbohydrates
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -111,40 +124,27 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot calcium
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot middaySnack
-		(type INSTANCE)
-;+		(allowed-classes SimpleMenu)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot protein
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot dishName
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(multislot ingredients
-		(type INSTANCE)
-;+		(allowed-classes Ingredient)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(multislot properties
+	(single-slot drinkClassification
 		(type SYMBOL)
-		(allowed-values curated raw)
-		(create-accessor read-write))
-	(single-slot afternoonSnack
-		(type INSTANCE)
-;+		(allowed-classes SimpleMenu)
+		(allowed-values Spanish)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot vitamineK
+	(single-slot molybdenum
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Sex
+		(type SYMBOL)
+		(allowed-values Man Woman)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot saturedFat
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot magnesium
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -154,46 +154,17 @@
 ;+		(allowed-classes Beverage)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot dinner
-		(type INSTANCE)
-;+		(allowed-classes CompleteMenu)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot firstCourse
-		(type INSTANCE)
-;+		(allowed-classes FirstCourse)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot potassium
+	(single-slot zinc
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot dishDifficulty
-		(type INTEGER)
-		(default 0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot drinkName
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot link
-		(type STRING)
-		(default "")
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(multislot inverse_of_dishIngredients
+	(multislot ingredients
 		(type INSTANCE)
-;+		(allowed-classes Dish)
-;+		(inverse-slot dishIngredients)
+;+		(allowed-classes Ingredient)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot selenium
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot monounsaturatedFat
+	(single-slot vitamineB6
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -203,49 +174,109 @@
 ;+		(allowed-classes CompleteMenu)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot ingredientsWeights
+	(single-slot vitamineB9
 		(type FLOAT)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot name_
-		(type STRING)
-		(default "")
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(multislot dishClassification
-		(type SYMBOL)
-		(allowed-values Vegan Spanish French Mexican Italian Japanese Chinese Thai)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot dessert
-		(type INSTANCE)
-;+		(allowed-classes Dessert)
+		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot beverage
 		(type INSTANCE)
 ;+		(allowed-classes Beverage)
 		(create-accessor read-write))
-	(single-slot polyunsaturatedFat
+	(single-slot selenium
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot dishPrice
-		(type FLOAT)
+	(single-slot dessert
+		(type INSTANCE)
+;+		(allowed-classes Dessert)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+		(default "")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot properties
+		(type SYMBOL)
+		(allowed-values curated raw)
+		(create-accessor read-write))
+	(multislot availability
+		(type INTEGER)
+		(cardinality 1 12)
+		(create-accessor read-write))
+	(single-slot afternoonSnack
+		(type INSTANCE)
+;+		(allowed-classes SimpleMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Exercise+level%28days%2Fweek%29
+		(type INTEGER)
+		(range 0 7)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot potassium
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot secondCourse
+		(type INSTANCE)
+;+		(allowed-classes SecondCourse)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot chromium
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot inverse_of_dishIngredients
+		(type INSTANCE)
+;+		(allowed-classes Dish)
+;+		(inverse-slot dishIngredients)
 		(create-accessor read-write))
 	(single-slot iron
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot vitamineB12
+	(single-slot polyunsaturatedFat
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot vitamineE
+	(single-slot firstCourse
+		(type INSTANCE)
+;+		(allowed-classes FirstCourse)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot vitamineK
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot fiber
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot calcium
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot calories
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot breakfast
+		(type INSTANCE)
+;+		(allowed-classes SimpleMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot vitamineA
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -255,8 +286,14 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot drinkPrice
+	(single-slot sodium
 		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dishDifficulty
+		(type INTEGER)
+		(default 0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot vitamineD
@@ -264,40 +301,34 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot appetizer
-		(type INSTANCE)
-;+		(allowed-classes Appetizer)
-		(create-accessor read-write))
-	(single-slot molybdenum
+	(single-slot vitamineE
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot vitamineA
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
+	(multislot Diseases
+		(type SYMBOL)
+		(allowed-values diabetes osteoporosis dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein ischemicCardiopathy arterialHypertension inflammatoryJoints goutHyperuricemia)
 		(create-accessor read-write)))
 
 (defclass Dish
 	(is-a USER)
 	(role abstract)
+	(single-slot dishName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(multislot ingredientsWeights
 		(type FLOAT)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(multislot dishClassification
-		(type SYMBOL)
-		(allowed-values Vegan Spanish French Mexican Italian Japanese Chinese Thai)
-		(cardinality 1 ?VARIABLE)
+	(multislot availability
+		(type INTEGER)
+		(cardinality 1 12)
 		(create-accessor read-write))
 	(single-slot link
 		(type STRING)
 		(default "")
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot dishName
-		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot ingredients
@@ -305,9 +336,10 @@
 ;+		(allowed-classes Ingredient)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(multislot availability
-		(type INTEGER)
-		(cardinality 1 12)
+	(multislot dishClassification
+		(type SYMBOL)
+		(allowed-values Vegan Spanish French Mexican Italian Japanese Chinese Thai)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write)))
 
 (defclass Dessert
@@ -333,30 +365,7 @@
 (defclass Ingredient
 	(is-a USER)
 	(role concrete)
-	(multislot properties
-		(type SYMBOL)
-		(allowed-values curated raw)
-		(create-accessor read-write))
-	(single-slot vitamineK
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot chromium
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot potassium
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(multislot ingredientClassification
-		(type SYMBOL)
-		(allowed-values dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein ischemicCardiopathy arterialHypertension diabetes osteoporosis inflammatoryJoints goutHyperuricemia)
-		(create-accessor read-write))
-	(single-slot cholesterol
+	(single-slot selenium
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -366,17 +375,50 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot magnesium
+	(single-slot iron
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot selenium
+	(single-slot name_
+		(type STRING)
+		(default "")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot ingredientClassification
+		(type SYMBOL)
+		(allowed-values dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein ischemicCardiopathy arterialHypertension diabetes osteoporosis inflammatoryJoints goutHyperuricemia)
+		(create-accessor read-write))
+	(single-slot carbohydrates
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot saturedFat
+	(single-slot polyunsaturatedFat
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot properties
+		(type SYMBOL)
+		(allowed-values curated raw)
+		(create-accessor read-write))
+	(single-slot vitamineK
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot fiber
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot calcium
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot calories
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -391,52 +433,7 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot vitamineB6
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot name_
-		(type STRING)
-		(default "")
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot fiber
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot calories
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot zinc
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot vitamineB9
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot polyunsaturatedFat
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot sodium
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot vitamineB3
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot carbohydrates
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -446,27 +443,12 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot iron
+	(single-slot vitamineA
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot vitamineB12
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot calcium
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot vitamineE
-		(type FLOAT)
-		(default 0.0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot protein
+	(single-slot potassium
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -476,7 +458,22 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot sodium
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot vitamineD
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot vitamineE
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot cholesterol
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -486,7 +483,42 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot vitamineA
+	(single-slot saturedFat
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot magnesium
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot chromium
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot vitamineB12
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot zinc
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot protein
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot vitamineB6
+		(type FLOAT)
+		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot vitamineB9
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
@@ -495,14 +527,14 @@
 (defclass DailyMenu
 	(is-a USER)
 	(role concrete)
-	(single-slot dinner
-		(type INSTANCE)
-;+		(allowed-classes CompleteMenu)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot breakfast
 		(type INSTANCE)
 ;+		(allowed-classes SimpleMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot dinner
+		(type INSTANCE)
+;+		(allowed-classes CompleteMenu)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot lunch
@@ -526,11 +558,6 @@
 (defclass CompleteMenu
 	(is-a USER)
 	(role concrete)
-	(single-slot firstCourse
-		(type INSTANCE)
-;+		(allowed-classes FirstCourse)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(multislot beverage
 		(type INSTANCE)
 ;+		(allowed-classes Beverage)
@@ -544,8 +571,49 @@
 		(type INSTANCE)
 ;+		(allowed-classes SecondCourse)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot firstCourse
+		(type INSTANCE)
+;+		(allowed-classes FirstCourse)
+;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
 (defclass %3AUNDEFINED
 	(is-a USER)
 	(role concrete))
+
+(defclass User
+	(is-a USER)
+	(role concrete)
+	(single-slot Sex
+		(type SYMBOL)
+		(allowed-values Man Woman)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Exercise+level%28days%2Fweek%29
+		(type INTEGER)
+		(range 0 7)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Age
+		(type INTEGER)
+		(range 0 150)
+		(default 0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Diseases
+		(type SYMBOL)
+		(allowed-values diabetes osteoporosis dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein ischemicCardiopathy arterialHypertension inflammatoryJoints goutHyperuricemia)
+		(create-accessor read-write))
+	(multislot Levels+%28Nombre+temporal%29
+;+		(comment "Es el nivel que tiene de una vitamina, zinc, etc.\n\nP.e. si tiene el primer valor é 1 significa que esta bajo de \"calcium\".\n\n(Siguiendo el orden de aparición en los ingredientes)")
+		(type INTEGER)
+		(range 0 10)
+		(cardinality 29 29)
+		(create-accessor read-write))
+	(single-slot Diet
+		(type SYMBOL)
+		(allowed-values Omnivora Vegetariana Vegana)
+		(default Omnivora)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))

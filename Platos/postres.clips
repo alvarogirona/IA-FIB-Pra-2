@@ -79,4 +79,10 @@
 	(ingredientsWeights 150.0)
   (link ""))
 
-		
+			([Postre11] of Dessert
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Melocoton")
+	(ingredients [Melocoton])
+	(ingredientsWeights 200.0)
+  (link ""))
