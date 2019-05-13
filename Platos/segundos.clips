@@ -2,7 +2,7 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
 	(dishName "Conejo guisado al estilo mediterráneo")
-	(ingredients [Conejo] [Tomate] [Zanahoria] [Cebolla] [Ajo] [AlmendraCruda] [PimientoVerde] [AceitunaNegra] [VinoBlanco] [AceiteOliva] [Sal])
+	(ingredients [Conejo] [Tomate] [Zanahoria] [Cebolla] [Ajo] [Almendra] [PimientoVerde] [AceitunaNegra] [VinoBlanco] [AceiteOliva] [Sal])
 	(ingredientsWeights 250.0 275.0 40.0 25.0 2.0 10.0 90.0 75.0 20.0 3.0 1.0)
   (link "https://www.cocina-familiar.com/conejo-guisado-al-estilo-mediterraneo.html"))
 
@@ -105,7 +105,7 @@
 	(ingredientsWeights 75.0 12.0 15.0 30.0 3.0 2.0)
 	(link "https://www.cocina-familiar.com/albondigas-de-pollo-con-salsa-de-tomate.html"))
 
-  ([Second10] of  SecondCourse
+  ([Second6] of  SecondCourse
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
 	(dishName "Estofado de ternera con patatas")
@@ -122,4 +122,75 @@
     [Sal])
 	(ingredientsWeights 150.0 100.0 50.0 50.0 40.0 30.0 2.0 15.0 3.0 2.0)
 	(link "https://www.cocina-familiar.com/estofado-de-ternera-con-patatas.html"))
+
+([Second10] of  SecondCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Tortilla de patata y calabacín")
+	(ingredients
+		[Patata]
+		[Huevo]
+	  [Calabacin]
+		[Cebolla]
+    [AceiteOliva]
+    [Sal])
+	(ingredientsWeights 90.0 90.0 30.0 30.0 3.0 2.0)
+	(link "https://www.cocina-familiar.com/tortilla-de-patata-y-calabacin-con-parmesano.html"))
+
+([Second11] of  SecondCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Pollo con salsa de limón")
+	(ingredients
+		[Pollo]
+		[Limon]
+		[AceiteOliva]
+    [Sal])
+	(ingredientsWeights 200.0 10.0 3.0 2.0)
+	(link "https://www.cocina-familiar.com/pollo-con-salsa-de-limon.html"))
+	
+([Second12] of  SecondCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Pollo a la plancha")
+	(ingredients
+		[Pollo]
+		[Sal]
+		[AceiteOliva])
+	(ingredientsWeights 200.0 3.0 2.0)
+	(link "https://cookpad.com/es/recetas/7254856-pechuga-de-pollo-a-la-plancha?via=search&search_term=pechuga%20de%20pollo%20a%20la%20plancha"))
+
+([Second13] of  SecondCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Hamburguesa de cerdo a la plancha")
+	(ingredients
+		[Cerdo]
+		[Sal]
+		[AceiteOliva])
+	(ingredientsWeights 175.0 3.0 2.0)
+	(link ""))
+
+	([Second14] of  SecondCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Hamburguesa de ternera a la plancha")
+	(ingredients
+		[Ternera]
+		[Sal]
+		[AceiteOliva])
+	(ingredientsWeights 175.0 3.0 2.0)
+	(link ""))
+
+	([Second15] of  SecondCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Hamburguesa de pollo a la plancha")
+	(ingredients
+		[Cerdo]
+		[Sal]
+		[AceiteOliva])
+	(ingredientsWeights 175.0 3.0 2.0)
+	(link ""))
+
 

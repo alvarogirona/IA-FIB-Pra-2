@@ -305,3 +305,96 @@
 
 
 ;% PRIMERA IMPORTACIÓN ACABA AQUÍ
+
+([Primero11] of  FirstCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Crema de calabacín con queso")
+	(ingredients
+		[Calabacin]
+		[Patata]
+		[Cebolla]
+    [AceiteOliva]
+    [Sal]
+    [QuesoPhiladelphia])
+	(ingredientsWeights 100.0 50.0 40.0 10.0 3.0 30.0)
+	(link "https://www.pequerecetas.com/receta/crema-calabacin-queso-thermomix/"))
+
+  ([Primero12] of  FirstCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Salmorejo")
+	(ingredients
+		[Tomate]
+		[Pan]
+    [AceiteOliva]
+    [Ajo])
+	(ingredientsWeights 200.0 50.0 40.0 4.0)
+	(link "https://www.pequerecetas.com/receta/salmorejo/"))
+
+ ([Primero13] of  FirstCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Puré de calabaza")
+	(ingredients
+		[Calabaza]
+		[Cebolleta]
+    [AceiteOliva]
+    [Ajo])
+	(ingredientsWeights 200.0 50.0 40.0 4.0)
+	(link "https://www.pequerecetas.com/receta/salmorejo/"))
+
+  
+ ([Primero14] of  FirstCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Puré de verduras")
+	(ingredients
+		[Zanahoria]
+		[Calabacin]
+    [Puerro]
+    [JudiaVerde]
+    [Patata]
+    [Sal]
+    [QuesoPhiladelphia]
+    [AceiteOliva])
+	(ingredientsWeights 70.0 50.0 60.0 40.0 3.0 30.0 4.0)
+	(link "https://www.pequerecetas.com/receta/pure-de-verduras-sano-y-delicioso/"))
+
+([Primero15] of  FirstCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Sopa de ajo")
+	(ingredients
+		[Ajo]
+		[Pan]
+    [Huevo]
+    [CaldoPollo])
+	(ingredientsWeights 30.0 50.0 50.0 250.0)
+	(link "http://recetasdecocina.elmundo.es/2015/10/sopa-ajo-castellana-receta-casera.html"))
+
+  ([Primero16] of  FirstCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Sopa de cebolla")
+	(ingredients
+		[Cebolla]
+		[AceiteOliva]
+    [Ajo]
+    [CaldoPollo])
+	(ingredientsWeights 120.0 10.0 10.0 250.0)
+	(link "http://recetasdecocina.elmundo.es/2015/02/sopa-de-cebolla-receta-facil.html"))
+
+  ([Primero17] of  FirstCourse
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Sopa de pollo y pasta")
+	(ingredients
+		[CaldoPollo]
+		[PimientoVerde]
+    [Cebolla]
+    [Pollo]
+    [Pasta])
+	(ingredientsWeights 250.0 40.0 30.0 50.0 50.0)
+	(link "http://recetasdecocina.elmundo.es/2013/09/sopa-pollo-receta-facil.html"))
+

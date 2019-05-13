@@ -1,0 +1,76 @@
+ ([Aperitivo1] of  Appetizer
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Manzana")
+	(ingredients
+		[Manzana])
+	(ingredientsWeights 200.0)
+	(link ""))
+
+([Aperitivo2] of  Appetizer
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Naranja")
+	(ingredients
+		[Naranja])
+	(ingredientsWeights 200.0)
+	(link ""))
+
+([Aperitivo3] of  Appetizer
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Pera")
+	(ingredients
+		[Pera])
+	(ingredientsWeights 200.0)
+	(link ""))
+
+([Aperitivo3] of  Appetizer
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Bocadillo jamón")
+	(ingredients
+		[Jamon]
+        [Pan])
+	(ingredientsWeights 20.0 100.0)
+	(link ""))
+
+([Aperitivo4] of  Appetizer
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Bocadillo pavo")
+	(ingredients
+		[Pavo]
+        [Pan])
+	(ingredientsWeights 20.0 100.0)
+	(link ""))
+
+([Aperitivo5] of  Appetizer
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Bocadillo queso")
+	(ingredients
+		[Queso]
+        [Pan])
+	(ingredientsWeights 20.0 100.0)
+	(link ""))
+
+([Aperitivo6] of  Appetizer
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Tostada con mantequilla")
+	(ingredients
+		[Mantequilla]
+        [Pan])
+	(ingredientsWeights 20.0 100.0)
+	(link ""))
+
+([Aperitivo3] of  Appetizer
+	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
+	(dishClassification Spanish)
+	(dishName "Bocadillo jamón")
+	(ingredients
+		[Jamon]
+        [Pan])
+	(ingredientsWeights 30.0 100.0)
+	(link ""))
