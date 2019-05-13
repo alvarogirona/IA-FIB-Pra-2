@@ -60,7 +60,7 @@ def create_ingredient_instance(row):
     }
 
     # quitar chromium, iode, molybdenum, vitaminD, vitamineK
-    # añadir kcals, monounsaturatedFat, v
+    # añadir Cholesterol, MonounsaturatedFat, PolyunsaturatedFat, Potassium, SaturatedFat, Sodium
     name = row[indexes["Name"]]
     calcium = row[indexes["Calcium_mg"]]
     calories = row[indexes["Energy_kcal"]]
