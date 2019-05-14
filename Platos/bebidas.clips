@@ -22,7 +22,7 @@
 	(dishName "Té con leche")
 	(ingredients
 		[Te]
-        [Leche])
+        	[Leche])
 	(ingredientsWeights 3.0 100.0)
 	(link ""))
 

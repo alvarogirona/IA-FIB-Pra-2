@@ -10,7 +10,7 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
 	(dishName "Atún con tomate y pimientos")
-	(ingredients [AtunFresco] [TomateFrito] [PimientoPiquillo] [AceiteOliva] [Sal])
+	(ingredients [Atun] [TomateFrito] [PimientoPiquillo] [AceiteOliva] [Sal])
 	(ingredientsWeights 250.0 125.0 75.0 10.0 1.0)
   (link "https://www.cocina-familiar.com/atun-con-tomate-y-pimientos.html"))
 
@@ -18,7 +18,7 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish French)
 	(dishName "Pechuga de pollo a la mostaza con patatas")
-	(ingredients [PechugaPollo] [Patata] [MostazaDijon] [AceiteOliva] [Sal])
+	(ingredients [PechugaPollo] [Patata] [Mostaza] [AceiteOliva] [Sal])
 	(ingredientsWeights 100.0 280.0 10.0 3.0 1.0)
   (link "https://www.cocina-familiar.com/pechugas-de-pollo-a-la-mostaza-con-patatas.html"))
 
@@ -45,7 +45,7 @@
 	(dishClassification Spanish)
 	(dishName "Carrilleras con salsa y puré de patata casero")
 	(ingredients
-		[CarilleraCerdo]
+		[CarrilleraCerdo]
 		[PimientoVerde]
 		[Zanahoria]
 		[Cebolla]
@@ -192,5 +192,7 @@
 		[AceiteOliva])
 	(ingredientsWeights 175.0 3.0 2.0)
 	(link ""))
+
+	
 
 
