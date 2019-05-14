@@ -1,4 +1,4 @@
-; Thu May 09 02:26:31 CEST 2019
+; Tue May 14 02:43:11 CEST 2019
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,11 +20,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[practica2-Protege_ProjectKB_Class20154]
-		[practica2-Protege_ProjectKB_Class20155]
-		[practica2-Protege_ProjectKB_Class20156]
-		[practica2-Protege_ProjectKB_Class20157]
-		[practica2-Protege_ProjectKB_Class20158]))
+		[practica2-Protege_ProjectKB_Class10078]
+		[practica2-Protege_ProjectKB_Class10079]
+		[practica2-Protege_ProjectKB_Class10080]
+		[practica2-Protege_ProjectKB_Class10081]
+		[practica2-Protege_ProjectKB_Class10082]))
 
 ([CLSES_TAB] of  Widget
 
@@ -65,7 +65,7 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_488680_Class3] of  Map
+([KB_425503_Class3] of  Map
 )
 
 ([KB_729440_Class0] of  String
@@ -76,9 +76,9 @@
 ([KB_729440_Class1] of  Map
 
 	(entries
-		[practica2-Protege_ProjectKB_Class20159]
-		[practica2-Protege_ProjectKB_Class20160]
-		[practica2-Protege_ProjectKB_Class20161]))
+		[practica2-Protege_ProjectKB_Class10083]
+		[practica2-Protege_ProjectKB_Class10084]
+		[practica2-Protege_ProjectKB_Class10085]))
 
 ([KB_729440_Class100] of  String
 
@@ -264,6 +264,52 @@
 ([practica2-Protege_ProjectKB_Class100] of  Property_List
 )
 
+([practica2-Protege_ProjectKB_Class10078] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([practica2-Protege_ProjectKB_Class10079] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([practica2-Protege_ProjectKB_Class10080] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([practica2-Protege_ProjectKB_Class10081] of  String
+
+	(name "SecondCourse")
+	(string_value "%3ANAME"))
+
+([practica2-Protege_ProjectKB_Class10082] of  String
+
+	(name "Ingredient")
+	(string_value "name"))
+
+([practica2-Protege_ProjectKB_Class10083] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([practica2-Protege_ProjectKB_Class10084] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([practica2-Protege_ProjectKB_Class10085] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
 ([practica2-Protege_ProjectKB_Class101] of  Widget
 
 	(height 60)
@@ -366,21 +412,7 @@
 	(property_list [practica2-Protege_ProjectKB_Class15])
 	(widget_class_name "ca.uvic.csr.shrimp.jambalaya.JambalayaTab"))
 
-([practica2-Protege_ProjectKB_Class149] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "vitamineD")
-	(property_list [practica2-Protege_ProjectKB_Class150])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 400)
-	(y 120))
-
 ([practica2-Protege_ProjectKB_Class15] of  Property_List
-)
-
-([practica2-Protege_ProjectKB_Class150] of  Property_List
 )
 
 ([practica2-Protege_ProjectKB_Class16] of  Widget
@@ -401,20 +433,6 @@
 	(y 180))
 
 ([practica2-Protege_ProjectKB_Class165] of  Property_List
-)
-
-([practica2-Protege_ProjectKB_Class168] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "vitamineK")
-	(property_list [practica2-Protege_ProjectKB_Class169])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 300)
-	(y 180))
-
-([practica2-Protege_ProjectKB_Class169] of  Property_List
 )
 
 ([practica2-Protege_ProjectKB_Class17] of  Property_List
@@ -533,66 +551,6 @@
 	(property_list [practica2-Protege_ProjectKB_Class21])
 	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
 
-([practica2-Protege_ProjectKB_Class20154] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([practica2-Protege_ProjectKB_Class20155] of  String
-
-	(name "SecondCourse")
-	(string_value "%3ANAME"))
-
-([practica2-Protege_ProjectKB_Class20156] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([practica2-Protege_ProjectKB_Class20157] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([practica2-Protege_ProjectKB_Class20158] of  String
-
-	(name "Ingredient")
-	(string_value "name"))
-
-([practica2-Protege_ProjectKB_Class20159] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([practica2-Protege_ProjectKB_Class20160] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([practica2-Protege_ProjectKB_Class20161] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([practica2-Protege_ProjectKB_Class204] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "chromium")
-	(property_list [practica2-Protege_ProjectKB_Class205])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 500)
-	(y 240))
-
-([practica2-Protege_ProjectKB_Class205] of  Property_List
-)
-
 ([practica2-Protege_ProjectKB_Class208] of  Widget
 
 	(height 60)
@@ -610,39 +568,11 @@
 ([practica2-Protege_ProjectKB_Class21] of  Property_List
 )
 
-([practica2-Protege_ProjectKB_Class212] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "iode")
-	(property_list [practica2-Protege_ProjectKB_Class213])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 100)
-	(y 310))
-
-([practica2-Protege_ProjectKB_Class213] of  Property_List
-)
-
 ([practica2-Protege_ProjectKB_Class22] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [practica2-Protege_ProjectKB_Class23])
 	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.InstanceTreeTab"))
-
-([practica2-Protege_ProjectKB_Class220] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "molybdenum")
-	(property_list [practica2-Protege_ProjectKB_Class221])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 200)
-	(y 310))
-
-([practica2-Protege_ProjectKB_Class221] of  Property_List
-)
 
 ([practica2-Protege_ProjectKB_Class224] of  Widget
 
@@ -963,9 +893,7 @@
 		[practica2-Protege_ProjectKB_Class107]
 		[practica2-Protege_ProjectKB_Class109]
 		[practica2-Protege_ProjectKB_Class111]
-		[practica2-Protege_ProjectKB_Class149]
 		[practica2-Protege_ProjectKB_Class164]
-		[practica2-Protege_ProjectKB_Class168]
 		[practica2-Protege_ProjectKB_Class172]
 		[practica2-Protege_ProjectKB_Class176]
 		[practica2-Protege_ProjectKB_Class178]
@@ -973,10 +901,7 @@
 		[practica2-Protege_ProjectKB_Class186]
 		[practica2-Protege_ProjectKB_Class192]
 		[practica2-Protege_ProjectKB_Class196]
-		[practica2-Protege_ProjectKB_Class204]
 		[practica2-Protege_ProjectKB_Class208]
-		[practica2-Protege_ProjectKB_Class212]
-		[practica2-Protege_ProjectKB_Class220]
 		[practica2-Protege_ProjectKB_Class224]
 		[practica2-Protege_ProjectKB_Class228]))
 
@@ -1135,8 +1060,8 @@
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[STANDARD_FACET_FORM_WIDGET]
 		[STANDARD_SLOT_FORM_WIDGET]
+		[STANDARD_FACET_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
 		[practica2-Protege_ProjectKB_Class78]
 		[STANDARD_CLASS_FORM_WIDGET])
