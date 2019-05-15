@@ -1,0 +1,18 @@
+([caca] of  Ingredient
+
+	(calcium 0.0)
+	(calories 0.0)
+	(carbohydrates 0.0)
+	(cholesterol 0.0)
+	(fiber 0.0)
+	(ingredientClassification hypertriglyceridemia arterialHypertension dysphagia)
+	(iron 0.0)
+	(magnesium 0.0)
+	(monounsaturatedFat 0.0)
+	(name "demo")
+	(polyunsaturatedFat 0.0)
+	(potassium 0.0)
+	(properties curated raw)
+	(protein 0.0)
+	(saturedFat 0.0)
+	(sodium 0.0))
