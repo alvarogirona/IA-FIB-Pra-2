@@ -60,7 +60,7 @@
 	(dishClassification Spanish)
 	(dishName "Tostada con mantequilla")
 	(ingredients
-		[Mantequilla]
+		[MantequillaSinSal]
         [Pan])
 	(ingredientsWeights 20.0 100.0)
 	(link ""))
@@ -72,7 +72,7 @@
 	(ingredients
 		[Pan]
         [Queso]
-		[Fresas])
+		[Fresa])
 	(ingredientsWeights 100.0 20.0 40.0)
 	(link ""))
 
