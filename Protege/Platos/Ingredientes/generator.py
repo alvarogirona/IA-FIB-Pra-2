@@ -122,15 +122,13 @@ def create_ingredient_instance(row):
 ingredients_file = open('ingredients.csv', 'r+')
 
 csv_reader = csv.reader(ingredients_file, delimiter=',')
+next(csv_reader)
+csv_reader = sorted(csv_reader, key=lambda row: (row[1]))
 
 output_file = open('generated_ingredients.clips', 'w+')
 
 line_count = 0
 for row in csv_reader:
-    if line_count == 0:
-        print(f'Column names are {", ".join(row)}')
-    else:
-        instance = create_ingredient_instance(row)
-        output_file.write(instance)
-        print(instance)
-    line_count += 1
+    instance = create_ingredient_instance(row)
+    output_file.write(instance)
+    print(instance)

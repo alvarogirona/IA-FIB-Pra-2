@@ -1,8 +1,8 @@
   ([Postre1] of Dessert
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
-	(dishName "Flan de leche de oveja")
-	(ingredients [LecheOveja] [Huevo] [Pinon] [Membrillo] [Nata] [Azucar])
+	(dishName "Flan de leche")
+	(ingredients [Leche] [Huevo] [Pinon] [Membrillo] [Nata] [Azucar])
 	(ingredientsWeights 62.5 32.5 18.75 2.5 12.5 25 3.125)
     (link "https://www.hogarmania.com/cocina/recetas/postres/201503/flan-leche-oveja-28433.html"))
 
@@ -58,7 +58,7 @@
 	(availability 10 11 12)
 	(dishClassification Spanish)
 	(dishName "Bizcocho de castañas")
-	(ingredients [Castana] [Harina] [Huevo] [Levadura] [Azucar] [Mantequilla])
+	(ingredients [Castana] [Harina] [Huevo] [Levadura] [Azucar] [MantequillaSinSal])
 	(ingredientsWeights 50.0 31.25 32.5 6.0 25.0 5.0)
   (link "https://www.hogarmania.com/cocina/recetas/postres/201810/bizcocho-castanas-41373.html"))
 
@@ -66,16 +66,16 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
 	(dishName "Flan de huevo")
-	(ingredients [Huevo] [Azucar] [Leche] [Nata] [Vainilla])
-	(ingredientsWeights 19.5 30.0 50.0 12.0 1.5)
+	(ingredients [Huevo] [Azucar] [Leche] [Nata])
+	(ingredientsWeights 19.5 30.0 50.0 12.0)
   (link "https://www.hogarmania.com/cocina/recetas/postres/201808/flan-huevo-40923.html"))
 
 
 	([Postre10] of Dessert
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
-	(dishName "Yogur natural")
-	(ingredients [Yogur])
+	(dishName "Yogurt natural")
+	(ingredients [Yogurt])
 	(ingredientsWeights 150.0)
   (link ""))
 
