@@ -1,4 +1,4 @@
-; Thu May 16 01:46:56 CEST 2019
+; Thu May 16 01:40:55 CEST 2019
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -15,11 +15,6 @@
 	(multislot availability
 		(type INTEGER)
 		(cardinality 1 12)
-		(create-accessor read-write))
-	(single-slot ingredientName
-		(type STRING)
-		(default "")
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot secondCourse
 		(type INSTANCE)
@@ -212,6 +207,11 @@
 		(type FLOAT)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+		(default "")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(multislot dishClassification
 		(type SYMBOL)
 		(allowed-values Vegan Spanish French Mexican Italian Japanese Chinese Thai)
@@ -337,11 +337,6 @@
 		(type SYMBOL)
 		(allowed-values curated raw)
 		(create-accessor read-write))
-	(single-slot ingredientName
-		(type STRING)
-		(default "")
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot potassium
 		(type FLOAT)
 		(default 0.0)
@@ -384,6 +379,11 @@
 	(single-slot vitamineB6
 		(type FLOAT)
 		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+		(default "")
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot fiber
@@ -520,3 +520,7 @@
 ;+		(allowed-classes SecondCourse)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
+
+(defclass %3AUNDEFINED
+	(is-a USER)
+	(role concrete))

@@ -1,4 +1,4 @@
-; Tue May 14 02:43:11 CEST 2019
+; Thu May 16 01:46:56 CEST 2019
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -65,7 +65,7 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_425503_Class3] of  Map
+([KB_026355_Class3] of  Map
 )
 
 ([KB_729440_Class0] of  String
@@ -271,7 +271,7 @@
 
 ([practica2-Protege_ProjectKB_Class10079] of  String
 
-	(name ":META-CLASS")
+	(name "SecondCourse")
 	(string_value "%3ANAME"))
 
 ([practica2-Protege_ProjectKB_Class10080] of  String
@@ -281,13 +281,13 @@
 
 ([practica2-Protege_ProjectKB_Class10081] of  String
 
-	(name "SecondCourse")
+	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
 ([practica2-Protege_ProjectKB_Class10082] of  String
 
 	(name "Ingredient")
-	(string_value "name"))
+	(string_value "ingredientName"))
 
 ([practica2-Protege_ProjectKB_Class10083] of  Map_Entry
 
@@ -1060,8 +1060,8 @@
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[STANDARD_SLOT_FORM_WIDGET]
 		[STANDARD_FACET_FORM_WIDGET]
+		[STANDARD_SLOT_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
 		[practica2-Protege_ProjectKB_Class78]
 		[STANDARD_CLASS_FORM_WIDGET])

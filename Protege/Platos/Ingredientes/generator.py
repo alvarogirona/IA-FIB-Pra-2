@@ -100,7 +100,7 @@ def create_ingredient_instance(row):
 	(iron {iron})
 	(magnesium {magnesium})
 	(monounsaturatedFat {monounsaturatedFat})
-	(name "{name}")
+	(ingredientName "{name}")
 	(polyunsaturatedFat {polyunsaturatedFat})
 	(potassium {potassium})
 	(protein {protein})

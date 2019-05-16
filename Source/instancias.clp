@@ -1,3 +1,10 @@
+
+;
+;	INSTANCIAS
+;	
+
+(definstances instances
+
 ; Thu May 16 01:46:56 CEST 2019
 ; 
 ;+ (version "3.5")
@@ -3256,3 +3263,8 @@
 	(vitamineC 0.06555556)
 	(vitamineE 0.66)
 	(zinc 0.24))
+
+)
+
+
+
