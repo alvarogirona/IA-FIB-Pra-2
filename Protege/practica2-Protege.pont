@@ -1,4 +1,4 @@
-; Thu May 16 01:46:56 CEST 2019
+; Fri May 17 00:14:50 CEST 2019
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -198,6 +198,9 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(multislot dishAttributes
+		(type STRING)
+		(create-accessor read-write))
 	(single-slot monounsaturatedFat
 		(type FLOAT)
 		(default 0.0)
@@ -282,6 +285,9 @@
 (defclass Dish
 	(is-a USER)
 	(role abstract)
+	(multislot dishAttributes
+		(type STRING)
+		(create-accessor read-write))
 	(multislot ingredientsWeights
 		(type FLOAT)
 		(cardinality 1 ?VARIABLE)
@@ -333,10 +339,6 @@
 (defclass Ingredient
 	(is-a USER)
 	(role concrete)
-	(multislot properties
-		(type SYMBOL)
-		(allowed-values curated raw)
-		(create-accessor read-write))
 	(single-slot ingredientName
 		(type STRING)
 		(default "")
@@ -346,10 +348,6 @@
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(multislot ingredientClassification
-		(type SYMBOL)
-		(allowed-values dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein ischemicCardiopathy arterialHypertension diabetes osteoporosis inflammatoryJoints goutHyperuricemia)
 		(create-accessor read-write))
 	(single-slot cholesterol
 		(type FLOAT)
