@@ -2,97 +2,123 @@
 ;	NUTRIENTS LIMITS
 ; 8===========D
 
-(deftemplate vitaminsAmount
-	(slot vitA)
-	(slot vitB2)
-	(slot vitB3)
-	(slot vitB6)
-	(slot vitB9)
-	(slot vitB12)
-	(slot vitC)
-	(slot VitE)
-)
+; (deftemplate vitaminsAmount
+; 	(slot vitA)
+; 	(slot vitB2)
+; 	(slot vitB3)
+; 	(slot vitB6)
+; 	(slot vitB9)
+; 	(slot vitB12)
+; 	(slot vitC)
+; 	(slot VitE)
+; )
 
-([MinVitMan] of vitaminsAmount
-	(vitA 900.0)
-	(vitB2 2.4)
-	(vitB3 16.0)
-	(vitB6 1.7)
-	(vitB9 400)
-	(vitB12 2.4)
-	(vitC 90.0)
-	(vitE 15.0)
-)
 
-([MinVitWoman] of vitaminsAmount
-	(vitA 700)
-	(vitB2 0.0)
-	(vitB3 14.0)
-	(vitB6 1.7)
-	(vitB9 400)
-	(vitB12 2.4)
-	(vitC 75)
-	(vitE 15)
-)
 
-([MaxVitManWoman] of vitaminsAmount
-	(vitA 3000.0)
-	(vitB2 999999.0)
-	(vitB3 35.0)
-	(vitB6 100.0)
-	(vitB9 1000.0)
-	(vitB12 999999.0)
-	(vitC 2000.0)
-	(vitE 1000.0)
-)
+; (deftemplate macronutrientsAmount
+; 	(slot name)
+; 	(slot proteinsMult)
+; 	(slot lipidsMult)
+; 	(slot saturatedMult)
+; 	(slot cholesterolMax)
+; 	(slot carbsMult)
+; )
 
-(deftemplate mineralsAmount
-	(slot calcium)
-	(slot copper)
-	(slot magnesium)
-	(slot selenium)
-	(slot zinc)
-)
+; (assert 
+; 	(macronutrientsAmount
+; 		(name "macrosAmount")
+; 		(vitA 900.0)
+; 		(vitB2 2.4)
+; 		(vitB3 16.0)
+; 		(vitB6 1.7)
+; 		(vitB9 400)
+; 		(vitB12 2.4)
+; 		(vitC 90.0)
+; 		(vitE 15.0)
+; 	)
+; )
 
-([MaxMineralMan] of mineralsAmount
-	(calcium 1200.0)
-	(copper 900.0)
-	(magnesium 420.0)
-	(selenium 55.0)
-	(zinc )
-)
 
-([MaxMineralWoman] of mineralsAmount
-	(calcium 1200.0)
-	(copper 900.0)
-	(magnesium 320.0)
-	(selenium 55.0)
-	(zinc 8.0)
-)
+; (deftemplate MAIN::mineralsAmount
+; 	(slot calciumA)
+; 	(slot copperA)
+; 	(slot magnesiumA)
+; 	(slot seleniumA)
+; 	(slot zincA)
+; )
 
-([MaxMineralManWoman] of mineralsAmount
-	(calcium 2500.0)
-	(copper 10000.0)
-	(magnesium 700.0)
-	(selenium 400.0)
-	(zinc 40.0)
-)
+; ([MinVitMan] of vitaminsAmount
+; 	(vitA 900.0)
+; 	(vitB2 2.4)
+; 	(vitB3 16.0)
+; 	(vitB6 1.7)
+; 	(vitB9 400)
+; 	(vitB12 2.4)
+; 	(vitC 90.0)
+; 	(vitE 15.0)
+; )
 
-(deftemplate macronutrientsAmount
-	(slot proteinsMult)
-	(slot lipidsMult)
-	(slot saturatedMult)
-	(slot cholesterolMult)
-	(slot carbsMult)
-)
+; (deffacts initAmounts
+; 	(vitaminsAmount (
+; 		(vitA 700)
+; 		(vitB2 0.0)
+; 		(vitB3 14.0)
+; 		(vitB6 1.7)
+; 		(vitB9 400)
+; 		(vitB12 2.4)
+; 		(vitC 75)
+; 		(vitE 15))
+; 	)
+; )
 
-([macrosAmount] of macronutrientsAmount
-	(proteinsMult 1.25)
-	(lipidsMult)
-	(saturatedMult)
-	(cholesterolMult)
-	(carbsMult)
-)
+
+; ([MaxVitManWoman] of vitaminsAmount
+; 	(vitA 3000.0)
+; 	(vitB2 999999.0)
+; 	(vitB3 35.0)
+; 	(vitB6 100.0)
+; 	(vitB9 1000.0)
+; 	(vitB12 999999.0)
+; 	(vitC 2000.0)
+; 	(vitE 1000.0)
+; )
+
+
+; ([MaxMineralMan] of mineralsAmount
+; 	(calcium 1200.0)
+; 	(copper 900.0)
+; 	(magnesium 420.0)
+; 	(selenium 55.0)
+; 	(zinc )
+; )
+
+; (assert(mineralsAmount
+; 	(calciumA 1200.0)
+; 	(copperA 900.0)
+; 	(magnesiumA 320.0)
+; 	(seleniumA 55.0)
+; 	(zincA 8.0)))
+
+; ([MaxMineralManWoman] of mineralsAmount
+; 	(calcium 2500.0)
+; 	(copper 10000.0)
+; 	(magnesium 700.0)
+; 	(selenium 400.0)
+; 	(zinc 40.0)
+; )
+
+; ;multiplication factor for weightdieg
+; ([macrosAmount] of macronutrientsAmount
+; 	(proteinsMult 1.25)
+; 	(lipidsMult 0.325)
+; 	(saturatedMult 0.085)
+; 	(cholesterolMax 300) ;mg
+; 	(carbsMult 0.5)
+; )
+
+
+;fibra recomendada es 25
+; (assert fiberAmount 25.0)
 
 ; 8===========D
 ;	FUNCTIONS
@@ -148,17 +174,18 @@
 	(initial-fact)
 	=>
 	(printout t crlf)
-    (printout t "                                                           _          " crlf)  
-    (printout t "  /\\/\\   ___ _ __  _   _    __ _  ___ _ __   ___ _ __ __ _| |_ ___  _ __ " crlf)
-    (printout t " /    \\ / _ \\ '_ \\| | | |  / _` |/ _ \\ '_ \\ / _ \\ '__/ _` | __/ _ \\| '__|" crlf)
-    (printout t "/ /\\/\\ \\  __/ | | | |_| | | (_| |  __/ | | |  __/ | | (_| | || (_) | |   " crlf)
-    (printout t "\\/    \\/\\___|_| |_|\\__,_|  \\__, |\\___|_| |_|\\___|_|  \\__,_|\\__\\___/|_|   " crlf)
-    (printout t "                           |___/                                         " crlf)
+    (printout t "   ______                               __                  __                                       " crlf)
+    (printout t "  / ____/__  ____  ___  _________ _____/ /___  _____   ____/ /__     ____ ___  ___  ____  __  _______" crlf)
+    (printout t " / / __/ _ \\/ __ \\/ _ \\/ ___/ __ `/ __  / __ \\/ ___/  / __  / _ \\   / __ `__ \\/ _ \\/ __ \\/ / / / ___/" crlf)
+    (printout t "/ /_/ /  __/ / / /  __/ /  / /_/ / /_/ / /_/ / /     / /_/ /  __/  / / / / / /  __/ / / / /_/ (__  ) " crlf)
+    (printout t "\\____/\\___/_/ /_/\\___/_/   \\__,_/\\__,_/\\____/_/      \\__,_/\\___/  /_/ /_/ /_/\\___/_/ /_/\\__,_/____/  " crlf)
 	(printout t crlf)
+	(printout t "Este programa genera un menú semanal para personas de edad avanzada."crlf)
 	(assert (user))	;usuario
 	(focus GETUSERINFO)
 )
-
+    
+                                                                                                     
 ; 8===========D
 ; QUESTIONS
 ; 8===========D
@@ -200,7 +227,7 @@
 (defrule GETUSERINFO::askPhysicalActivity "rule to know user's physical activity"
 	(user)
 	=>
-	(bind ?question (numericalQuestion "¿Con qué frecuencia práctica ejercicio? [Nunca(1), Apenas(2), A veces(3), Frecuentemente(4)]: " 1 4))
+	(bind ?question (numericalQuestion "¿Con qué frecuencia práctica ejercicio? ([1]Nunca, [2]Apenas, [3]A veces, [4]Frecuentemente) " 1 4))
 	(switch ?question
 	;quizás hace falta cambiar el valor asociado
 		(case 1 then (assert(activity 0)))
@@ -224,12 +251,21 @@
 	)
 )
 	
-(defrule GETUSERINFO::askFoodAllergies "rule to know if user has food allergies, and which"
+(defrule GETUSERINFO::askFoodAllergies "rule to know if user has food allergies/intolerances, and which"
+	(user)
+	=>
+	(if (booleanQuestion "¿Tiene alguna alergia/intolerancia alimentaria? (Sí/No) ")
+		then 
+			(bind ?question (multipleQuestion "Escriba los alimentos los cuales tiene alergia/intolerancia (en singular, separados por espacios: "))
+			(assert(allergy ?question))
+	)
+)
+(defrule GETUSERINFO::askFood "rule to know if which food the user dislikes, and which"
 	(user)
 	=>
 	(if (booleanQuestion "¿Tiene alguna alergia alimentaria? (Sí/No) ")
 		then 
-			(bind ?question (multipleQuestion "Escriba los alimentos los cuales tiene alergia (en singular, separatdos por espacios: "))
+			(bind ?question (multipleQuestion "¿Qué alimentos le disgustan? (en singular, separados por espacios: "))
 			(assert(allergy ?question))
 	)
 )
@@ -262,6 +298,8 @@
 			(assert(disease ?diseases))
 		)
 )
+; 8===========D
+; GENERATOR
 
 ;
 ; TEST
