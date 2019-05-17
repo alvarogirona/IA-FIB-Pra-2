@@ -7,6 +7,7 @@
 (load p2.pons)
 (load ingredients.clp)
 (load dishes.clp)
+(load amounts.clp)
 
 (reset)
 (load program.clp)
