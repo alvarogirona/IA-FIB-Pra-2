@@ -62,10 +62,26 @@
     (printout t "\\____/\\___/_/ /_/\\___/_/   \\__,_/\\__,_/\\____/_/      \\__,_/\\___/  /_/ /_/ /_/\\___/_/ /_/\\__,_/____/  " crlf)
 	(printout t crlf)
 	(printout t "Este programa genera un menú semanal para personas de edad avanzada."crlf)
-	(assert (user))	;usuario
+	;(assert (user))	;usuario
+	(assert (debug))
 	(focus GETUSERINFO)
 )
-    
+
+(defrule MAIN::debugRule "debug"
+	(debug)
+	=>
+	(printout t crlf "DEBUG" crlf)
+	(assert (gender Man))
+	(assert (age 66))
+	(assert (weight 80))
+	(assert (height 175))
+	(assert (diet vegan))
+	(assert (allergy huevo pavo))
+	(assert (activity 1.3))
+	(assert (fooddislikes leche))
+	(assert (diseases (create$ dysphagia hyperlipidemia)))
+	(focus RESTRICTIONS)
+)
                                                                                                      
 ; 8===========D
 ; QUESTIONS
@@ -80,8 +96,8 @@
 	=>
 	(bind ?question (choiceQuestion "¿Cuál es su género biológico? (Mujer Hombre) " (create$ mujer hombre)))
 	(switch ?question
-		(case M then (assert(gender Man)))
-		(case W then (assert(gender Woman)))
+		(case M then (assert(gender man)))
+		(case W then (assert(gender woman)))
 	)
 )
 
@@ -111,10 +127,10 @@
 	(bind ?question (numericalQuestion "¿Con qué frecuencia práctica ejercicio? ([1]Nunca, [2]Apenas, [3]A veces, [4]Frecuentemente) " 1 4))
 	(switch ?question
 	;quizás hace falta cambiar el valor asociado
-		(case 1 then (assert(activity 0)))
-		(case 2 then (assert(activity 1)))
-		(case 3 then (assert(activity 2)))
-		(case 4 then (assert(activity 3)))
+		(case 1 then (assert(activity 1)))
+		(case 2 then (assert(activity 1.3)))
+		(case 3 then (assert(activity 1.5)))
+		(case 4 then (assert(activity 1.6)))
 	)
 )
 
@@ -177,34 +193,60 @@
 			)
 			(assert(disease ?diseases))
 		)
+	(focus RESTRICTIONS)	
 )
 ; 8===========D
 ; GENERATOR
 ; 8===========D
-(defmodule GENERATEMENUS
+
+                           
+(defmodule RESTRICTIONS
 		(import MAIN ?ALL)
 		(import GETUSERINFO ?ALL)
 		(export ?ALL)
 )
-(defrule GENERATEMENUS::dishPermutation "rule to kn"
-	(user)
+(defrule RESTRICTIONS::generateRecommendedCalories "Rule to define the recommended value of daily calories "
+	(gender ?gender)
+	(age ?age)
+	(weight ?weight)
+	(height ?height)
+	(activity ?activity)
 	=>
-	(bind ?question (numericalQuestion "¿Cuál es su altura (en kilogramos)? [40,300]: " 40 300))
-    (assert(weight ?question))
+	(bind ?geb)
+	(if (eq ?gender woman)
+		then 
+			(bind ?geb (+ 655.1 (-(+(* 9.6 ?weight) (* 1.85 ?height)) (* 4.68 ?age))))
+		else
+			(bind ?geb (+ 66.47 (-(+(* 13.75 ?weight) (* 5 ?height))(* 6.76 ?age))))
+	)		
+	b*f+b/9
+	(bind ?recommendedCalories (+ (div ?geb 9 )(* ?geb ?activity)))
+	(assert (recommendedCalories ?recommendedCalories))
 )
-
 ;
 ; TEST
 ;
 (defrule test
-    (allergy ?g) 
+    (recommendedCalories ?g) 
+	(gender ?gender)
+	(age ?age)
+	(weight ?weight)
+	(height ?height)
+	(activity ?activity)
     => 
-    (printout t ?g)
+    (printout t "Género: "?gender crlf)
+    (printout t "Edad: "?age crlf)
+    (printout t "Peso: "?weight crlf)
+    (printout t "Altura: "?height crlf)
+    (printout t "Actividad: "?activity crlf)
+	
+    (printout t "calorias recomendadas: "?g crlf)
 )
 
 (defrule test2
-    (disease $?r) 
+    (diseases $?r) 
     => 
+	(printout t "Enfermedades" crlf)
     (loop-for-count (?i 1 (length$ ?r)) do
 		(bind ?aux (nth$ ?i ?r))
 		(printout t ?aux crlf)
