@@ -29,6 +29,7 @@
 	(slot copper)
 	(slot magnesium)
 	(slot selenium)
+    (slot sodium)
 	(slot zinc)
 )
 
@@ -76,6 +77,7 @@
         (copper 900.0)
         (magnesium 420.0)
         (selenium 55.0)
+        (sodium 2.3)
         (zinc 11.0)
     )
 
@@ -86,6 +88,7 @@
         (copper 900.0)
         (magnesium 320.0)
         (selenium 55.0)
+        (sodium 2.3)
         (zinc 8.0)
     )
 
@@ -96,6 +99,7 @@
         (copper 10000.0)
         (magnesium 700.0)
         (selenium 400.0)
+        (sodium 2.8)
         (zinc 40.0)
     )
 
