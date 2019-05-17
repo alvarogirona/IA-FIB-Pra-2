@@ -144,15 +144,14 @@
 (defrule GETUSERINFO::askFood "rule to know if which food the user dislikes, and which"
 	(user)
 	=>
-	(if (booleanQuestion "¿Tiene alguna alergia alimentaria? (Sí/No) ")
+	(if (booleanQuestion "¿Le disgusta algún alimento? (Sí/No) ")
 		then 
 			(bind ?question (multipleQuestion "¿Qué alimentos le disgustan? (en singular, separados por espacios: "))
-			(assert(allergy ?question))
+			(assert(fooddilikes ?question))
 	)
 )
 
 (defrule GETUSERINFO::askDiseases "rule to know if user has diseas that can affect the diet"
-    (declare (salience 9))
 	(user)
 	=>
 	(if (booleanQuestion "Tiene algún transtorno/enfermedad que pueda afectar a su dieta? (Sí/No) ")
@@ -181,6 +180,18 @@
 )
 ; 8===========D
 ; GENERATOR
+; 8===========D
+(defmodule GENERATEMENUS
+		(import MAIN ?ALL)
+		(import GETUSERINFO ?ALL)
+		(export ?ALL)
+)
+(defrule GENERATEMENUS::dishPermutation "rule to kn"
+	(user)
+	=>
+	(bind ?question (numericalQuestion "¿Cuál es su altura (en kilogramos)? [40,300]: " 40 300))
+    (assert(weight ?question))
+)
 
 ;
 ; TEST
