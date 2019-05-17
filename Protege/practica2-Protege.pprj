@@ -1,4 +1,4 @@
-; Fri May 17 02:51:08 CEST 2019
+; Fri May 17 05:03:39 CEST 2019
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,11 +20,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[practica2-Protege_ProjectKB_Class20115]
-		[practica2-Protege_ProjectKB_Class20116]
-		[practica2-Protege_ProjectKB_Class20117]
-		[practica2-Protege_ProjectKB_Class20118]
-		[practica2-Protege_ProjectKB_Class20119]))
+		[practica2-Protege_ProjectKB_Class10078]
+		[practica2-Protege_ProjectKB_Class10079]
+		[practica2-Protege_ProjectKB_Class10080]
+		[practica2-Protege_ProjectKB_Class10081]
+		[practica2-Protege_ProjectKB_Class10082]))
 
 ([CLSES_TAB] of  Widget
 
@@ -65,9 +65,6 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_479888_Class3] of  Map
-)
-
 ([KB_729440_Class0] of  String
 
 	(name "factory_class_name")
@@ -76,9 +73,9 @@
 ([KB_729440_Class1] of  Map
 
 	(entries
-		[practica2-Protege_ProjectKB_Class20120]
-		[practica2-Protege_ProjectKB_Class20121]
-		[practica2-Protege_ProjectKB_Class20122]))
+		[practica2-Protege_ProjectKB_Class10083]
+		[practica2-Protege_ProjectKB_Class10084]
+		[practica2-Protege_ProjectKB_Class10085]))
 
 ([KB_729440_Class100] of  String
 
@@ -172,6 +169,9 @@
 	(name "classes_file_name")
 	(string_value "practica2-Protege.pont"))
 
+([KB_841183_Class3] of  Map
+)
+
 ([LAYOUT_PROPERTIES] of  Property_List
 
 	(name "layout properties")
@@ -263,6 +263,52 @@
 
 ([practica2-Protege_ProjectKB_Class100] of  Property_List
 )
+
+([practica2-Protege_ProjectKB_Class10078] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([practica2-Protege_ProjectKB_Class10079] of  String
+
+	(name "SecondCourse")
+	(string_value "%3ANAME"))
+
+([practica2-Protege_ProjectKB_Class10080] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([practica2-Protege_ProjectKB_Class10081] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([practica2-Protege_ProjectKB_Class10082] of  String
+
+	(name "Ingredient")
+	(string_value "ingredientName"))
+
+([practica2-Protege_ProjectKB_Class10083] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([practica2-Protege_ProjectKB_Class10084] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([practica2-Protege_ProjectKB_Class10085] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
 
 ([practica2-Protege_ProjectKB_Class101] of  Widget
 
@@ -504,52 +550,6 @@
 	(is_hidden TRUE)
 	(property_list [practica2-Protege_ProjectKB_Class21])
 	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
-
-([practica2-Protege_ProjectKB_Class20115] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([practica2-Protege_ProjectKB_Class20116] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([practica2-Protege_ProjectKB_Class20117] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([practica2-Protege_ProjectKB_Class20118] of  String
-
-	(name "SecondCourse")
-	(string_value "%3ANAME"))
-
-([practica2-Protege_ProjectKB_Class20119] of  String
-
-	(name "Ingredient")
-	(string_value "ingredientName"))
-
-([practica2-Protege_ProjectKB_Class20120] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([practica2-Protege_ProjectKB_Class20121] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([practica2-Protege_ProjectKB_Class20122] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
 
 ([practica2-Protege_ProjectKB_Class208] of  Widget
 
@@ -1060,8 +1060,8 @@
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[STANDARD_SLOT_FORM_WIDGET]
 		[STANDARD_FACET_FORM_WIDGET]
+		[STANDARD_SLOT_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
 		[practica2-Protege_ProjectKB_Class78]
 		[STANDARD_CLASS_FORM_WIDGET])
