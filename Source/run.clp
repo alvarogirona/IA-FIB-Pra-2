@@ -4,7 +4,7 @@
 
 (clear)
 
-(load p2.pons)
+(load defclasses.clp)
 (load ingredients.clp)
 (load dishes.clp)
 (load amounts.clp)
@@ -13,4 +13,3 @@
 (load program.clp)
 
 (run)
-

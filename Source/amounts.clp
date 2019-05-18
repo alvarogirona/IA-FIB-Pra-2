@@ -16,11 +16,10 @@
 
 (deftemplate macronutrientsAmount
 	(slot name)
-	(slot proteinsMult)
-	(slot lipidsMult)
-	(slot saturatedMult)
+	(slot proteins)
+	(slot saturated)
 	(slot cholesterolMax)
-	(slot carbsMult)
+	(slot carbs)
 )
 
 (deftemplate mineralsAmount
@@ -31,7 +30,13 @@
 	(slot selenium)
     (slot sodium)
 	(slot zinc)
+	(slot fiber)
+	(slot iron)
+	(slot potassium)
 )
+;fiber 19 infinito 27
+;iron 8 a 10
+;potassium 3,500–4,700
 
 
 ; (defrule find_title
