@@ -5,32 +5,32 @@
 ;	FUNCTIONS
 ; 8===========D
 (deffunction MAIN::generalQuestion (?question)
-	(format t "%s" ?question)
+	(printout t ?question)
 	(bind ?answer (read))
 	?answer
 )
 
 (deffunction MAIN::numericalQuestion (?question ?min ?max)
-	(format t "%s" ?question)
+	(printout t ?question)
 	(bind ?answer (read))
 	(while (not(and(>= ?answer ?min)(<= ?answer ?max))) do
-		(format t "%s" ?question)
+		(printout t ?question)
 		(bind ?answer (read))
 	)
 	?answer
 )
 
 (deffunction MAIN::choiceQuestion (?question $?values)
-    (format t "%s" ?question)
+    (printout t ?question)
     (bind ?answer (read))
     (while (not (member (lowcase ?answer) ?values)) do
-        (format t "%s" ?question)
+        (printout t ?question)
         (bind ?answer (read))
     )
 	(lowcase ?answer)
 )
 (deffunction MAIN::booleanQuestion (?question)
-    (format t "%s" ?question)
+    (printout t ?question)
     (bind ?answer (read))
     (if (or (eq (lowcase ?answer) si) (eq (lowcase ?answer)s))
 		then TRUE
@@ -38,7 +38,7 @@
 	)
 )
 (deffunction MAIN::multipleQuestion(?question)
-	(format t "%s" ?question)
+	(printout t ?question)
 	(bind ?answer (readline))
 	(bind ?answer (str-explode (lowcase ?answer)))
 	?answer
@@ -62,42 +62,28 @@
     (printout t "\\____/\\___/_/ /_/\\___/_/   \\__,_/\\__,_/\\____/_/      \\__,_/\\___/  /_/ /_/ /_/\\___/_/ /_/\\__,_/____/  " crlf)
 	(printout t crlf)
 	(printout t "Este programa genera un menú semanal para personas de edad avanzada."crlf)
-	;(assert (user))	;usuario
-	(assert (debug))
+	(assert (user))	;usuario
+	;(assert (debug))
 	(focus GETUSERINFO)
 )
 
-(defrule MAIN::debugRule "debug"
-	(debug)
-	=>
-	(printout t crlf "DEBUG" crlf)
-	(assert (gender Man))
-	(assert (age 66))
-	(assert (weight 80))
-	(assert (height 175))
-	(assert (diet vegan))
-	(assert (allergy huevo pavo))
-	(assert (activity 1.3))
-	(assert (fooddislikes leche))
-	(assert (diseases (create$ dysphagia hyperlipidemia)))
-	(focus RESTRICTIONS)
-)
                                                                                                      
 ; 8===========D
 ; QUESTIONS
 ; 8===========D
 (defmodule GETUSERINFO
 		(import MAIN ?ALL)
+		(import RESTRICTIONS)
 		(export ?ALL)
 )
 
-(defrule GETUSERINFO::askGenere "rule to know user's gender"
+(defrule GETUSERINFO::askGender "rule to know user's gender"
 	(user)
 	=>
 	(bind ?question (choiceQuestion "¿Cuál es su género biológico? (Mujer Hombre) " (create$ mujer hombre)))
 	(switch ?question
-		(case M then (assert(gender man)))
-		(case W then (assert(gender woman)))
+		(case hombre then (assert(gender man)))
+		(case mujer then (assert(gender woman)))
 	)
 )
 
@@ -111,7 +97,7 @@
 (defrule GETUSERINFO::askWeight "rule to know user's weight"
 	(user)
 	=>
-	(bind ?question (numericalQuestion "¿Cuál es su altura (en kilogramos)? [40,300]: " 40 300))
+	(bind ?question (numericalQuestion "¿Cuál es su peso (en kilogramos)? [40,300]: " 40 300))
     (assert(weight ?question))
 )
 
@@ -139,12 +125,20 @@
 	=>
 	(if (booleanQuestion "¿Es vegano? (Sí/No) ")
 		then 
-			(assert(vegan vegan))
+			(assert(dietType vegan))
 		else 
 			(if (booleanQuestion "¿Es vegetariano? (Sí/No) ")
-				then (assert(vegan vegetarian))
-				else (assert(vegan normal))
+				then (assert(dietType vegetarian))
 			)
+	)
+)
+(defrule GETUSERINFO::askFood "rule to know if which food the user dislikes, and which"
+	(user)
+	=>
+	(if (booleanQuestion "¿Le disgusta algún alimento? (Sí/No) ")
+		then 
+			(bind ?question (multipleQuestion "¿Qué alimentos le disgustan? (en singular, separados por espacios: "))
+			(assert(foodislikes ?question))
 	)
 )
 	
@@ -157,19 +151,12 @@
 			(assert(allergy ?question))
 	)
 )
-(defrule GETUSERINFO::askFood "rule to know if which food the user dislikes, and which"
-	(user)
-	=>
-	(if (booleanQuestion "¿Le disgusta algún alimento? (Sí/No) ")
-		then 
-			(bind ?question (multipleQuestion "¿Qué alimentos le disgustan? (en singular, separados por espacios: "))
-			(assert(fooddilikes ?question))
-	)
-)
 
 (defrule GETUSERINFO::askDiseases "rule to know if user has diseas that can affect the diet"
+    (declare (salience -1))
 	(user)
 	=>
+	(bind ?diseases (create$))
 	(if (booleanQuestion "Tiene algún transtorno/enfermedad que pueda afectar a su dieta? (Sí/No) ")
 		then 
    			(printout t "[1] Disfagia" crlf
@@ -180,19 +167,17 @@
     					"[6] Hipertensión arterial" crlf
     					"[7] Diabetes" crlf
     					"[8] Osteoporosis" crlf
-    					"[9] Articulaciones inflamatorias" crlf
-    					"[10] Hiperuricemia de gota" crlf)
+    					"[9] Articulaciones inflamatorias" crlf)
 			(bind ?position (multipleQuestion "Escriba los números asociados a los transtornos/enfermedades que tiene (separados por espacios): "))
  			(bind ?list (create$ dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein 
 			 				ischemicCardiopathy arterialHypertension diabetes osteoporosis inflammatoryJoints goutHyperuricemia))
-			(bind ?diseases (create$))
 			(loop-for-count(?i 1 (length$ ?position)) do
 				(bind ?number (nth$ ?i ?position))
 				(bind ?disease (nth$ ?number ?list))
 				(bind ?diseases (insert$ ?diseases 1 ?disease ))
 			)
-			(assert(disease ?diseases))
 		)
+	(assert(disease ?diseases))	
 	(focus RESTRICTIONS)	
 )
 ; 8===========D
@@ -212,54 +197,26 @@
 	(height ?height)
 	(activity ?activity)
 	=>
-	(bind ?geb)
+	(bind ?factor)
 	(if (eq ?gender woman)
 		then 
-			(bind ?geb (+ 655.1 (-(+(* 9.6 ?weight) (* 1.85 ?height)) (* 4.68 ?age))))
+			(bind ?factor (+ 655.1 (-(+(* 9.6 ?weight) (* 1.85 ?height)) (* 4.68 ?age))))
 		else
-			(bind ?geb (+ 66.47 (-(+(* 13.75 ?weight) (* 5 ?height))(* 6.76 ?age))))
+			(bind ?factor (+ 66.47 (-(+(* 13.75 ?weight) (* 5 ?height))(* 6.76 ?age))))
 	)		
 	b*f+b/9
-	(bind ?recommendedCalories (+ (div ?geb 9 )(* ?geb ?activity)))
-	(assert (recommendedCalories ?recommendedCalories))
+	(bind ?calories (+ (div ?factor 9 )(* ?factor ?activity)))
+	(assert (recommendedCalories ?calories))
 )
+
 ;
-; TEST
-;
-(defrule test
-    (recommendedCalories ?g) 
-	(gender ?gender)
-	(age ?age)
-	(weight ?weight)
-	(height ?height)
-	(activity ?activity)
-    => 
-    (printout t "Género: "?gender crlf)
-    (printout t "Edad: "?age crlf)
-    (printout t "Peso: "?weight crlf)
-    (printout t "Altura: "?height crlf)
-    (printout t "Actividad: "?activity crlf)
-	
-    (printout t "calorias recomendadas: "?g crlf)
-)
+; Outputa cosas
 
-(defrule test2
-    (diseases $?r) 
-    => 
-	(printout t "Enfermedades" crlf)
-    (loop-for-count (?i 1 (length$ ?r)) do
-		(bind ?aux (nth$ ?i ?r))
-		(printout t ?aux crlf)
-	)
+(defrule output "Output de algunas cosas"
+	(recommendedCalories ?value)
+	=>
+	(printout t "Calorias recomendadas: "?value crlf)
 )
-
-(defrule prueba
-    ?genere <- (gender "K")
-    =>
-    (printout t "olakase")
-)
-
-   
 
 
  
