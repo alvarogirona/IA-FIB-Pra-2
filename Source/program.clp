@@ -361,10 +361,11 @@
 )
 
 (defrule filterDiabetes "Rule to filter dishes that are not available for diabetic people"
-	?d <- (intialDishes (dishAttributes $?attrs))
+	?d <- (initialDishes (dishAttributes $?attrs))
 	(filter diabetes)
-	;(test (member$ "diabetes" ?attrs)) ; The initial dishes with the diabetes attribute will be retracted
+	(test (member$ "diabetes" ?attrs)) ; The initial dishes with the diabetes attribute will be retracted
 	=>
+	(printout t "BORRANDO" crlf)
 	(retract ?d)
 )
 

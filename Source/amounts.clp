@@ -34,9 +34,6 @@
 	(slot iron)
 	(slot potassium)
 )
-;fiber 19 infinito 27
-;iron 8 a 10
-;potassium 3,500–4,700
 
 
 ; (defrule find_title
