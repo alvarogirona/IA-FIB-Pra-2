@@ -115,57 +115,55 @@
 
 (defrule GETUSERINFO::askVeganism "rule to know if user is vegan, vegetarian or normal"
 	=>
-	(if (booleanQuestion "¿Es vegano? (Sí/No): ")
-		then 
+	(if (booleanQuestion "¿Es vegano? (Sí/No): ") then 
 			(assert(dietType vegan))
-		else 
-			(if (booleanQuestion "¿Es vegetariano? (Sí/No): ")
-				then (assert(dietType vegetarian))
-			)
+	else 
+		(if (booleanQuestion "¿Es vegetariano? (Sí/No): ") then 
+			(assert(dietType vegetarian))
+		)
 	)
 )
 
 (defrule GETUSERINFO::askFood "rule to know if which food the user dislikes, and which"
 	=>
-	(if (booleanQuestion "¿Le disgusta algún alimento? (Sí/No): ")
-		then 
-			(bind ?question (multipleQuestion "¿Qué alimentos le disgustan? (en singular, separados por espacios): "))
-			(assert(fooddislike ?question))
+	(if (booleanQuestion "¿Le disgusta algún alimento? (Sí/No): ") then 
+		(bind ?foodDislike (multipleQuestion "¿Qué alimentos le disgustan? (en singular, separados por espacios): "))
+		(loop-for-count(?i 1 (length$ ?foodDislike)) do
+			(assert (foodDislike (nth$ ?i ?foodDislike)))
+		)	
 	)
 )
 	
 (defrule GETUSERINFO::askFoodAllergies "rule to know if user has food allergies/intolerances, and which"
 	=>
-	(if (booleanQuestion "¿Tiene alguna alergia/intolerancia alimentaria? (Sí/No): ")
-		then 
-			(bind ?question (multipleQuestion "Escriba los alimentos los cuales tiene alergia/intolerancia (en singular, separados por espacios): "))
-			(assert(allergy ?question))
+	(if (booleanQuestion "¿Tiene alguna alergia/intolerancia alimentaria? (Sí/No): ") then 
+		(bind ?question (multipleQuestion "Escriba los alimentos los cuales tiene alergia/intolerancia (en singular, separados por espacios): "))
+		(loop-for-count(?i 1 (length$ ?question)) do
+			(assert (allergy (nth$ ?i ?question)))
+		)
 	)
 )
 
 (defrule GETUSERINFO::askDiseases "rule to know if user has diseas that can affect the diet"
  	(declare (salience -1))	
 	=>
-	(if (booleanQuestion "Tiene algún transtorno/enfermedad que pueda afectar a su dieta? (Sí/No): ")
-		then 
-   			(printout t "[1] Disfagia" crlf
-				 		"[2] Hiperlipidemia" crlf
-    			 		"[3] Hipertrigliceridemia" crlf
-    					"[4] Lipoproteína de alta densidad" crlf
-    					"[5] Cardiopatía isquémica" crlf
-    					"[6] Hipertensión arterial" crlf
-    					"[7] Diabetes" crlf
-    					"[8] Osteoporosis" crlf
-    					"[9] Articulaciones inflamatorias" crlf)
-			(bind ?position (multipleQuestion "Escriba los números asociados a los transtornos/enfermedades que tiene (separados por espacios): "))
- 			(bind ?list (create$ dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein 
-			 				ischemicCardiopathy arterialHypertension diabetes osteoporosis inflammatoryJoints))
-			(loop-for-count(?i 1 (length$ ?position)) do
-				(bind ?number (nth$ ?i ?position))
-				(bind ?disease (nth$ ?number ?list))
-				(assert(disease ?disease))		
-			)
+	(if (booleanQuestion "Tiene algún transtorno/enfermedad que pueda afectar a su dieta? (Sí/No): ") then 
+   		(printout t "[1] Disfagia" crlf
+			 		"[2] Hiperlipidemia" crlf
+    		 		"[3] Hipertrigliceridemia" crlf
+    				"[4] Cardiopatía isquémica" crlf
+    				"[5] Hipertensión arterial" crlf
+    				"[6] Diabetes" crlf
+    				"[7] Osteoporosis" crlf
+    				"[8] Articulaciones inflamatorias" crlf)
+		(bind ?position (multipleQuestion "Escriba los números asociados a los transtornos/enfermedades que tiene (separados por espacios): "))
+ 		(bind ?list (create$ dysphagia hyperlipidemia hypertriglyceridemia ischemicCardiopathy arterialHypertension diabetes osteoporosis inflammatoryJoints))
+		(loop-for-count(?i 1 (length$ ?position)) do
+			(bind ?number (nth$ ?i ?position))
+			(bind ?disease (nth$ ?number ?list))
+			(assert(disease ?disease))		
 		)
+	)
 	(focus RESTRICTIONS)	
 	(facts)
 )
@@ -190,11 +188,10 @@
 	(activity ?activity)
 	=>
 	(bind ?factor)
-	(if (eq ?gender woman)
-		then 
-			(bind ?factor (+ 655.1 (-(+(* 9.6 ?weight) (* 1.85 ?height)) (* 4.68 ?age))))
-		else
-			(bind ?factor (+ 66.47 (-(+(* 13.75 ?weight) (* 5 ?height))(* 6.76 ?age))))
+	(if (eq ?gender woman) then 
+		(bind ?factor (+ 655.1 (-(+(* 9.6 ?weight) (* 1.85 ?height)) (* 4.68 ?age))))
+	else
+		(bind ?factor (+ 66.47 (-(+(* 13.75 ?weight) (* 5 ?height))(* 6.76 ?age))))
 	)		
 	(bind ?calories (+ (div ?factor 9 )(* ?factor ?activity)))
 	(assert (recommendedCalories ?calories))
@@ -203,43 +200,173 @@
 (defrule RESTRICTIONS::rangeVitamines "Rule to define the range of vitamin intake"
 	(gender ?gender)
 	=>
-	(if (eq ?gender woman)
-		then
-			(assert(vitaminsAmount (name vitaminMin) (vitA 900.0) (vitB2 2.4) (vitB3 16.0) (vitB6 1.7) (vitB9 400) (vitB12 2.4) (vitC 90.0) (vitE 15.0)))
-		else 
-			(assert(vitaminsAmount (name vitaminMin) (vitA 700) (vitB2 1.1) (vitB3 14.0) (vitB6 1.7) (vitB9 400) (vitB12 2.4) (vitC 75.0) (vitE 15.0)))
+	(if (eq ?gender woman)then
+		(assert(vitaminsAmount (name vitaminMin) (vitA 900.0) (vitB2 2.4) (vitB3 16.0) (vitB6 1.7) (vitB9 400) (vitB12 2.4) (vitC 90.0) (vitE 15.0)))
+	else 
+		(assert(vitaminsAmount (name vitaminMin) (vitA 700) (vitB2 1.1) (vitB3 14.0) (vitB6 1.7) (vitB9 400) (vitB12 2.4) (vitC 75.0) (vitE 15.0)))
 	)
-	(assert(vitaminsAmount (name vitaminMax) (vitA 3000.0) (vitB2 999999.0) (vitB3 35.0) (vitB6 100.0) (vitB9 1000.0) (vitB12 999999.0) (vitC 2000.0) (vitE 1000.0)))		
+	(assert(vitaminsAmount (name vitaminMax) (vitA 3000.0) (vitB2 999999.0) (vitB3 35.0) (vitB6 100.0) (vitB9 1000.0) (vitB12 999999.0) (vitC 2000.0) (vitE 1000.0)))
 )
+
 (defrule RESTRICTIONS::rangeMinerals "Rule to define the range of vitamin intake"
 	(gender ?gender)
 	=>
-	(if (eq ?gender woman)
-		then
-			(assert(mineralsAmount (name vitaminMin) (calcium 1200.0) (copper 900.0) (magnesium 320.0) (selenium 55.0) (sodium 2.3) (zinc 8.0)))
-		else 
-			(assert(mineralsAmount (name vitaminMin) (calcium 1200.0) (copper 900.0) (magnesium 420.0)(selenium 55.0)(sodium 2.3) (zinc 11.0)))
+	(if (eq ?gender woman) then
+		(assert(mineralsAmount (name mineralMin) (calcium 1200.0) (copper 900.0) (magnesium 320.0) (selenium 55.0) (sodium 2.3) (zinc 8.0) (fiber 27) (iron 8.0) (potassium 3500.0)))
+	else 
+		(assert(mineralsAmount (name mineralMin) (calcium 1200.0) (copper 900.0) (magnesium 420.0)(selenium 55.0)(sodium 2.3) (zinc 11.0) (fiber 19) (iron 8.0) (potassium 3500.0)))
 	)
-	(assert(mineralsAmount (name vitaminMax) (calcium 2500.0) (copper 10000.0) (magnesium 700.0) (selenium 400.0) (sodium 2.8) (zinc 40.0)))		
+	(assert(mineralsAmount (name mineralMax) (calcium 2500.0) (copper 10000.0) (magnesium 700.0) (selenium 400.0) (sodium 2.8) (zinc 40.0) (fiber 10000.0) (iron 10.0) (potassium 4700.0)))
+
 )
+
 (defrule RESTRICTIONS::limitMacroNutrients "Rule to define the range of mineral intake"
 	(recommendedCalories ?recommendedCalories)
 	(weight ?weight)
 	=>
-	(bind ?lipidsFactor (* ?recommendedCalories  0.325))
 	(assert(macronutrientsAmount(name macrosAmount) (proteins (* ?weight 1.25)) (saturated (div (* ?recommendedCalories 0.1) 14)) (cholesterolMax 300) (carbs (* ?recommendedCalories 0.5))))
 )
 
 (defrule RESTRICTIONS::hyperlipidemia "Rule to modifiy some nutrients if hyperlipidemia disease is present"
 	(activity ?activity)
 	?hyperlipidemia <- (disease hyperlipidemia)
-	?macronutrientsAmount <- (macronutrientsAmount)
+	?macronutrientsAmount <- (macronutrientsAmount(cholesterolMax ?cholesterolMax))
 	=>
-	(modify ?macronutrientsAmount (cholesterolMax (* 150 ?activity)))
+	(modify ?macronutrientsAmount (cholesterolMax (*(* 0.5 ?cholesterolMax) ?activity)))
 	(retract ?hyperlipidemia)
 )
 
+(defrule RESTRICTIONS::hypertriglyceridemia "Rule to modify total income of recommended calories if hypertriglyceridemia is present"
+	?hypertriglyceridemia <- (disease hypertriglyceridemia)
+	?recommendedCalories <- (recommendedCalories ?value)
+	?macronutrientsAmount <- (macronutrientsAmount (saturated ?saturated))
+	=>
+	(modify ?recommendedCalories (* 0.8 ?value))
+	(modify ?macronutrientsAmount (saturated (* 0.85 ?saturated)))
+	(retract ?hypertriglyceridemia)
+)
+
+(defrule RESTRICTIONS::ischemicCardiopathy "Rule to modify total income of recommended calories if ischemic cardiopathy is present"
+	?ischemicCardiopathy <- (disease ischemicCardiopathy)
+	?recommendedCalories <- (recommendedCalories ?value)
+	?macronutrientsAmount <- (macronutrientsAmount (saturated ?saturated) (cholesterolMax ?cholesterolMax))
+	=>
+	(modify ?recommendedCalories (* 0.85 ?value))
+	(modify ?macronutrientsAmount (saturated (* 0.7 ?saturated))(cholesterolMax (* 0.7 ?cholesterolMax)))
+	(retract ?ischemicCardiopathy)
+)
+
+(defrule RESTRICTIONS::arterialHypertension "Rule to modify total income of nutrients and minerals if arterial hypertension disease is present"
+	?arterialHypertension <- (disease arterialHypertension)
+	?mineralsAmountMin <- (mineralsAmount (name mineralMin))
+	?mineralsAmountMax <- (mineralsAmount (name mineralMax))
+	?macronutrientsAmount <- (macronutrientsAmount (saturated ?saturated))
+	=>
+	(modify ?macronutrientsAmount (saturated (* 0.8 ?saturated)))
+	(modify ?mineralsAmountMin (sodium 1.5))
+	(modify ?mineralsAmountMax (sodium 0.7))
+	(retract ?arterialHypertension)
+)
+
+(defrule RESTRICTIONS::diabetes "Rule to modify total income of recommended nutrients and minerals if diabetes disease is present"
+	?diabetes <- (disease diabetes)
+	?macronutrientsAmount <- (macronutrientsAmount (cholesterolMax ?cholesterolMax) (saturated ?saturated))
+	=>
+	(modify ?macronutrientsAmount (cholesterolMax (* 0.7 ?cholesterolMax))(saturated (* 0.7 ?saturated)))
+	(retract ?diabetes)
+	(assert (filter diabetes))
+)
+
+(defrule RESTRICTIONS::osteoporosis "Rule to modify total income of recommended nutrients and minerals if diabetes disease is present"
+	?osteoporosis <- (disease diabetes)
+	?mineralsAmountMin <- (mineralsAmount (name mineralMin) (calcium ?calciumMin))
+	?mineralsAmountMax <- (mineralsAmount (name mineralMax) (calcium ?calciumMax))
+	=>
+	(modify ?mineralsAmountMin (calcium (* ?calciumMin 1.2)))
+	(modify ?mineralsAmountMax (calcium (* ?calciumMax 1.4)))
+	(retract ?osteoporosis)
+)
+
+(defrule RESTRICTIONS::dysphagia "rule to create filterDysphagia"
+	?dysphagia <- (disease dysphagia)
+	=>
+	(retract ?dysphagia)
+	(assert (filter dysphagia))
+) 
+
+(defrule RESTRICTIONS::inflammatoryJoints "rule to create filterDysphagia"
+	?inflammatoryJoints <- (disease inflammatoryJoints)
+	=>
+	(retract ?inflammatoryJoints)
+	(assert (filter inflammatoryJoints))
+)
+
+(defrule RESTRICTIONS::endRestrictions "Rule to go to next module if everything is calculated are left"
+ 	(declare (salience -1))
+	=>
+	(focus GENERATOR)
+	(printout t "endRestrictions hecho: " crlf)
+	(facts)
+)
+
+; 8========D
+; GENERATOR
+; 8========D
+
 ;https://stackoverflow.com/questions/45673459/how-to-get-the-objects-in-clips-in-order-on-lhs-side-based-on-a-particular-slot
+;(defmodule MAIN(export ?ALL))
+;(defmodule GENERATOR (import MAIN ?ALL)(export ?ALL))
+
+; (clear)
+
+; (load defclasses.clp)
+; (load ingredients.clp)
+; (load dishes.clp)
+(defmodule GENERATOR
+		(import MAIN ?ALL)
+		(import GETUSERINFO ?ALL)
+		(import RESTRICTIONS ?ALL)
+		(export ?ALL)
+)
+
+(deftemplate initialDishes
+	(slot dishName)
+	(multislot availability)
+	(multislot dishAttributes)
+	(multislot ingredients)
+	(multislot ingredientsWeights)
+)
+
+(defrule generateInitialDishesFacts "Rule to generate initial facts "
+	?d <- 	(object 	
+				(is-a Dish)
+				(dishName ?name)
+			)
+	=>
+	(assert (initialDishes 
+				(dishName (send ?d get-dishName))
+				(dishAttributes (send ?d get-dishAttributes))
+				(ingredients (send ?d get-ingredients))
+				(ingredientsWeights (send ?d get-ingredientsWeights))
+			)
+	)
+	(assert (filter diabetes))
+)
+
+(defrule prinFilter "Prints the filters that will be applied"
+	(declare (salience 10))
+	(filter ?f)
+	=>
+	(printout t "Applying filter for " ?f crlf)
+)
+
+(defrule filterDiabetes "Rule to filter dishes that are not available for diabetic people"
+	?d <- (intialDishes (dishAttributes $?attrs))
+	(filter diabetes)
+	;(test (member$ "diabetes" ?attrs)) ; The initial dishes with the diabetes attribute will be retracted
+	=>
+	(retract ?d)
+)
 
 ;(macronutrientsAmount 
 ;
