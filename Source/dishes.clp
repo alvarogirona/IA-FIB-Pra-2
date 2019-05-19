@@ -18,7 +18,9 @@
 	(dishClassification Spanish)
 	(dishName "Tostada con mermelada de fresa")
     (dishAttributes
-
+		"vegan"
+        "vegetarian"
+		"diabetes"
     )
 	(ingredients
 		[Pan]
@@ -30,7 +32,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Naranja")
 	(ingredients [Naranja])
@@ -67,7 +70,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"diabetes"
     )
 	(dishName "Bocadillo queso")
 	(ingredients
@@ -80,7 +84,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"diabetes"
     )
 	(dishName "Tostada con mantequilla")
 	(ingredients
@@ -93,7 +98,7 @@
 	(availability 1 2 3 4 5)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
     )
 	(dishName "Tostada queso fresco con fruta")
 	(ingredients
@@ -107,7 +112,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"diabetes"
     )
 	(dishName "Porridge")
 	(ingredients
@@ -120,7 +126,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Tostada con margarina")
 	(ingredients
@@ -134,7 +141,9 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"dysphagia"
+		"diabetes"
     )
 	(dishName "Vaso de leche")
 	(ingredients [Leche])
@@ -145,7 +154,9 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
+		"dysphagia"
     )
 	(dishName "Té")
 	(ingredients [Te])
@@ -156,7 +167,9 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"dysphagia"
+		"diabetes"
     )
 	(dishName "Té con leche")
 	(ingredients
@@ -169,7 +182,9 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
+		"dysphagia"
     )
 	(dishName "Café")
 	(ingredients [Cafe])
@@ -180,7 +195,9 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"dysphagia"
+		"diabetes"
     )
 	(dishName "Café con leche")
 	(ingredients
@@ -193,7 +210,9 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
+		"dysphagia"
     )
 	(dishName "Zumo natural naranja")
 	(ingredients [Naranja])
@@ -204,7 +223,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"diabetes"
     )
 	(dishName "Flan de leche")
 	(ingredients
@@ -222,7 +242,7 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
     )
 	(dishName "Yogurt natural")
 	(ingredients [Yogurt])
@@ -233,7 +253,9 @@
 	(availability 8 9 10 11)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"dysphagia"
+		"diabetes"
     )
 	(dishName "Crema fría de mango")
 	(ingredients
@@ -250,7 +272,8 @@
 	(availability 2 3 4 5)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"diabetes"
     )
 	(dishName "Bizcocho de cacahuete borracho")
 	(ingredients
@@ -270,7 +293,8 @@
 	(availability 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Manzana")
 	(ingredients [Manzana])
@@ -281,7 +305,8 @@
 	(availability 7 8 9 10)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Pera")
 	(ingredients [Pera])
@@ -292,7 +317,8 @@
 	(availability 1 2 3 4 5 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Naranja")
 	(ingredients [Naranja])
@@ -303,7 +329,8 @@
 	(availability 1 2 3 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Mandarina")
 	(ingredients [Mandarina])
@@ -314,7 +341,8 @@
 	(availability 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"diabetes"
     )
 	(dishName "Bizcocho de castañas")
 	(ingredients
@@ -332,7 +360,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"diabetes"
     )
 	(dishName "Flan de huevo")
 	(ingredients
@@ -348,7 +377,8 @@
 	(availability 2)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Ensalada de lechugas variadas, aguacate y fresas")
 	(ingredients
@@ -366,7 +396,8 @@
 
 	(dishClassification Japanese)
     (dishAttributes
-
+        "vegetarian"
+		"diabetes"
     )
 	(dishName "Ensalada de calabacín, canónigos y queso")
 	(ingredients
@@ -385,7 +416,9 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"dysphagia"
+		"diabetes"
     )
 	(dishName "Crema de calabacín con queso")
 	(ingredients
@@ -403,7 +436,9 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
+		"dysphagia"
     )
 	(dishName "Salmorejo")
 	(ingredients
@@ -419,7 +454,9 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
+		"dysphagia"
     )
 	(dishName "Puré de calabaza")
 	(ingredients
@@ -435,7 +472,10 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+		"diabetes"
     )
 	(dishName "Puré de verduras")
 	(ingredients
@@ -455,7 +495,7 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
     )
 	(dishName "Sopa de ajo")
 	(ingredients
@@ -471,7 +511,9 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
+		"dysphagia"
     )
 	(dishName "Sopa de cebolla")
 	(ingredients
@@ -523,7 +565,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"diabetes"
     )
 	(dishName "Pastel de espinacas con provenzal de queso")
 	(ingredients
@@ -569,7 +612,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Ensalada de escarola, aguacate y nueces")
 	(ingredients
@@ -587,7 +631,7 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
     )
 	(dishName "Ensalada de lechugas variadas con higos, moras y avellanas")
 	(ingredients
@@ -606,7 +650,7 @@
 
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
     )
 	(dishName "Garbanzos con calabacín y huevo escalfado")
 	(ingredients
@@ -629,7 +673,8 @@
 
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Ensalada de escarola, cebolla y cacahuetes")
 	(ingredients
@@ -647,7 +692,8 @@
 
 	(dishClassification Japanese)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Ensalada de lechugas variadas, pasta y fresas")
 	(ingredients
@@ -689,7 +735,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegan"
+        "vegetarian"
     )
 	(dishName "Tortilla de patata y calabacín")
 	(ingredients
@@ -814,7 +861,8 @@
 	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
 	(dishClassification Spanish)
     (dishAttributes
-
+        "vegetarian"
+		"diabetes"
     )
 	(dishName "Berenjena rellena de pisto")
 	(ingredients
