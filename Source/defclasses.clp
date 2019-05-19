@@ -1,8 +1,3 @@
-; Thu May 16 23:58:14 CEST 2019
-; 
-;+ (version "3.5")
-;+ (build "Build 663")
-
 
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
@@ -318,26 +313,32 @@
 
 (defclass Dessert
 	(is-a Dish)
+	(pattern-match reactive)
 	(role concrete))
 
 (defclass FirstCourse
 	(is-a Dish)
+	(pattern-match reactive)
 	(role concrete))
 
 (defclass SecondCourse
 	(is-a Dish)
+	(pattern-match reactive)
 	(role concrete))
 
 (defclass Appetizer
 	(is-a Dish)
+	(pattern-match reactive)
 	(role concrete))
 
 (defclass Beverage
 	(is-a Dish)
+	(pattern-match reactive)
 	(role concrete))
 
 (defclass Ingredient
 	(is-a USER)
+	(pattern-match reactive)
 	(role concrete)
 	(multislot properties
 		(type SYMBOL)
@@ -475,6 +476,7 @@
 
 (defclass DailyMenu
 	(is-a USER)
+	(pattern-match reactive)
 	(role concrete)
 	(single-slot dinner
 		(type INSTANCE)
@@ -494,6 +496,7 @@
 
 (defclass SimpleMenu
 	(is-a USER)
+	(pattern-match reactive)
 	(role concrete)
 	(multislot appetizer
 		(type INSTANCE)
@@ -506,6 +509,7 @@
 
 (defclass CompleteMenu
 	(is-a USER)
+	(pattern-match reactive)
 	(role concrete)
 	(single-slot firstCourse
 		(type INSTANCE)
