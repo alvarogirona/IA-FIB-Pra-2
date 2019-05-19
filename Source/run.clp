@@ -7,7 +7,7 @@
 (load defclasses.clp)
 (load ingredients.clp)
 (load dishes.clp)
-(load amounts.clp)
+(load templates.clp)
 
 (reset)
 (load program.clp)

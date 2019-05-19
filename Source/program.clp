@@ -224,7 +224,7 @@
 	(recommendedCalories ?recommendedCalories)
 	(weight ?weight)
 	=>
-	(assert(macronutrientsAmount(name macrosAmount) (proteins (* ?weight 1.25)) (saturated (div (* ?recommendedCalories 0.1) 14)) (cholesterolMax 300) (carbs (* ?recommendedCalories 0.5))))
+	(assert(macronutrientsAmount(name macrosAmount) (protein (* ?weight 1.25)) (saturated (div (* ?recommendedCalories 0.1) 14)) (cholesterolMax 300) (carbs (* ?recommendedCalories 0.5))))
 )
 
 (defrule RESTRICTIONS::hyperlipidemia "Rule to modifiy some nutrients if hyperlipidemia disease is present"
@@ -274,7 +274,7 @@
 	=>
 	(modify ?macronutrientsAmount (cholesterolMax (* 0.7 ?cholesterolMax))(saturated (* 0.7 ?saturated)))
 	(retract ?diabetes)
-	(assert (filter diabetes))
+	(assert (dietType diabetes))
 )
 
 (defrule RESTRICTIONS::osteoporosis "Rule to modify total income of recommended nutrients and minerals if diabetes disease is present"
@@ -291,14 +291,14 @@
 	?dysphagia <- (disease dysphagia)
 	=>
 	(retract ?dysphagia)
-	(assert (filter dysphagia))
+	(assert (dietType dysphagia))
 ) 
 
 (defrule RESTRICTIONS::inflammatoryJoints "rule to create filterDysphagia"
 	?inflammatoryJoints <- (disease inflammatoryJoints)
 	=>
 	(retract ?inflammatoryJoints)
-	(assert (filter inflammatoryJoints))
+	(assert (dietType inflammatoryJoints))
 )
 
 (defrule RESTRICTIONS::endRestrictions "Rule to go to next module if everything is calculated are left"
@@ -329,15 +329,7 @@
 		(export ?ALL)
 )
 
-(deftemplate initialDishes
-	(slot dishName)
-	(multislot availability)
-	(multislot dishAttributes)
-	(multislot ingredients)
-	(multislot ingredientsWeights)
-)
-
-(defrule generateInitialDishesFacts "Rule to generate initial facts "
+(defrule GENERATOR::generateInitialDishesFacts "Rule to generate initial facts "
 	?d <- 	(object 	
 				(is-a Dish)
 				(dishName ?name)
@@ -350,23 +342,163 @@
 				(ingredientsWeights (send ?d get-ingredientsWeights))
 			)
 	)
-	(assert (filter diabetes))
 )
 
-(defrule prinFilter "Prints the filters that will be applied"
+(defrule GENERATOR::printDietTypes "Prints the filters that will be applied"
 	(declare (salience 10))
-	(filter ?f)
+	(debug)
+	(dietType ?dt)
 	=>
-	(printout t "Applying filter for " ?f crlf)
+	(printout t "Applying filter for " ?dt crlf)
 )
 
-(defrule filterDiabetes "Rule to filter dishes that are not available for diabetic people"
+(defrule GENERATOR::filterDiabetes "Rule to filter dishes that are not available for diabetic people"
 	?d <- (initialDishes (dishAttributes $?attrs))
-	(filter diabetes)
+	(dietType diabetes)
 	(test (member$ "diabetes" ?attrs)) ; The initial dishes with the diabetes attribute will be retracted
 	=>
 	(printout t "BORRANDO" crlf)
 	(retract ?d)
+)
+
+(defrule GENERATOR::filterDisphagia "Rule to filter dishes that are not available for people with disphagia"
+	?d <- (initialDishes (dishAttributes $?attrs))
+	(dietType dysphagia)
+	(test (not (member$ "dysphagia" ?attrs))) ; The initial dishes with the diabetes attribute will be retracted
+	=>
+	(printout t "BORRANDO" crlf)
+	(retract ?d)
+)
+
+(defrule GENERATOR::filterVegan "Rule to filter dishes that are not available for people with disphagia"
+	?d <- (initialDishes (dishAttributes $?attrs))
+	(dietType vegan)
+	(test (not (member$ "vegan" ?attrs))) ; The initial dishes with the diabetes attribute will be retracted
+	=>
+	(printout t "BORRANDO" crlf)
+	(retract ?d)
+)
+
+(defrule GENERATOR::filterVegetarian "Rule to filter dishes that are not available for people with disphagia"
+	?d <- (initialDishes (dishAttributes $?attrs))
+	(dietType vegetarian)
+	(test (not (member$ "vegetarian" ?attrs))) ; The initial dishes with the diabetes attribute will be retracted
+	=>
+	(printout t "BORRANDO" crlf)
+	(retract ?d)
+)
+
+(defrule GENERATOR::calculateDishStats "Rule to define facts for dish stats (nutrients, calories and so)"
+	(declare (salience -1))
+	?dish <- (initialDishes (dishName ?dishName)(ingredients $?ingredients) (ingredientsWeights $?ingredientsWeights))
+	=>
+	(bind ?auxcalcium 0)
+	(bind ?auxcalories 0)
+	(bind ?auxcarbohydrates 0)
+	(bind ?auxcholesterol 0)
+	(bind ?auxcopper 0)
+	(bind ?auxfiber 0)
+	(bind ?auxiron 0)
+	(bind ?auxmagnesium 0)
+	(bind ?auxpotassium 0)
+	(bind ?auxprotein 0)
+	(bind ?auxsaturedFat 0)
+	(bind ?auxselenium 0)
+	(bind ?auxsodium 0)
+	(bind ?auxvitamineA 0)
+	(bind ?auxvitamineB12 0)
+	(bind ?auxvitamineB2 0)
+	(bind ?auxvitamineB3 0)
+	(bind ?auxvitamineB6 0)
+	(bind ?auxvitamineB9 0)
+	(bind ?auxvitamineC  0)
+	(bind ?auxvitamineE  0)
+	(bind ?auxzinc 0)
+
+	(loop-for-count(?i 1 (length$ ?ingredients)) do
+		(bind ?ingredient (nth$ ?i ?ingredients))
+		(bind ?ingredientFactor(div (nth$ ?i ?ingredientsWeights) 100))
+		;;
+		(bind ?calcium (* ?ingredientFactor (send ?ingredient get-calcium)))
+		(bind ?calories (* ?ingredientFactor (send ?ingredient get-calories)))
+		(bind ?carbohydrates (* ?ingredientFactor (send ?ingredient get-carbohydrates)))
+		(bind ?cholesterol (* ?ingredientFactor (send ?ingredient get-cholesterol)))
+		(bind ?copper (* ?ingredientFactor (send ?ingredient get-copper)))
+		(bind ?fiber (* ?ingredientFactor (send ?ingredient get-fiber)))
+		(bind ?iron (* ?ingredientFactor (send ?ingredient get-iron)))
+		(bind ?magnesium (* ?ingredientFactor (send ?ingredient get-magnesium)))
+		(bind ?potassium (* ?ingredientFactor (send ?ingredient get-potassium)))
+		(bind ?protein (* ?ingredientFactor (send ?ingredient get-protein)))
+		(bind ?saturedFat (* ?ingredientFactor (send ?ingredient get-saturedFat)))
+		(bind ?selenium (* ?ingredientFactor (send ?ingredient get-calciseleniumum)))
+		(bind ?sodium (* ?ingredientFactor (send ?ingredient get-sodium)))
+		(bind ?vitamineA (* ?ingredientFactor (send ?ingredient get-vitamineA)))
+		(bind ?vitamineB12 (* ?ingredientFactor (send ?ingredient get-vitamineB12)))
+		(bind ?vitamineB2 (* ?ingredientFactor (send ?ingredient get-vitamineB2)))
+		(bind ?vitamineB3 (* ?ingredientFactor (send ?ingredient get-vitamineB3)))
+		(bind ?vitamineB6 (* ?ingredientFactor (send ?ingredient get-vitamineB6)))
+		(bind ?vitamineB9 (* ?ingredientFactor (send ?ingredient get-vitamineB9)))
+		(bind ?vitamineC (* ?ingredientFactor (send ?ingredient get-vitamineC)))
+		(bind ?vitamineE (* ?ingredientFactor (send ?ingredient get-vitamineE)))
+		(bind ?zinc (* ?ingredientFactor (send ?ingredient get-zinc)))
+
+		(bind ?auxcalcium (+ ?calcium ?auxcalcium))
+		(bind ?auxcalories (+ ?calories ?auxcalories))
+		(bind ?auxcarbohydrates (+ ?carbohydrates ?auxcarbohydrates))
+		(bind ?auxcholesterol (+ ?cholesterol ?auxcholesterol))
+		(bind ?auxcopper (+ ?copper  ?auxcopper))
+		(bind ?auxfiber (+ ?fiber  ?auxfiber))
+		(bind ?auxiron (+ ?iron  ?auxiron 0))
+		(bind ?auxmagnesium (+ ?magnesium ?auxmagnesium ))
+		(bind ?auxpotassium (+ ?potassium ?auxpotassium))
+		(bind ?auxprotein (+ ?protein ?auxprotein))
+		(bind ?auxsaturedFat (+ ?saturedFat ?auxsaturedFat))
+		(bind ?auxselenium (+ ?selenium ?auxselenium))
+		(bind ?auxsodium (+ ?sodium  ?auxsodium))
+		(bind ?auxvitamineA (+ ?vitamineA ?auxvitamineA))
+		(bind ?auxvitamineB12 (+ ?vitamineB12 ?auxvitamineB12))
+		(bind ?auxvitamineB2 (+ ?vitamineB2 ?auxvitamineB2))
+		(bind ?auxvitamineB3 (+ ?vitamineB3 ?auxvitamineB3))
+		(bind ?auxvitamineB6 (+ ?vitamineB6 ?auxvitamineB6))
+		(bind ?auxvitamineB9 (+ ?vitamineB9 ?auxvitamineB9))
+		(bind ?auxvitamineC  (+ ?vitamineC ?auxvitamineC))
+		(bind ?auxvitamineE  (+ ?vitamineE ?auxvitamineE ))
+		(bind ?auxzinc (+ ?zinc  ?auxzinc))
+	) 
+
+	(assert(dishStats 
+		(name ?dishName)
+		(calories ?auxcalories) 
+		(vitA ?auxvitamineA)
+		(vitB2 ?auxvitamineB2)
+		(vitB3 ?auxvitamineB3)
+		(vitB6 ?auxvitamineB6)
+		(vitB9 ?auxvitamineB9)
+		(vitB12 ?auxvitamineB12)
+		(vitC ?auxvitamineC)
+		(vitE ?auxvitamineE)
+		(protein ?auxprotein)
+		(saturated ?auxsaturedFat)
+		(cholesterolMax ?auxcholesterol)
+		(carbs ?auxcarbohydrates)
+		(calcium ?auxcalcium)
+		(copper ?auxcopper)
+		(magnesium ?auxmagnesium)
+		(selenium ?auxselenium)
+		(sodium ?auxsodium)
+		(zinc ?auxzinc)
+		(fiber ?auxfiber)
+		(iron ?auxiron)
+		(potassium ?auxpotassium)
+		)
+	)
+)
+
+
+(defrule finalFactsPrint
+	(declare (salience -10))
+	=>
+	(facts)
 )
 
 ;(macronutrientsAmount 
