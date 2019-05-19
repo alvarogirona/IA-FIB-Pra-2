@@ -165,7 +165,7 @@
 		)
 	)
 	(focus RESTRICTIONS)	
-	(facts)
+	;(facts)
 )
 
 ; 8===========D
@@ -390,8 +390,9 @@
 
 (defrule GENERATOR::calculateDishStats "Rule to define facts for dish stats (nutrients, calories and so)"
 	(declare (salience -1))
-	?dish <- (initialDishes (dishName ?dishName)(ingredients $?ingredients) (ingredientsWeights $?ingredientsWeights))
+	?dish <- (initialDishes (dishName ?name )(ingredients $?ingredients) (ingredientsWeights $?ingredientsWeights))
 	=>
+	(printout t "entre ESTOY DENTRO" crlf crlf crlf)
 	(bind ?auxcalcium 0)
 	(bind ?auxcalories 0)
 	(bind ?auxcarbohydrates 0)
@@ -416,9 +417,11 @@
 	(bind ?auxzinc 0)
 
 	(loop-for-count(?i 1 (length$ ?ingredients)) do
-		(bind ?ingredient (nth$ ?i ?ingredients))
-		(bind ?ingredientFactor(div (nth$ ?i ?ingredientsWeights) 100))
+		(bind ?ingredientSymbol (nth$ ?i ?ingredients))
+		(printout t "INGREDIENT IS " ?ingredientSymbol crlf)
+		(bind ?ingredientFactor(div (nth$ ?i ?ingredientsWeights) 100.0))
 		;;
+		(bind ?ingredient (symbol-to-instance-name (sym-cat "MAIN::"?ingredientSymbol))) ; GO TO THE FUKIN MAIN MODULE
 		(bind ?calcium (* ?ingredientFactor (send ?ingredient get-calcium)))
 		(bind ?calories (* ?ingredientFactor (send ?ingredient get-calories)))
 		(bind ?carbohydrates (* ?ingredientFactor (send ?ingredient get-carbohydrates)))
@@ -430,7 +433,7 @@
 		(bind ?potassium (* ?ingredientFactor (send ?ingredient get-potassium)))
 		(bind ?protein (* ?ingredientFactor (send ?ingredient get-protein)))
 		(bind ?saturedFat (* ?ingredientFactor (send ?ingredient get-saturedFat)))
-		(bind ?selenium (* ?ingredientFactor (send ?ingredient get-calciseleniumum)))
+		(bind ?selenium (* ?ingredientFactor (send ?ingredient get-selenium)))
 		(bind ?sodium (* ?ingredientFactor (send ?ingredient get-sodium)))
 		(bind ?vitamineA (* ?ingredientFactor (send ?ingredient get-vitamineA)))
 		(bind ?vitamineB12 (* ?ingredientFactor (send ?ingredient get-vitamineB12)))
@@ -467,7 +470,7 @@
 	) 
 
 	(assert(dishStats 
-		(name ?dishName)
+		(name ?name)
 		(calories ?auxcalories) 
 		(vitA ?auxvitamineA)
 		(vitB2 ?auxvitamineB2)
@@ -492,6 +495,7 @@
 		(potassium ?auxpotassium)
 		)
 	)
+	(facts)
 )
 
 

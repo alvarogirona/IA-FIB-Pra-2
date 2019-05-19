@@ -446,7 +446,7 @@
 		[Pan]
 		[AceiteOliva]
 		[Ajo])
-	(ingredientsWeights 200.0 50.0 40.0 4.0)
+	(ingredientsWeights 200.0 50.0 10.0 4.0)
 	(link "https://www.pequerecetas.com/receta/salmorejo/"))
 
 ([Primero13] of  FirstCourse
@@ -464,7 +464,7 @@
 		[Cebolleta]
 		[AceiteOliva]
 		[Ajo])
-	(ingredientsWeights 200.0 50.0 40.0 4.0)
+	(ingredientsWeights 200.0 50.0 10.0 4.0)
 	(link "https://www.pequerecetas.com/receta/salmorejo/"))
 
 ([Primero14] of  FirstCourse
@@ -487,7 +487,7 @@
 		[Sal]
 		[QuesoPhiladelphia]
 		[AceiteOliva])
-	(ingredientsWeights 70.0 50.0 60.0 40.0 3.0 30.0 4.0)
+	(ingredientsWeights 70.0 50.0 60.0 40.0 3.0 30.0 4.0 10.0)
 	(link "https://www.pequerecetas.com/receta/pure-de-verduras-sano-y-delicioso/"))
 
 ([Primero15] of  FirstCourse
