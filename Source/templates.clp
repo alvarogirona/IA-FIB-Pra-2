@@ -128,7 +128,7 @@
 )
 (deftemplate dailyMenu
 	(slot nameAppetizer)
-	(slot nameBreakfast)
+	(slot nameBeverage)
 
 	(slot nameFirstLunch)
 	(slot nameSecondLunch)
