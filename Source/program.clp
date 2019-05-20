@@ -395,7 +395,7 @@
 (defrule GENERATOR::filterAllergies "Rule to filter the alergies"
 	(allergy ?allergy)
 	?d <- (initialDishes (ingredients $?ingredients))
-	;(test (not (member$ ?allergy $?ingredients)))
+	(test (not (member$ ?allergy $?ingredients)))
 	=>
 	(pri)
 	(retract ?d)
