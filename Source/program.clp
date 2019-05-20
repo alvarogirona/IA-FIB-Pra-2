@@ -397,7 +397,7 @@
 	?d <- (initialDishes (ingredients $?ingredients))
 	(test (not (member$ ?allergy $?ingredients)))
 	=>
-	(pri)
+	
 	(retract ?d)
 )
 
