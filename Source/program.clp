@@ -1001,6 +1001,10 @@
 	; (test (not(eq ?secondLunch ?secondDinner)))
 	; (test (not(eq ?dessertLunch ?dessertDinner)))
 
+	; Do not repeat the soylent :D
+	(test (not(eq ?firstLunch ?secondLunch)))
+	(test (not(eq ?firstDinner ?secondDinner)))
+
 	(maxRepetitions ?maxRepetitions)
 	; ||||||||| CHECKING REPETITIONS |||||||||||
 	; DINNER
