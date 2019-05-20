@@ -982,4 +982,151 @@
 	(ingredientsWeights 75.0 12.0 15.0 30.0 3.0 2.0)
 	(link "https://www.cocina-familiar.com/albondigas-de-pollo-con-salsa-de-tomate.html"))
 
+([SoylentMango] of  FirstCourse
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor mango")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+
+)
+([SoylentMango] of  SecondCourse
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor mango")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+
+)
+([SoylentFresa] of  FirstCourse
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor fresa")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+
+([SoylentFresa] of  SecondCourse
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor fresa")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+
+([SoylentChocolate] of  FirstCourse
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor chocolate")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+([SoylentChocolate] of  SecondCourse
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor chocolate")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+
+([SoylentVainilla] of  FirstCourse
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor vainilla")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+([SoylentVainilla] of  SecondCourse
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor vainilla")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+([SoylentManzana] of  FirstCourse
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor manzana")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+([SoylentManzana] of  SecondCourse
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor manzana")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
 )
