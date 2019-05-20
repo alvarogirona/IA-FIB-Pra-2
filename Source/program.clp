@@ -503,6 +503,8 @@
 		(potassium ?auxpotassium)
 		))
 )
+
+
 (defrule GENERATOR::completeMenuGenerator "Rule to generate completeMenus (dinner, lunch)"
 	(initialDishes (dishName ?first)(category FirstCourse))
 	(initialDishes (dishName ?second)(category SecondCourse))
@@ -579,9 +581,110 @@
 		(fiber ?dessertFiber)
 		(iron ?dessertIron)
 		(potassium ?dessertPotassium))
+
+	(recommendedCalories ?recommendedCalories)
+	(vitaminsAmount 
+		(name vitaminMin) 
+		(vitA ?minVitA) 
+		(vitB2 ?minVitB2)
+		(vitB3 ?minVitB3) 
+		(vitB6 ?minVitB6) 
+		(vitB9 ?minVitB9) 
+		(vitB12 ?minVitB12) 
+		(vitC ?minVitC) 
+		(vitE ?minVitE))
+	(vitaminsAmount 
+		(name vitaminMax) 
+		(vitA ?maxVitA) 
+		(vitB2 ?maxVitB2) 
+		(vitB3 ?maxVitB3) 
+		(vitB6 ?maxVitB6) 
+		(vitB9 ?maxVitB9) 
+		(vitB12 ?maxVitB12) 
+		(vitC ?maxVitC) 
+		(vitE ?maxVitE))
+	(macronutrientsAmount
+		(name macrosAmount) 
+		(protein ?proteins) 
+		(saturated ?saturated) 
+		(cholesterolMax ?cholesterol) 
+		(carbs ?carbs))
+	(mineralsAmount 
+		(name mineralMin) 
+		(calcium ?minCalcium) 
+		(copper ?minCopper) 
+		(magnesium ?minMagnesium) 
+		(selenium ?minSelenium) 
+		(sodium ?minSodium) 
+		(zinc ?minZinc) 
+		(fiber ?minFiber) 
+		(iron ?minIron) 
+		(potassium ?minPotassium))
+	(mineralsAmount 
+		(name mineralMax) 
+		(calcium ?maxCalcium) 
+		(copper ?maxCopper) 
+		(magnesium ?maxMagnesium) 
+		(selenium ?maxSelenium) 
+		(sodium ?maxSodium) 
+		(zinc ?maxZinc) 
+		(fiber ?maxFiber) 
+		(iron ?maxIron) 
+		(potassium ?maxPotassium))
+
 	=>
-	
-	(assert
+
+	(bind ?vitA (+ (+ ?dessertVitA ?firstVitA) ?secondVitA))
+	(bind ?vitB2 (+ (+ ?dessertVitB2 ?firstVitB2) ?secondVitB2)) 
+	(bind ?vitB3 (+ (+ ?dessertVitB3 ?firstVitB3) ?secondVitB3))
+	(bind ?vitB6 (+ (+ ?dessertVitB6 ?firstVitB6) ?secondVitB6))
+	(bind ?vitB9 (+ (+ ?dessertVitB9 ?firstVitB9) ?secondVitB9))
+	(bind ?vitB12 (+ (+ ?dessertVitB12 ?firstVitB12) ?secondVitB12))
+	(bind ?vitC (+ (+ ?dessertVitC ?firstVitC) ?secondVitC))
+	(bind ?vitE (+ (+ ?dessertVitE ?firstVitE) ?secondVitE))
+	(bind ?protein (+ (+ ?dessertProtein ?firstProtein) ?secondProtein))
+	(bind ?saturated (+ (+ ?dessertSaturate ?firstSaturate) ?secondSaturate))
+	(bind ?cholesterolMax (+ (+ ?dessertCholesterolMax ?firstCholesterolMax) ?secondCholesterolMax))
+	(bind ?carbs (+ (+ ?dessertCarbs ?firstCarbs) ?secondCarbs))
+	(bind ?calcium (+ (+ ?dessertCalcium ?firstCalcium) ?secondCalcium))
+	(bind ?copper (+ (+ ?dessertCopper ?firstCopper) ?secondCopper))
+	(bind ?magnesium (+ (+ ?dessertMagnesium ?firstMagnesium) ?secondMagnesium))
+	(bind ?selenium (+ (+ ?dessertSelenium ?firstSelenium) ?secondSelenium ))
+	(bind ?sodium (+ (+ ?dessertSodium ?firstSodium) ?secondSodium))
+	(bind ?zinc (+ (+ ?dessertZinc ?firstZinc) ?secondZinc))
+	(bind ?fiber(+ (+ ?dessertFiber ?firstFiber) ?secondFiber))
+	(bind ?iron (+ (+ ?dessertIron ?firstIron) ?secondIron))
+	(bind ?potassium (+ (+ ?dessertPotassium ?firstPotassium) ?secondPotassium))
+	(bind ?calories (+ (+ ?dessertCalories ?firstCalories) ?secondCalories))
+
+	(bind ?extraFactor (* 0.35 2.0)) ; 35% de lo necesario al día con
+	(bind ?lowerFactor (* 0.35 0.5)) ; 35% de lo diario con
+
+	(bind ?r ( or (<= ?vitA  (* ?minVitA ?lowerFactor)) (> ?vitA (* ?maxVitA ?extraFactor)))) ; si estamos por debajo del min o encima del max
+	; (bind ?r (or ?r (or (<= ?vitB2 (* ?minVitB2 ?lowerFactor)) (> ?vitB2 (* ?maxVitB2 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitB3 (* ?minVitB3 ?lowerFactor)) (> ?vitB3 (* ?maxVitB3 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitB6 (* ?minVitB6 ?lowerFactor)) (> ?vitB6 (* ?maxVitB6 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitB9 (* ?minVitB9 ?lowerFactor)) (> ?vitB9 (* ?maxVitB9 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitB12 (* ?minVitB12 ?lowerFactor)) (> ?vitB12 (* ?maxVitB12 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitC (* ?minVitC ?lowerFactor)) (> ?vitC (* ?maxVitC ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitE (* ?minVitE ?lowerFactor)) (> ?vitE (* ?maxVitE ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?protein (* ?proteins ?lowerFactor)) (> ?protein (* ?proteins ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?saturated (* ?saturated ?lowerFactor)) (> ?saturated (* ?saturated ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?cholesterolMax (* ?cholesterol ?lowerFactor)) (> ?cholesterol (* ?cholesterol ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?carbs (* ?carbs ?lowerFactor)) (> ?carbs (* ?carbs ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?calories (* ?recommendedCalories ?lowerFactor)) (> ?calories (* ?recommendedCalories ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?calcium (* ?minCalcium ?lowerFactor)) (> ?calcium (* ?maxCalcium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?copper (* ?minCopper ?lowerFactor)) (> ?copper (* ?maxCopper ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?selenium (* ?minSelenium ?lowerFactor)) (> ?selenium (* ?maxSelenium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?sodium (* ?minSodium ?lowerFactor)) (> ?sodium (* ?maxSodium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?zinc (* ?minZinc ?lowerFactor)) (> ?zinc (* ?maxZinc ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?fiber (* ?minFiber ?lowerFactor)) (> ?fiber (* ?maxFiber ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?iron (* ?minIron ?lowerFactor)) (> ?iron (* ?maxIron ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?potassium (* ?minPotassium ?lowerFactor)) (> ?potassium (* ?maxPotassium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?magnesium (* ?minMagnesium ?lowerFactor)) (> ?magnesium (* ?maxMagnesium ?extraFactor)))))
+
+	(if (not ?r) then
+		(assert
 		(completeMenu 
 			(firstName ?first) 
 			(secondName ?second) 
@@ -611,6 +714,7 @@
 			(calories (+ (+ ?dessertCalories ?firstCalories) ?secondCalories))
 
 		))
+	)
 )
 
 (defrule GENERATOR::simpleMenuGenerator "Rule to generate simpleMenus (breakfast)"
@@ -664,38 +768,143 @@
 		(fiber ?beverageFiber)
 		(iron ?beverageIron)
 		(potassium ?beveragePotassium))
-	=>
-	(assert
-		(simpleMenu 
-			(appetizerName ?appetizer) 
-			(beverageName ?beverage)
-			(vitA (+ ?beverageVitA ?appetizerVitA))
-			(vitB2 (+ ?beverageVitB2 ?appetizerVitB2)) 
-			(vitB3 (+ ?beverageVitB3 ?appetizerVitB3))
-			(vitB6 (+ ?beverageVitB6 ?appetizerVitB6))
-			(vitB9 (+ ?beverageVitB9 ?appetizerVitB9))
-			(vitB12 (+ ?beverageVitB12 ?appetizerVitB12))
-			(vitC (+ ?beverageVitC ?appetizerVitC))
-			(vitE (+ ?beverageVitE ?appetizerVitE))
-			(protein (+ ?beverageProtein ?appetizerProtein))
-			(saturated (+ ?beverageSaturate ?appetizerSaturate))
-			(cholesterolMax (+ ?beverageCholesterolMax ?appetizerCholesterolMax))
-			(carbs (+ ?beverageCarbs ?appetizerCarbs))
-			(calcium (+ ?beverageCalcium ?appetizerCalcium))
-			(copper (+ ?beverageCopper ?appetizerCopper))
-			(magnesium (+ ?beverageMagnesium ?appetizerMagnesium))
-			(selenium (+ ?beverageSelenium ?appetizerSelenium ))
-			(sodium (+ ?beverageSodium ?appetizerSodium))
-			(zinc (+ ?beverageZinc ?appetizerZinc))
-			(fiber(+ ?beverageFiber ?appetizerFiber))
-			(iron (+ ?beverageIron ?appetizerIron))
-			(potassium (+ ?beveragePotassium ?appetizerPotassium))
-			(calories (+ ?beverageCalories ?appetizerCalories))
 
+	(recommendedCalories ?recommendedCalories)
+	(vitaminsAmount 
+		(name vitaminMin) 
+		(vitA ?minVitA) 
+		(vitB2 ?minVitB2)
+		(vitB3 ?minVitB3) 
+		(vitB6 ?minVitB6) 
+		(vitB9 ?minVitB9) 
+		(vitB12 ?minVitB12) 
+		(vitC ?minVitC) 
+		(vitE ?minVitE))
+	(vitaminsAmount 
+		(name vitaminMax) 
+		(vitA ?maxVitA) 
+		(vitB2 ?maxVitB2) 
+		(vitB3 ?maxVitB3) 
+		(vitB6 ?maxVitB6) 
+		(vitB9 ?maxVitB9) 
+		(vitB12 ?maxVitB12) 
+		(vitC ?maxVitC) 
+		(vitE ?maxVitE))
+	(macronutrientsAmount
+		(name macrosAmount) 
+		(protein ?proteins) 
+		(saturated ?saturated) 
+		(cholesterolMax ?cholesterol) 
+		(carbs ?carbs))
+	(mineralsAmount 
+		(name mineralMin) 
+		(calcium ?minCalcium) 
+		(copper ?minCopper) 
+		(magnesium ?minMagnesium) 
+		(selenium ?minSelenium) 
+		(sodium ?minSodium) 
+		(zinc ?minZinc) 
+		(fiber ?minFiber) 
+		(iron ?minIron) 
+		(potassium ?minPotassium))
+	(mineralsAmount 
+		(name mineralMax) 
+		(calcium ?maxCalcium) 
+		(copper ?maxCopper) 
+		(magnesium ?maxMagnesium) 
+		(selenium ?maxSelenium) 
+		(sodium ?maxSodium) 
+		(zinc ?maxZinc) 
+		(fiber ?maxFiber) 
+		(iron ?maxIron) 
+		(potassium ?maxPotassium))
+	=>
+
+	(bind ?vitA (+ ?beverageVitA ?appetizerVitA))
+	(bind ?vitB2 (+ ?beverageVitB2 ?appetizerVitB2)) 
+	(bind ?vitB3 (+ ?beverageVitB3 ?appetizerVitB3))
+	(bind ?vitB6 (+ ?beverageVitB6 ?appetizerVitB6))
+	(bind ?vitB9 (+ ?beverageVitB9 ?appetizerVitB9))
+	(bind ?vitB12 (+ ?beverageVitB12 ?appetizerVitB12))
+	(bind ?vitC (+ ?beverageVitC ?appetizerVitC))
+	(bind ?vitE (+ ?beverageVitE ?appetizerVitE))
+	(bind ?protein (+ ?beverageProtein ?appetizerProtein))
+	(bind ?saturated (+ ?beverageSaturate ?appetizerSaturate))
+	(bind ?cholesterolMax (+ ?beverageCholesterolMax ?appetizerCholesterolMax))
+	(bind ?carbs (+ ?beverageCarbs ?appetizerCarbs))
+	(bind ?calcium (+ ?beverageCalcium ?appetizerCalcium))
+	(bind ?copper (+ ?beverageCopper ?appetizerCopper))
+	(bind ?magnesium (+ ?beverageMagnesium ?appetizerMagnesium))
+	(bind ?selenium (+ ?beverageSelenium ?appetizerSelenium ))
+	(bind ?sodium (+ ?beverageSodium ?appetizerSodium))
+	(bind ?zinc (+ ?beverageZinc ?appetizerZinc))
+	(bind ?fiber(+ ?beverageFiber ?appetizerFiber))
+	(bind ?iron (+ ?beverageIron ?appetizerIron))
+	(bind ?potassium (+ ?beveragePotassium ?appetizerPotassium))
+	(bind ?calories (+ ?beverageCalories ?appetizerCalories))
+
+	(bind ?extraFactor (* 0.25 1.4)) ; 25% de lo necesario al día con un lower de 1.4
+	(bind ?lowerFactor (* 0.25 0.7)) ; 25% de lo diario con un lower de 0.4
+
+	(bind ?violatedLimits 0)
+
+	(bind ?r ( or (<= ?vitA  (* ?minVitA ?lowerFactor)) (> ?vitA (* ?maxVitA ?extraFactor)))) ; si estamos por debajo del min o encima del max
+	; (bind ?r (or ?r (or (<= ?vitB2 (* ?minVitB2 ?lowerFactor)) (> ?vitB2 (* ?maxVitB2 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitB3 (* ?minVitB3 ?lowerFactor)) (> ?vitB3 (* ?maxVitB3 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitB6 (* ?minVitB6 ?lowerFactor)) (> ?vitB6 (* ?maxVitB6 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitB9 (* ?minVitB9 ?lowerFactor)) (> ?vitB9 (* ?maxVitB9 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitB12 (* ?minVitB12 ?lowerFactor)) (> ?vitB12 (* ?maxVitB12 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitC (* ?minVitC ?lowerFactor)) (> ?vitC (* ?maxVitC ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?vitE (* ?minVitE ?lowerFactor)) (> ?vitE (* ?maxVitE ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?protein (* ?proteins ?lowerFactor)) (> ?protein (* ?proteins ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?saturated (* ?saturated ?lowerFactor)) (> ?saturated (* ?saturated ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?cholesterolMax (* ?cholesterol ?lowerFactor)) (> ?cholesterol (* ?cholesterol ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?carbs (* ?carbs ?lowerFactor)) (> ?carbs (* ?carbs ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?calories (* ?recommendedCalories ?lowerFactor)) (> ?calories (* ?recommendedCalories ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?calcium (* ?minCalcium ?lowerFactor)) (> ?calcium (* ?maxCalcium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?copper (* ?minCopper ?lowerFactor)) (> ?copper (* ?maxCopper ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?selenium (* ?minSelenium ?lowerFactor)) (> ?selenium (* ?maxSelenium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?sodium (* ?minSodium ?lowerFactor)) (> ?sodium (* ?maxSodium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?zinc (* ?minZinc ?lowerFactor)) (> ?zinc (* ?maxZinc ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?fiber (* ?minFiber ?lowerFactor)) (> ?fiber (* ?maxFiber ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?iron (* ?minIron ?lowerFactor)) (> ?iron (* ?maxIron ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?potassium (* ?minPotassium ?lowerFactor)) (> ?potassium (* ?maxPotassium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?magnesium (* ?minMagnesium ?lowerFactor)) (> ?magnesium (* ?maxMagnesium ?extraFactor)))))
+
+	; ALWAYS GENERATE IT
+	; (if (not ?r) then
+		(assert
+			(simpleMenu 
+				(appetizerName ?appetizer) 
+				(beverageName ?beverage)
+				(vitA (+ ?beverageVitA ?appetizerVitA))
+				(vitB2 (+ ?beverageVitB2 ?appetizerVitB2)) 
+				(vitB3 (+ ?beverageVitB3 ?appetizerVitB3))
+				(vitB6 (+ ?beverageVitB6 ?appetizerVitB6))
+				(vitB9 (+ ?beverageVitB9 ?appetizerVitB9))
+				(vitB12 (+ ?beverageVitB12 ?appetizerVitB12))
+				(vitC (+ ?beverageVitC ?appetizerVitC))
+				(vitE (+ ?beverageVitE ?appetizerVitE))
+				(protein (+ ?beverageProtein ?appetizerProtein))
+				(saturated (+ ?beverageSaturate ?appetizerSaturate))
+				(cholesterolMax (+ ?beverageCholesterolMax ?appetizerCholesterolMax))
+				(carbs (+ ?beverageCarbs ?appetizerCarbs))
+				(calcium (+ ?beverageCalcium ?appetizerCalcium))
+				(copper (+ ?beverageCopper ?appetizerCopper))
+				(magnesium (+ ?beverageMagnesium ?appetizerMagnesium))
+				(selenium (+ ?beverageSelenium ?appetizerSelenium ))
+				(sodium (+ ?beverageSodium ?appetizerSodium))
+				(zinc (+ ?beverageZinc ?appetizerZinc))
+				(fiber(+ ?beverageFiber ?appetizerFiber))
+				(iron (+ ?beverageIron ?appetizerIron))
+				(potassium (+ ?beveragePotassium ?appetizerPotassium))
+				(calories (+ ?beverageCalories ?appetizerCalories))
+
+			)
 		)
-	)
-	(assert (generateDaily 1))
-	(assert (maxRepetitions 7))
+		(assert (generateDaily 1))
+		(assert (maxRepetitions 3))
+	; )
 )
 
 (defglobal
@@ -790,60 +999,18 @@
 		(calories ?dinnerCalories)
 	)
 
-	(vitaminsAmount 
-		(name vitaminMin) 
-		(vitA ?minVitA) 
-		(vitB2 ?minVitB2)
-		(vitB3 ?minVitB3) 
-		(vitB6 ?minVitB6) 
-		(vitB9 ?minVitB9) 
-		(vitB12 ?minVitB12) 
-		(vitC ?minVitC) 
-		(vitE ?minVitE))
-	(vitaminsAmount 
-		(name vitaminMax) 
-		(vitA ?maxVitA) 
-		(vitB2 ?maxVitB2) 
-		(vitB3 ?maxVitB3) 
-		(vitB6 ?maxVitB6) 
-		(vitB9 ?maxVitB9) 
-		(vitB12 ?maxVitB12) 
-		(vitC ?maxVitC) 
-		(vitE ?maxVitE))
-	(macronutrientsAmount
-		(name macrosAmount) 
-		(protein ?proteins) 
-		(saturated ?saturated) 
-		(cholesterolMax ?cholesterol) 
-		(carbs ?carbs))
-	(mineralsAmount 
-		(name mineralMin) 
-		(calcium ?minCalcium) 
-		(copper ?minCopper) 
-		(magnesium ?minMagnesium) 
-		(selenium ?minSelenium) 
-		(sodium ?minSodium) 
-		(zinc ?minZinc) 
-		(fiber ?minFiber) 
-		(iron ?minIron) 
-		(potassium ?minPotassium))
-	(mineralsAmount 
-		(name mineralMax) 
-		(calcium ?maxCalcium) 
-		(copper ?maxCopper) 
-		(magnesium ?maxMagnesium) 
-		(selenium ?maxSelenium) 
-		(sodium ?maxSodium) 
-		(zinc ?maxZinc) 
-		(fiber ?maxFiber) 
-		(iron ?maxIron) 
-		(potassium ?maxPotassium)
-	)
-
 	; No repetir platos en comida y cena
-	(test (not(eq ?firstLunch ?firstDinner)))
-	(test (not(eq ?secondLunch ?secondDinner)))
-	(test (not(eq ?dessertLunch ?dessertDinner)))
+	(test (or 
+			(not
+				(eq ?firstLunch ?firstDinner)
+			)
+			(not
+				(eq ?secondLunch ?secondDinner)
+			)
+		)
+	)
+	; (test (not(eq ?secondLunch ?secondDinner)))
+	; (test (not(eq ?dessertLunch ?dessertDinner)))
 
 	; (completeMenu 
 	; 	(firstName ?firstDinner)
@@ -870,129 +1037,59 @@
 	(test (<= ?firstLP ?maxRepetitions))
 	(test (<= ?secondLP ?maxRepetitions))
 	(test (<= ?dessertLP ?maxRepetitions))
-
-	; (dishPriority (nombre ~?firstDinner) (priority ?noDinnerFPrio))
-
-	?t <-(generatedMenus ?gen)
+	
 	=>
 
 	(printout t "ESTOY DENTRO" crlf)
 
-	(bind ?dailyVitA (+ (+ ?dinnerVitA ?lunchVitA) ?breakfastVitA))
-	(bind ?dailyVitB2 (+ (+ ?dinnerVitB2 ?lunchVitB2) ?breakfastVitB2)) 
-	(bind ?dailyVitB3 (+ (+ ?dinnerVitB3 ?lunchVitB3) ?breakfastVitB3))
-	(bind ?dailyVitB6 (+ (+ ?dinnerVitB6 ?lunchVitB6) ?breakfastVitB6))
-	(bind ?dailyVitB9 (+ (+ ?dinnerVitB9 ?lunchVitB9) ?breakfastVitB9))
-	(bind ?dailyVitB12 (+ (+ ?dinnerVitB12 ?lunchVitB12) ?breakfastVitB12))
-	(bind ?dailyVitC (+ (+ ?dinnerVitC ?lunchVitC) ?breakfastVitC))
-	(bind ?dailyVitE (+ (+ ?dinnerVitE ?lunchVitE) ?breakfastVitE))
-	(bind ?dailyProtein (+ (+ ?dinnerProtein ?lunchProtein) ?breakfastProtein))
-	(bind ?dailySaturated (+ (+ ?dinnerSaturate ?lunchSaturate) ?breakfastSaturate))
-	(bind ?dailyCholesterolMax (+ (+ ?dinnerCholesterolMax ?lunchCholesterolMax) ?breakfastCholesterolMax))
-	(bind ?dailyCarbs (+ (+ ?dinnerCarbs ?lunchCarbs) ?breakfastCarbs))
-	(bind ?dailyCalcium (+ (+ ?dinnerCalcium ?lunchCalcium) ?breakfastCalcium))
-	(bind ?dailyCopper (+ (+ ?dinnerCopper ?lunchCopper) ?breakfastCopper))
-	(bind ?dailyMagnesium (+ (+ ?dinnerMagnesium ?lunchMagnesium) ?breakfastMagnesium))
-	(bind ?dailySelenium (+ (+ ?dinnerSelenium ?lunchSelenium) ?breakfastSelenium ))
-	(bind ?dailySodium (+ (+ ?dinnerSodium ?lunchSodium) ?breakfastSodium))
-	(bind ?dailyZinc (+ (+ ?dinnerZinc ?lunchZinc) ?breakfastZinc))
-	(bind ?dailyFiber (+ (+ ?dinnerFiber ?lunchFiber) ?breakfastFiber))
-	(bind ?dailyIron (+ (+ ?dinnerIron ?lunchIron) ?breakfastIron))
-	(bind ?dailyPotassium (+ (+ ?dinnerPotassium ?lunchPotassium) ?breakfastPotassium))
-	(bind ?dailyCalories (+ (+ ?dinnerCalories ?lunchCalories) ?breakfastCalories))
-	;(modify ?t (generatedMenus (+ ?gen 1)))
-	(bind ?extraFactor 1.8)
-	(bind ?lowerFactor 0.3)
+	(printout t "generated" crlf)
 
-	(bind ?r ( or (<= ?dailyVitA  ?minVitA) (> ?dailyVitA ?maxVitA))) ; si estamos por debajo del min o encima del max
-	(bind ?r (or ?r (or (<= ?dailyVitB2 (* ?minVitB2 ?lowerFactor)) (> ?dailyVitB2 (* ?maxVitB2 ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?dailyVitB3 (* ?minVitB3 ?lowerFactor)) (> ?dailyVitB3 (* ?maxVitB3 ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?dailyVitB6 (* ?minVitB6 ?lowerFactor)) (> ?dailyVitB6 (* ?maxVitB6 ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?dailyVitB9 (* ?minVitB9 ?lowerFactor)) (> ?dailyVitB9 (* ?maxVitB9 ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?dailyVitB12 (* ?minVitB12 ?lowerFactor)) (> ?dailyVitB12 (* ?maxVitB12 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?dailyVitC (* ?minVitC ?lowerFactor)) (> ?dailyVitC (* ?maxVitC ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?dailyVitE (* ?minVitE ?lowerFactor)) (> ?dailyVitE (* ?maxVitE ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?dailyProtein (* ?proteins ?lowerFactor)) (> ?dailyProtein (* ?proteins ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?dailySaturated (* ?saturated ?lowerFactor)) (> ?dailySaturated (* ?saturated ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?dailyCholesterolMax (* ?cholesterol ?lowerFactor)) (> ?cholesterol (* ?cholesterol ?extraFactor)))))
-	;(bind ?r (or ?r (or (<= ?dailyCarbs (* ?carbs ?lowerFactor)) (> ?dailyCarbs (* ?carbs ?extraFactor)))))
-	;(bind ?r (or ?r (or (<= ?dailyCalories (* ?recommendedCalories ?lowerFactor)) (> ?dailyCalories (* ?recommendedCalories ?extraFactor)))))
-	;(bind ?r (or ?r (or (<= ?dailyCalcium (* ?minCalcium ?lowerFactor)) (> ?dailyCalcium (* ?maxCalcium ?extraFactor)))))
-	;(bind ?r (or ?r (or (<= ?dailyCopper (* ?minCopper ?lowerFactor)) (> ?dailyCopper (* ?maxCopper ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?dailySelenium (* ?minSelenium ?lowerFactor)) (> ?dailySelenium (* ?maxSelenium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?dailySodium (* ?minSodium ?lowerFactor)) (> ?dailySodium (* ?maxSodium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?dailyZinc (* ?minZinc ?lowerFactor)) (> ?dailyZinc (* ?maxZinc ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?dailyFiber (* ?minFiber ?lowerFactor)) (> ?dailyFiber (* ?maxFiber ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?dailyIron (* ?minIron ?lowerFactor)) (> ?dailyIron (* ?maxIron ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?dailyPotassium (* ?minPotassium ?lowerFactor)) (> ?dailyPotassium (* ?maxPotassium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?dailyMagnesium (* ?minMagnesium ?lowerFactor)) (> ?dailyMagnesium (* ?maxMagnesium ?extraFactor)))))
+	; updating the dinner priorities
+	; First we retract 
+	(retract ?pfd)
+	(retract ?psd)
+	(retract ?pdd)
 
-	;vitc
-	;carbs
-	;añadir ricos en calcio para los veganos
+	; Then create the new assert
+	(assert (dishPriority (dishName ?firstDinner) (priority (+ ?firstDP 1))))
+	(assert (dishPriority (dishName ?secondDinner) (priority (+ ?secondDP 1))))
+	(assert (dishPriority (dishName ?dessertDinner) (priority (+ ?dessertDP 1))))
 
-	(if(not ?r) then
-		(printout t "generated" crlf)
+	(retract ?pfl)
+	(retract ?psl)
+	(retract ?pdl)
 
-		; updating the dinner priorities
-		; First we retract 
-		(retract ?pfd)
-		(retract ?psd)
-		(retract ?pdd)
+	; Then create the new assert
+	(assert (dishPriority (dishName ?firstLunch) (priority (+ ?firstLP 1))))
+	(assert (dishPriority (dishName ?secondLunch) (priority (+ ?secondLP 1))))
+	(assert (dishPriority (dishName ?dessertLunch) (priority (+ ?dessertLP 1))))
 
-		; Then create the new assert
-		(assert (dishPriority (dishName ?firstDinner) (priority (+ ?firstDP 1))))
-		(assert (dishPriority (dishName ?secondDinner) (priority (+ ?secondDP 1))))
-		(assert (dishPriority (dishName ?dessertDinner) (priority (+ ?dessertDP 1))))
+	;increase generated menus
+	(bind ?*menuGen* (+ ?*menuGen* 1))
 
-		(retract ?pfl)
-		(retract ?psl)
-		(retract ?pdl)
-
-		; Then create the new assert
-		(assert (dishPriority (dishName ?firstLunch) (priority (+ ?firstLP 1))))
-		(assert (dishPriority (dishName ?secondLunch) (priority (+ ?secondLP 1))))
-		(assert (dishPriority (dishName ?dessertLunch) (priority (+ ?dessertLP 1))))
-
-		;increase generated menus
-		(bind ?*menuGen* (+ ?*menuGen* 1))
-
-		; We got 7, do not generate more
-		(if (>= ?*menuGen* 7) then
-			(retract ?generate)
-		)
-		
-		; (bind ?newGen (+ ?gen 1))
-		; (retract ?t)
-		; (assert (generatedMenus ?newGen))
-		; (printout t "Valor de gen: " ?gen crlf)
-		(assert (finalMenu
-			(nameAppetizer ?appetizer)
-			(nameBeverage ?beverage)
-			(nameFirstLunch ?firstLunch)
-			(nameSecondLunch ?secondLunch)
-			(nameDessertLunch ?dessertLunch)
-			(nameFirstDinner ?firstDinner)
-			(nameSecondDinner ?secondDinner)
-			(nameDessertDinner ?dessertDinner)
-		))
+	(printout t ?*menuGen* crlf)
+	; We got 7, do not generate more
+	(if (>= ?*menuGen* 7) then
+		(retract ?generate)
 	)
-	; else
-	; ; 	(printout t ?d crlf)
-	; 	(printout t crlf "Estoy trabajando " crlf
-	; 		"appetizer: " ?appetizer crlf
-	; 		"beverage: "?beverage crlf
-	; 		"primer plato comida: "?firstLunch crlf
-	; 		"segundo plato comida: "?secondLunch crlf
-	; 		"postre comida: "?dessertLunch crlf
-	; 		 "primer plato cena: "?firstDinner crlf
-	; 		 "secundo plato cena: "?secondDinner crlf
-	; 		 "postre cena: "?dessertDinner crlf crlf
-	; 	)
+	
+	(assert (finalMenu
+		(nameAppetizer ?appetizer)
+		(nameBeverage ?beverage)
+		(nameFirstLunch ?firstLunch)
+		(nameSecondLunch ?secondLunch)
+		(nameDessertLunch ?dessertLunch)
+		(nameFirstDinner ?firstDinner)
+		(nameSecondDinner ?secondDinner)
+		(nameDessertDinner ?dessertDinner)
+	))
+
 	(assert (printable 1))
 )
 
-(defglobal )
+(defglobal 
+	?*printed* = 0
+)
 
 (defrule GENERATOR::printMenus "Rule to print the final menus generated"
 	(declare (salience -10))
@@ -1010,20 +1107,24 @@
 		(nameDessertDinner ?dessertDinner)
 	)
 	=>
-	(if (< ?c 7) then
-		(printout t "no son sufisientes" crlf)
-		(retract ?p)
-		(assert (printable (+ ?c 1)))
-	else ; ACABE NOMÁS
+
+	(bind ?*printed* (+ ?*printed* 1))
+
+	(if (>= ?*printed* 7) then
 		(printout t "ACABE NOMÁS" crlf)
+		;(printout t "no son sufisientes" crlf)
 		(retract ?p)
+		;(assert (printable (+ ?c 1)))
+	else ; ACABE NOMÁS
+		(printout t "sigo printeando" crlf)
+		;(retract ?p)
 	)
 	; (if (< ?c 7) then
 	; 	(retract ?p)
 	; 	(assert (printable (+ ?p 1))
 	; )
 
-	(printout t crlf "Estoy trabajando " crlf
+	(printout t crlf "MENU DEL DIA " ?*printed* crlf
 		"appetizer: " ?appetizer crlf
 		"beverage: "?beverage crlf
 		"primer plato comida: "?firstLunch crlf
@@ -1032,6 +1133,16 @@
 		 "primer plato cena: "?firstDinner crlf
 		 "segundo plato cena: "?secondDinner crlf
 		 "postre cena: "?dessertDinner crlf crlf
+	)
+)
+
+(defrule reprintIfNotAll
+	(declare (salience -19))
+	?t <- (printable ?n)
+	=>
+	(if (< ?*printed* 7) then
+		(retract ?t)
+		(assert (printable (+ ?n 1)))
 	)
 )
 
