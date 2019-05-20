@@ -395,10 +395,28 @@
 (defrule GENERATOR::filterAllergies "Rule to filter the alergies"
 	(allergy ?allergy)
 	?d <- (initialDishes (ingredients $?ingredients))
-	(test (not (member$ ?allergy $?ingredients)))
+	;(test (not (member$ ?allergy $?ingredients)))
 	=>
-	
-	(retract ?d)
+	(bind ?allergic 0)
+	(bind ?ingredientA (symbol-to-instance-name (sym-cat ?allergy)))
+
+	(loop-for-count(?i 1 (length$ ?ingredients)) do
+		(bind ?ing (lowcase (nth$ ?i ?ingredients)))
+		(printout t "symbol is " ?ingredientA ?ing)
+		(if (eq ?ing ?ingredientA) then
+			(bind ?allergic 1)
+		)
+	)
+
+	(if (= ?allergic 1) then
+		(printout t ?allergy " " $?ingredients crlf)
+		(retract ?d)
+	)
+	; (if (not(eq ?allergic 0))
+	; 	(printout t ?allergy " " $?ingredients crlf)
+	; 	(retract ?d)
+	; )
+
 )
 
 (defrule GENERATOR::filterVegetarian "Rule to filter dishes that are not available for people with vegetarian"
