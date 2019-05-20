@@ -233,11 +233,11 @@
 	(gender ?gender)
 	=>
 	(if (eq ?gender woman) then
-		(assert(mineralsAmount (name mineralMin) (calcium 1200.0) (copper 0.9) (magnesium 320.0) (selenium 55.0) (sodium 2.3) (zinc 8.0) (fiber 27) (iron 8.0) (potassium 3500.0)))
+		(assert(mineralsAmount (name mineralMin) (calcium 1200.0) (copper 0.9) (magnesium 320.0) (selenium 55.0) (sodium 2.3) (zinc 8.0) (fiber 27) (iron 18.0) (potassium 3500.0)))
 	else 
 		(assert(mineralsAmount (name mineralMin) (calcium 1200.0) (copper 0.9) (magnesium 420.0)(selenium 55.0)(sodium 2.3) (zinc 11.0) (fiber 19) (iron 8.0) (potassium 3500.0)))
 	)
-	(assert(mineralsAmount (name mineralMax) (calcium 2500.0) (copper 10.0) (magnesium 700.0) (selenium 400.0) (sodium 2.8) (zinc 40.0) (fiber 10000.0) (iron 10.0) (potassium 4700.0)))
+	(assert(mineralsAmount (name mineralMax) (calcium 2500.0) (copper 10.0) (magnesium 700.0) (selenium 400.0) (sodium 2.8) (zinc 40.0) (fiber 10000.0) (iron 30.0) (potassium 4700.0)))
 
 )
 
@@ -245,7 +245,7 @@
 	(recommendedCalories ?recommendedCalories)
 	(weight ?weight)
 	=>
-	(assert(macronutrientsAmount(name macrosAmount) (protein (* ?weight 1.25)) (saturated (div (* ?recommendedCalories 0.1) 14)) (cholesterolMax 300) (carbs (* ?recommendedCalories 0.5))))
+	(assert(macronutrientsAmount(name macrosAmount) (protein (* ?weight 1.25)) (saturated (div (* ?recommendedCalories 0.1) 14)) (cholesterolMax 300) (carbs (div (* ?recommendedCalories 0.5) 4))))
 )
 
 (defrule RESTRICTIONS::hyperlipidemia "Rule to modify some nutrients if hyperlipidemia disease is present"
@@ -387,6 +387,14 @@
 	?d <- (initialDishes (dishAttributes $?attrs))
 	(dietType vegan)
 	(test (not (member$ "vegan" ?attrs))) ; The initial dishes with the diabetes attribute will be retracted
+	=>
+	(retract ?d)
+)
+
+(defrule GENERATOR::filterAllergies "Rule to filter the alergies"
+	(allergy ?allergy)
+	?d <- (initialDishes (ingredients $?ingredients))
+	(test (not (member$ ?allergy $?ingredients)))
 	=>
 	(retract ?d)
 )
