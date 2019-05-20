@@ -233,11 +233,11 @@
 	(gender ?gender)
 	=>
 	(if (eq ?gender woman) then
-		(assert(mineralsAmount (name mineralMin) (calcium 1200.0) (copper 900.0) (magnesium 320.0) (selenium 55.0) (sodium 2.3) (zinc 8.0) (fiber 27) (iron 8.0) (potassium 3500.0)))
+		(assert(mineralsAmount (name mineralMin) (calcium 1200.0) (copper 0.9) (magnesium 320.0) (selenium 55.0) (sodium 2.3) (zinc 8.0) (fiber 27) (iron 8.0) (potassium 3500.0)))
 	else 
-		(assert(mineralsAmount (name mineralMin) (calcium 1200.0) (copper 900.0) (magnesium 420.0)(selenium 55.0)(sodium 2.3) (zinc 11.0) (fiber 19) (iron 8.0) (potassium 3500.0)))
+		(assert(mineralsAmount (name mineralMin) (calcium 1200.0) (copper 0.9) (magnesium 420.0)(selenium 55.0)(sodium 2.3) (zinc 11.0) (fiber 19) (iron 8.0) (potassium 3500.0)))
 	)
-	(assert(mineralsAmount (name mineralMax) (calcium 2500.0) (copper 10000.0) (magnesium 700.0) (selenium 400.0) (sodium 2.8) (zinc 40.0) (fiber 10000.0) (iron 10.0) (potassium 4700.0)))
+	(assert(mineralsAmount (name mineralMax) (calcium 2500.0) (copper 10.0) (magnesium 700.0) (selenium 400.0) (sodium 2.8) (zinc 40.0) (fiber 10000.0) (iron 10.0) (potassium 4700.0)))
 
 )
 
@@ -248,7 +248,7 @@
 	(assert(macronutrientsAmount(name macrosAmount) (protein (* ?weight 1.25)) (saturated (div (* ?recommendedCalories 0.1) 14)) (cholesterolMax 300) (carbs (* ?recommendedCalories 0.5))))
 )
 
-(defrule RESTRICTIONS::hyperlipidemia "Rule to modifiy some nutrients if hyperlipidemia disease is present"
+(defrule RESTRICTIONS::hyperlipidemia "Rule to modify some nutrients if hyperlipidemia disease is present"
 	(activity ?activity)
 	?hyperlipidemia <- (disease hyperlipidemia)
 	?macronutrientsAmount <- (macronutrientsAmount(cholesterolMax ?cholesterolMax))
@@ -502,7 +502,7 @@
 		(potassium ?auxpotassium)
 		))
 )
-(defrule completeMenuGenerator "Rule to generate completeMenus (dinner, lunch)"
+(defrule GENERATOR::completeMenuGenerator "Rule to generate completeMenus (dinner, lunch)"
 	(initialDishes (dishName ?first)(category FirstCourse))
 	(initialDishes (dishName ?second)(category SecondCourse))
 	(initialDishes (dishName ?dessert)(category Dessert))
@@ -611,7 +611,7 @@
 		))
 )
 
-(defrule simpleMenuGenerator "Rule to generate simpleMenus (breakfast)"
+(defrule GENERATOR::simpleMenuGenerator "Rule to generate simpleMenus (breakfast)"
 	(initialDishes (dishName ?appetizer )(category Appetizer))
 	(initialDishes (dishName ?beverage )(category Beverage))
 	(dishStats 
@@ -694,7 +694,7 @@
 	)
 )
 
-(defrule dailyMenuGenerator "Rule to generate completeMenus (dinner, lunch, dessert)"
+(defrule GENERATOR::dailyMenuGenerator "Rule to generate completeMenus (dinner, lunch, dessert)"
 	?desayuno <- (simpleMenu 
 		(appetizerName ?appetizer)
 		(beverageName ?beverage)
@@ -834,9 +834,9 @@
 	)
 )
 
-(defrule filterAmounts "Filter daily menus by calories, macronutrients and vitamins"
+(defrule GENERATOR::filterAmounts "Filter daily menus by calories, macronutrients and vitamins"
 	(recommendedCalories ?recommendedCalories)
-	?d <- (dailyMenu 
+	(dailyMenu 
 		(nameAppetizer ?appetizer)
 		(nameBeverage ?beverage)
 
@@ -919,40 +919,87 @@
 		(iron ?maxIron) 
 		(potassium ?maxPotassium))
 	=>
-	(bind ?extraFactor 1.3)
-	(bind ?lowerFactor 0.7)
+	(bind ?extraFactor 1.8)
+	(bind ?lowerFactor 0.3)
+	(bind ?r ( or (<= ?dailyVitA  ?minVitA) (> ?dailyVitA ?maxVitA))) ; si estamos por debajo del min o encima del max
+	(bind ?r (or ?r (or (<= ?dailyVitB2 (* ?minVitB2 ?lowerFactor)) (> ?dailyVitB2 (* ?maxVitB2 ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?dailyVitB3 (* ?minVitB3 ?lowerFactor)) (> ?dailyVitB3 (* ?maxVitB3 ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?dailyVitB6 (* ?minVitB6 ?lowerFactor)) (> ?dailyVitB6 (* ?maxVitB6 ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?dailyVitB9 (* ?minVitB9 ?lowerFactor)) (> ?dailyVitB9 (* ?maxVitB9 ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?dailyVitB12 (* ?minVitB12 ?lowerFactor)) (> ?dailyVitB12 (* ?maxVitB12 ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?dailyVitC (* ?minVitC ?lowerFactor)) (> ?dailyVitC (* ?maxVitC ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?dailyVitE (* ?minVitE ?lowerFactor)) (> ?dailyVitE (* ?maxVitE ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?dailyProtein (* ?proteins ?lowerFactor)) (> ?dailyProtein (* ?proteins ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?dailySaturated (* ?saturated ?lowerFactor)) (> ?dailySaturated (* ?saturated ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?dailyCholesterolMax (* ?cholesterol ?lowerFactor)) (> ?cholesterol (* ?cholesterol ?extraFactor)))))
+	;(bind ?r (or ?r (or (<= ?dailyCarbs (* ?carbs ?lowerFactor)) (> ?dailyCarbs (* ?carbs ?extraFactor)))))
+	;(bind ?r (or ?r (or (<= ?dailyCalories (* ?recommendedCalories ?lowerFactor)) (> ?dailyCalories (* ?recommendedCalories ?extraFactor)))))
+	;(bind ?r (or ?r (or (<= ?dailyCalcium (* ?minCalcium ?lowerFactor)) (> ?dailyCalcium (* ?maxCalcium ?extraFactor)))))
+	;(bind ?r (or ?r (or (<= ?dailyCopper (* ?minCopper ?lowerFactor)) (> ?dailyCopper (* ?maxCopper ?extraFactor)))))
+	(bind ?r (or ?r (or (<= ?dailySelenium (* ?minSelenium ?lowerFactor)) (> ?dailySelenium (* ?maxSelenium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?dailySodium (* ?minSodium ?lowerFactor)) (> ?dailySodium (* ?maxSodium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?dailyZinc (* ?minZinc ?lowerFactor)) (> ?dailyZinc (* ?maxZinc ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?dailyFiber (* ?minFiber ?lowerFactor)) (> ?dailyFiber (* ?maxFiber ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?dailyIron (* ?minIron ?lowerFactor)) (> ?dailyIron (* ?maxIron ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?dailyPotassium (* ?minPotassium ?lowerFactor)) (> ?dailyPotassium (* ?maxPotassium ?extraFactor)))))
+	; (bind ?r (or ?r (or (<= ?dailyMagnesium (* ?minMagnesium ?lowerFactor)) (> ?dailyMagnesium (* ?maxMagnesium ?extraFactor)))))
 
-	(bind ?r1 ( or (<= ?dailyVitA  ?minVitA) (> ?dailyVitA ?maxVitA))) ; si estamos por debajo del min o encima del max
-	(bind ?r2 (or ?r1 (or (<= ?dailyVitB2 ?minVitB2) (> ?dailyVitB2 ?maxVitB2))))
-	(bind ?r3 (or ?r2 (or (<= ?dailyVitB3 ?minVitB3) (> ?dailyVitB3 ?maxVitB3))))
-	(bind ?r4 (or ?r3 (or (<= ?dailyVitB6 ?minVitB6) (> ?dailyVitA ?maxVitB6))))
-	(bind ?r5 (or ?r4 (or (<= ?dailyVitB9 ?minVitB9) (> ?dailyVitB9 ?maxVitB9))))
-	(bind ?r6 (or ?r5 (or (<= ?dailyVitB12 ?minVitB12) (> ?dailyVitB12 ?maxVitB12))))
-	(bind ?r7 (or ?r6 (or (<= ?dailyVitC ?minVitC) (> ?dailyVitC ?maxVitC))))
-	(bind ?r8 (or ?r7 (or (<= ?dailyVitE ?minVitE) (> ?dailyVitE ?maxVitE))))
-	(bind ?r9 (or ?r8 (or (<= ?dailyProtein (* ?proteins ?lowerFactor)) (> ?dailyProtein (* ?proteins ?extraFactor)))))
-	(bind ?r10 (or ?r9 (or (<= ?dailySaturated (* ?saturated ?lowerFactor)) (> ?dailySaturated (* ?saturated ?extraFactor)) )))
-	(bind ?r11 (or ?r10 (or (<= ?dailyCholesterolMax (* ?cholesterol ?lowerFactor)) (> ?cholesterol (* ?cholesterol ?extraFactor)))))
-	(bind ?r12 (or ?r11 (or (<= ?dailyCarbs (* ?carbs ?lowerFactor)) (> ?dailyCarbs (* ?carbs ?extraFactor)))))
-	(bind ?r13 (or ?r12 (or (<= ?dailyCalories (* ?recommendedCalories ?lowerFactor)) (> ?dailyCalories (* ?recommendedCalories ?extraFactor)))))
-	(bind ?r13 (or ?r12 (or (<= ?dailyCalcium ?minCalcium) (> ?dailyCalcium ?maxCalcium))))
-	(bind ?r14 (or ?r13 (or (<= ?dailyCopper ?minCopper) (> ?dailyCopper ?maxCopper))))
-	(bind ?r15 (or ?r14 (or (<= ?dailySelenium ?minSelenium) (> ?dailySelenium ?maxSelenium))))
-	(bind ?r16 (or ?r15 (or (<= ?dailySodium ?minSodium) (> ?dailySodium ?maxSodium))))
-	(bind ?r17 (or ?r16 (or (<= ?dailyZinc ?minZinc) (> ?dailyZinc ?maxZinc))))
-	(bind ?r18 (or ?r17 (or (<= ?dailyFiber ?minFiber) (> ?dailyFiber ?maxFiber))))
-	(bind ?r19 (or ?r18 (or (<= ?dailyIron ?minIron) (> ?dailyIron ?maxIron))))
-	(bind ?r20 (or ?r19 (or (<= ?dailyPotassium ?minPotassium) (> ?dailyPotassium ?maxPotassium))))
-	(bind ?r21 (or ?r20 (or (<= ?dailyMagnesium ?minMagnesium) (> ?dailyMagnesium ?maxMagnesium))))
-	
-	(if ?r21  then
-		(retract ?d)
-	else
-		(printout t ?d crlf)
+	;vitc
+	;carbs
+	;añadir ricos en calcio para los putos veganos
+
+	(if(not ?r) then
+	(assert (finalMenus
+		(nameAppetizer ?appetizer)
+		(nameBeverage ?beverage)
+		(nameFirstLunch ?firstLunch)
+		(nameSecondLunch ?secondLunch)
+		(nameDessertLunch ?dessertLunch)
+		(nameFirstDinner ?firstDinner)
+		(nameSecondDinner ?secondDinner)
+		(nameDessertDinner ?dessertDinner))
+	)
+	; else
+	; ; 	(printout t ?d crlf)
+	; 	(printout t crlf "Estoy trabajando " crlf
+	; 		"appetizer: " ?appetizer crlf
+	; 		"beverage: "?beverage crlf
+	; 		"primer plato comida: "?firstLunch crlf
+	; 		"segundo plato comida: "?secondLunch crlf
+	; 		"postre comida: "?dessertLunch crlf
+	; 		 "primer plato cena: "?firstDinner crlf
+	; 		 "secundo plato cena: "?secondDinner crlf
+	; 		 "postre cena: "?dessertDinner crlf crlf
+	; 	)
 	)
 )
 
+(defrule GENERATOR::printMenus "Rule to print the final menus generated"
+	(declare (salience -10))
+	(finalMenus 
+		(nameAppetizer ?appetizer)
+		(nameBeverage ?beverage)
 
+		(nameFirstLunch  ?firstLunch)
+		(nameSecondLunch ?secondLunch)
+		(nameDessertLunch ?dessertLunch)
+
+		(nameFirstDinner ?firstDinner)
+		(nameSecondDinner ?secondDinner)
+		(nameDessertDinner ?dessertDinner)
+	)
+	=>
+	(printout t crlf "Estoy trabajando " crlf
+		"appetizer: " ?appetizer crlf
+		"beverage: "?beverage crlf
+		"primer plato comida: "?firstLunch crlf
+		"segundo plato comida: "?secondLunch crlf
+		"postre comida: "?dessertLunch crlf
+		 "primer plato cena: "?firstDinner crlf
+		 "secundo plato cena: "?secondDinner crlf
+		 "postre cena: "?dessertDinner crlf crlf
+	)
+)
 
 
 
@@ -976,18 +1023,32 @@
 ; 	=>
 ; 	(facts)
 ; )
+(defrule GENERATOR::mmm ""
+	(declare (salience 10))
+	=>
+	(assert (terminar no))
+)
 
+(defrule GENERATOR::output2 "Output de algunas cosas"
+ 	(declare (salience -10))
+	?s <- (mineralsAmount 
+		(name mineralMax))
+	=>
+	(modify ?s (name mineralMax))
+	(facts)
+	(printout t "esto debería ir al final")
 
-(defrule output "Output de algunas cosas"
+)
+
+(defrule GENERATOR::output "Output de algunas cosas"
 	(recommendedCalories ?value)
 	=>
 	(printout t "Calorias recomendadas: "?value crlf)
 )
-
-(defrule output "Output de algunas cosas"
-	(recommendedCalories ?value)
+(defrule GENERATOR::output "Output de algunas cosas"
+ 	(declare (salience -3))
 	=>
-	(printout t "Calorias recomendadas: "?value crlf)
+	(assert (generatedMenus 0))
 )
 (defrule test2
     (diseasess $?r) 
@@ -1006,3 +1067,8 @@
 ; Asignar valor a slot (send ?instancia put-nom "nom")
 
 ; Acceder instancia si sabemos nombre (bind ?altura_rect1 (send [rect1] get-altura))
+; ronutrientsAmount (name macrosAmount) (protein 87.5) (saturated 15) (cholesterolMax 300) (carbs 1062.01))
+; f-9     (vitaminsAmount (name vitaminMin) (vitA 900.0) (vitB2 2.4) (vitB3 16.0) (vitB6 1.7) (vitB9 400) (vitB12 2.4) (vitC 90.0) (vitE 15.0))
+; f-10    (vitaminsAmount (name vitaminMax) (vitA 3000.0) (vitB2 999999.0) (vitB3 35.0) (vitB6 100.0) (vitB9 1000.0) (vitB12 999999.0) (vitC 2000.0) (vitE 1000.0))
+; f-11    (mineralsAmount (name mineralMin) (calcium 1200.0) (copper 900.0) (magnesium 320.0) (selenium 55.0) (sodium 2.3) (zinc 8.0) (fiber 27) (iron 8.0) (potassium 3500.0))
+; f-12    (mineralsAmount (name mineralMax) (calcium 2500.0) (copper 10000.0) (magnesium 700.0) (selenium 400.0) (sodium 2.8) (zinc 40.0) (fiber 10000.0) (iron 10.0) (potassium 4700.0))

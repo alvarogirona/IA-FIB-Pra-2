@@ -162,6 +162,19 @@
 	(slot potassium)
 
 )
+
+(deftemplate finalMenu
+	(slot nameAppetizer)
+	(slot nameBeverage)
+
+	(slot nameFirstLunch)
+	(slot nameSecondLunch)
+	(slot nameDessertLunch)
+
+	(slot nameFirstDinner)
+	(slot nameSecondDinner)
+	(slot nameDessertDinner)
+)
 ; (defrule find_title
 ;     ?macros<-(macronutrientsAmount(name "macrosAmount")(proteinsMult ?pMult))
 ;     =>
