@@ -2279,6 +2279,34 @@
 	(vitamineE 1.35)
 	(zinc 0.31))
 
+([Soylent] of  Ingredient
+
+	(calcium 200.0)
+	(calories 320.0)
+	(carbohydrates 100.0)
+	(cholesterol 0.0)
+	(copper 0.15)
+	(fiber 4)
+	(ingredientName "Soylent")
+	(iron 2)
+	(magnesium 60)
+	(monounsaturatedFat 0)
+	(polyunsaturatedFat 0)
+	(potassium 510)
+	(protein 14)
+	(saturedFat 0)
+	(selenium 9)
+	(sodium 0.4)
+	(vitamineA 150)
+	(vitamineB12 0.4)
+	(vitamineB2 0.4)
+	(vitamineB3 3)
+	(vitamineB6 0.3)
+	(vitamineB9 65)
+	(vitamineC 15)
+	(vitamineE 25)
+	(zinc 1.5))
+
 ([Te] of  Ingredient
 
 	(calcium 0.0)
