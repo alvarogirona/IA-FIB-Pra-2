@@ -327,7 +327,7 @@
 	=>
 	(focus GENERATOR)
 	(printout t "endRestrictions hecho: " crlf)
-	(facts)
+	;(facts)
 )
 
 ; 8========D
@@ -692,9 +692,14 @@
 
 		)
 	)
+	(assert (generateDaily 1))
 )
 
+(defglobal
+?*dailyGen* = 0)
+
 (defrule GENERATOR::dailyMenuGenerator "Rule to generate completeMenus (dinner, lunch, dessert)"
+	?g <- (generateDaily 1)
 	?desayuno <- (simpleMenu 
 		(appetizerName ?appetizer)
 		(beverageName ?beverage)
@@ -781,9 +786,12 @@
 		(potassium ?dinnerPotassium)
 		(calories ?dinnerCalories)
 	)
+	; (test (< ?lunchCalories ?dinnerCalories))
 
-	; (test (not(eq ?firstLunch ?firstDinner)))
-	; (test (not(eq ?secondLunch ?secondDinner)))
+	(test (not(eq ?firstLunch ?firstDinner)))
+	(test (not(eq ?secondLunch ?secondDinner)))
+	(test (not(eq ?dessertLunch ?dessertDinner)))
+
 	=>
 	; (printout t crlf "Estoy trabajando " crlf
 	; 	"appetizer: " ?appetizer crlf
@@ -796,6 +804,14 @@
 	; 	; "postre cena: "?dessertDinner crlf crlf
 	
 	; )
+
+	(if (> ?*dailyGen* 100000) then
+		(retract ?g)
+	)
+
+	(bind ?newDailyGen (+ ?*dailyGen* 1))
+	(bind ?*dailyGen* ?newDailyGen)
+	
 	(assert	(dailyMenu 
 		(nameAppetizer ?appetizer)
 		(nameBeverage ?beverage)
@@ -834,6 +850,8 @@
 	)
 )
 
+
+; VALIDATING THE GENERATED MENUS BEFORE TO THE ONES THAT FULFILL ALL THE RESTRICTIONS
 (defrule GENERATOR::filterAmounts "Filter daily menus by calories, macronutrients and vitamins"
 	(recommendedCalories ?recommendedCalories)
 	(dailyMenu 
@@ -917,8 +935,15 @@
 		(zinc ?maxZinc) 
 		(fiber ?maxFiber) 
 		(iron ?maxIron) 
-		(potassium ?maxPotassium))
+		(potassium ?maxPotassium)
+	)
+	(test (not(eq ?firstLunch ?firstDinner)))
+	(test (not(eq ?secondLunch ?secondDinner)))
+	(test (not(eq ?dessertLunch ?dessertDinner)))
+
+	?t <-(generatedMenus ?gen)
 	=>
+	;(modify ?t (generatedMenus (+ ?gen 1)))
 	(bind ?extraFactor 1.8)
 	(bind ?lowerFactor 0.3)
 	(bind ?r ( or (<= ?dailyVitA  ?minVitA) (> ?dailyVitA ?maxVitA))) ; si estamos por debajo del min o encima del max
@@ -949,16 +974,22 @@
 	;añadir ricos en calcio para los putos veganos
 
 	(if(not ?r) then
-	(assert (finalMenus
-		(nameAppetizer ?appetizer)
-		(nameBeverage ?beverage)
-		(nameFirstLunch ?firstLunch)
-		(nameSecondLunch ?secondLunch)
-		(nameDessertLunch ?dessertLunch)
-		(nameFirstDinner ?firstDinner)
-		(nameSecondDinner ?secondDinner)
-		(nameDessertDinner ?dessertDinner))
+		; (bind ?newGen (+ ?gen 1))
+		; (retract ?t)
+		; (assert (generatedMenus ?newGen))
+		; (printout t "Valor de gen: " ?gen crlf)
+		(assert (finalMenu
+			(nameAppetizer ?appetizer)
+			(nameBeverage ?beverage)
+			(nameFirstLunch ?firstLunch)
+			(nameSecondLunch ?secondLunch)
+			(nameDessertLunch ?dessertLunch)
+			(nameFirstDinner ?firstDinner)
+			(nameSecondDinner ?secondDinner)
+			(nameDessertDinner ?dessertDinner)
+		))
 	)
+	(assert (printable 1))
 	; else
 	; ; 	(printout t ?d crlf)
 	; 	(printout t crlf "Estoy trabajando " crlf
@@ -971,12 +1002,16 @@
 	; 		 "secundo plato cena: "?secondDinner crlf
 	; 		 "postre cena: "?dessertDinner crlf crlf
 	; 	)
-	)
+)
+
+(defglobal
+ ?*generated* = 0
 )
 
 (defrule GENERATOR::printMenus "Rule to print the final menus generated"
 	(declare (salience -10))
-	(finalMenus 
+	?p <- (printable ?c)
+	(finalMenu 
 		(nameAppetizer ?appetizer)
 		(nameBeverage ?beverage)
 
@@ -989,6 +1024,13 @@
 		(nameDessertDinner ?dessertDinner)
 	)
 	=>
+	(bind ?newGen (+ ?*generated* 1))
+	(printout t "new gen is " ?newGen crlf)
+	(bind ?*generated* ?newGen)
+	(printout t "generated is " ?*generated* crlf)
+	(if (> ?*generated* 10) then
+		(retract ?p)
+	)
 	(printout t crlf "Estoy trabajando " crlf
 		"appetizer: " ?appetizer crlf
 		"beverage: "?beverage crlf
@@ -1019,45 +1061,46 @@
 
 
 ; (defrule finalFactsPrint
-; 	(declare (salience -10))
-; 	=>
-; 	(facts)
-; )
+;   	(declare (salience 2))
+;   	=>
+	
+;  )
+
 (defrule GENERATOR::mmm ""
 	(declare (salience 10))
 	=>
 	(assert (terminar no))
 )
 
-(defrule GENERATOR::output2 "Output de algunas cosas"
- 	(declare (salience -10))
-	?s <- (mineralsAmount 
-		(name mineralMax))
-	=>
-	(modify ?s (name mineralMax))
-	(facts)
-	(printout t "esto debería ir al final")
+; (defrule GENERATOR::output2 "Output de algunas cosas"
+;  	(declare (salience -10))
+; 	?s <- (mineralsAmount 
+; 		(name mineralMax))
+; 	=>
+; 	(modify ?s (name mineralMax))
+; 	(facts)
+; 	(printout t "esto debería ir al final")
 
-)
+; )
 
+; (defrule GENERATOR::output "Output de algunas cosas"
+; 	(recommendedCalories ?value)
+; 	=>
+; 	(printout t "Calorias recomendadas: "?value crlf)
+; )
 (defrule GENERATOR::output "Output de algunas cosas"
-	(recommendedCalories ?value)
-	=>
-	(printout t "Calorias recomendadas: "?value crlf)
-)
-(defrule GENERATOR::output "Output de algunas cosas"
- 	(declare (salience -3))
+ 	(declare (salience 666))
 	=>
 	(assert (generatedMenus 0))
 )
-(defrule test2
-    (diseasess $?r) 
-    => 
-    (loop-for-count (?i 1 (length$ ?r)) do
-		(bind ?aux (nth$ ?i ?r))
-		(printout t ?aux crlf)
-	)
-)
+; (defrule test2
+;     (diseasess $?r) 
+;     => 
+;     (loop-for-count (?i 1 (length$ ?r)) do
+; 		(bind ?aux (nth$ ?i ?r))
+; 		(printout t ?aux crlf)
+; 	)
+; )
 
 
  
