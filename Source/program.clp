@@ -395,8 +395,9 @@
 (defrule GENERATOR::filterAllergies "Rule to filter the alergies"
 	(allergy ?allergy)
 	?d <- (initialDishes (ingredients $?ingredients))
-	(test (not (member$ ?allergy $?ingredients)))
+	;(test (not (member$ ?allergy $?ingredients)))
 	=>
+	(pri)
 	(retract ?d)
 )
 
@@ -1099,12 +1100,10 @@
 	(bind ?*printed* (+ ?*printed* 1))
 
 	(if (>= ?*printed* 7) then
-		(printout t "ACABE NOMÁS" crlf)
 		;(printout t "no son sufisientes" crlf)
 		(retract ?p)
 		;(assert (printable (+ ?c 1)))
 	else ; ACABE NOMÁS
-		(printout t "sigo printeando" crlf)
 		;(retract ?p)
 	)
 	; (if (< ?c 7) then
