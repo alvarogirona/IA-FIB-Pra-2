@@ -973,106 +973,33 @@
 	?desayuno <- (simpleMenu 
 		(appetizerName ?appetizer)
 		(beverageName ?beverage)
-		(vitA ?breakfastVitA)
-		(vitB2 ?breakfastVitB2)
-		(vitB3 ?breakfastVitB3)
-		(vitB6 ?breakfastVitB6)
-		(vitB9 ?breakfastVitB9)
-		(vitB12 ?breakfastVitB12)
-		(vitC ?breakfastVitC)
-		(vitE ?breakfastVitE)
-		(protein ?breakfastProtein)
-		(saturated ?breakfastSaturate)
-		(cholesterolMax ?breakfastCholesterolMax)
-		(carbs ?breakfastCarbs)
-		(calcium ?breakfastCalcium)
-		(copper ?breakfastCopper)
-		(magnesium ?breakfastMagnesium)
-		(selenium ?breakfastSelenium)
-		(sodium ?breakfastSodium)
-		(zinc ?breakfastZinc)
-		(fiber ?breakfastFiber)
-		(iron ?breakfastIron)
-		(potassium ?breakfastPotassium)
-		(calories ?breakfastCalories)
 	)
 
 	?comida <- (completeMenu 
 		(firstName ?firstLunch)
 		(secondName ?secondLunch)
 		(dessertName ?dessertLunch)
-
-		(vitA ?lunchVitA)
-		(vitB2 ?lunchVitB2)
-		(vitB3 ?lunchVitB3)
-		(vitB6 ?lunchVitB6)
-		(vitB9 ?lunchVitB9)
-		(vitB12 ?lunchVitB12)
-		(vitC ?lunchVitC)
-		(vitE ?lunchVitE)
-		(protein ?lunchProtein)
-		(saturated ?lunchSaturate)
-		(cholesterolMax ?lunchCholesterolMax)
-		(carbs ?lunchCarbs)
-		(calcium ?lunchCalcium)
-		(copper ?lunchCopper)
-		(magnesium ?lunchMagnesium)
-		(selenium ?lunchSelenium)
-		(sodium ?lunchSodium)
-		(zinc ?lunchZinc)
-		(fiber ?lunchFiber)
-		(iron ?lunchIron)
-		(potassium ?lunchPotassium)
-		(calories ?lunchCalories)
 	)
 
 	?cena <- (completeMenu 
 		(firstName ?firstDinner)
 		(secondName ?secondDinner)
 		(dessertName ?dessertDinner)
-
-		(vitA ?dinnerVitA)
-		(vitB2 ?dinnerVitB2)
-		(vitB3 ?dinnerVitB3)
-		(vitB6 ?dinnerVitB6)
-		(vitB9 ?dinnerVitB9)
-		(vitB12 ?dinnerVitB12)
-		(vitC ?dinnerVitC)
-		(vitE ?dinnerVitE)
-		(protein ?dinnerProtein)
-		(saturated ?dinnerSaturate)
-		(cholesterolMax ?dinnerCholesterolMax)
-		(carbs ?dinnerCarbs)
-		(calcium ?dinnerCalcium)
-		(copper ?dinnerCopper)
-		(magnesium ?dinnerMagnesium)
-		(selenium ?dinnerSelenium)
-		(sodium ?dinnerSodium)
-		(zinc ?dinnerZinc)
-		(fiber ?dinnerFiber)
-		(iron ?dinnerIron)
-		(potassium ?dinnerPotassium)
-		(calories ?dinnerCalories)
 	)
 
 	; No repetir platos en comida y cena
-	; (test (or 
-	; 		(not
-	; 			(eq ?firstLunch ?firstDinner)
-	; 		)
-	; 		(not
-	; 			(eq ?secondLunch ?secondDinner)
-	; 		)
-	; 	)
-	; )
-	(test (not(eq ?firstLunch ?firstDinner)))
-	(test (not(eq ?secondLunch ?secondDinner)))
+	(test (or 
+			(not
+				(eq ?firstLunch ?firstDinner)
+			)
+			(not
+				(eq ?secondLunch ?secondDinner)
+			)
+		)
+	)
+	; (test (not(eq ?firstLunch ?firstDinner)))
+	; (test (not(eq ?secondLunch ?secondDinner)))
 	(test (not(eq ?dessertLunch ?dessertDinner)))
-
-	; (completeMenu 
-	; 	(firstName ?firstDinner)
-	; 	(secondName ?secondDinner)
-	; 	(dessertName ?dessertDinner)
 
 	(maxRepetitions ?maxRepetitions)
 	; ||||||||| CHECKING REPETITIONS |||||||||||
@@ -1101,26 +1028,6 @@
 
 	(printout t "generated" crlf)
 
-	; updating the dinner priorities
-	; First we retract 
-	(retract ?pfd)
-	(retract ?psd)
-	(retract ?pdd)
-
-	; Then create the new assert
-	(assert (dishPriority (dishName ?firstDinner) (priority (+ ?firstDP 1))))
-	(assert (dishPriority (dishName ?secondDinner) (priority (+ ?secondDP 1))))
-	(assert (dishPriority (dishName ?dessertDinner) (priority (+ ?dessertDP 1))))
-
-	(retract ?pfl)
-	(retract ?psl)
-	(retract ?pdl)
-
-	; Then create the new assert
-	(assert (dishPriority (dishName ?firstLunch) (priority (+ ?firstLP 1))))
-	(assert (dishPriority (dishName ?secondLunch) (priority (+ ?secondLP 1))))
-	(assert (dishPriority (dishName ?dessertLunch) (priority (+ ?dessertLP 1))))
-
 	;increase generated menus
 	(bind ?*menuGen* (+ ?*menuGen* 1))
 
@@ -1128,6 +1035,27 @@
 	; We got 7, do not generate more
 	(if (>= ?*menuGen* 7) then
 		(retract ?generate)
+
+	else
+		; updating the dinner priorities
+		; First we retract 
+		(retract ?pfd)
+		(retract ?psd)
+		(retract ?pdd)
+
+		; Then create the new assert
+		(assert (dishPriority (dishName ?firstDinner) (priority (+ ?firstDP 1))))
+		(assert (dishPriority (dishName ?secondDinner) (priority (+ ?secondDP 1))))
+		(assert (dishPriority (dishName ?dessertDinner) (priority (+ ?dessertDP 1))))
+
+		(retract ?pfl)
+		(retract ?psl)
+		(retract ?pdl)
+
+		; Then create the new assert
+		(assert (dishPriority (dishName ?firstLunch) (priority (+ ?firstLP 1))))
+		(assert (dishPriority (dishName ?secondLunch) (priority (+ ?secondLP 1))))
+		(assert (dishPriority (dishName ?dessertLunch) (priority (+ ?dessertLP 1))))
 	)
 	
 	(assert (finalMenu
@@ -1141,7 +1069,10 @@
 		(nameDessertDinner ?dessertDinner)
 	))
 
+
 	(assert (printable 1))
+
+
 )
 
 (defglobal 
