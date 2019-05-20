@@ -666,8 +666,8 @@
 	(bind ?potassium (+ (+ ?dessertPotassium ?firstPotassium) ?secondPotassium))
 	(bind ?calories (+ (+ ?dessertCalories ?firstCalories) ?secondCalories))
 
-	(bind ?extraFactor (* 0.35 2.0)) ; 35% de lo necesario al día con
-	(bind ?lowerFactor (* 0.35 0.5)) ; 35% de lo diario con
+	(bind ?extraFactor (* 0.35 1.5)) ; 35% de lo necesario al día con
+	(bind ?lowerFactor (* 0.35 0.7)) ; 35% de lo diario con
 
 	(bind ?violatedLimits 0)
 
@@ -877,8 +877,8 @@
 	(bind ?potassium (+ ?beveragePotassium ?appetizerPotassium))
 	(bind ?calories (+ ?beverageCalories ?appetizerCalories))
 
-	(bind ?extraFactor (* 0.25 2.0)) ; 25% de lo necesario al día con un lower de 1.4
-	(bind ?lowerFactor (* 0.25 0.4)) ; 25% de lo diario con un lower de 0.4
+	(bind ?extraFactor (* 0.25 1.5)) ; 25% de lo necesario al día con un lower de 1.4
+	(bind ?lowerFactor (* 0.25 0.7)) ; 25% de lo diario con un lower de 0.4
 
 	(bind ?violatedLimits 0)
 
@@ -988,18 +988,18 @@
 	)
 
 	; No repetir platos en comida y cena
-	(test (or 
-			(not
-				(eq ?firstLunch ?firstDinner)
-			)
-			(not
-				(eq ?secondLunch ?secondDinner)
-			)
-		)
-	)
-	; (test (not(eq ?firstLunch ?firstDinner)))
-	; (test (not(eq ?secondLunch ?secondDinner)))
-	; (test (not(eq ?dessertLunch ?dessertDinner)))
+	; (test (or 
+	; 		(not
+	; 			(eq ?firstLunch ?firstDinner)
+	; 		)
+	; 		(not
+	; 			(eq ?secondLunch ?secondDinner)
+	; 		)
+	; 	)
+	; )
+	(test (not(eq ?firstLunch ?firstDinner)))
+	(test (not(eq ?secondLunch ?secondDinner)))
+	(test (not(eq ?dessertLunch ?dessertDinner)))
 
 	; Do not repeat the soylent :D
 	(test (not(eq ?firstLunch ?secondLunch)))
