@@ -660,30 +660,55 @@
 	(bind ?extraFactor (* 0.35 2.0)) ; 35% de lo necesario al día con
 	(bind ?lowerFactor (* 0.35 0.5)) ; 35% de lo diario con
 
-	(bind ?r ( or (<= ?vitA  (* ?minVitA ?lowerFactor)) (> ?vitA (* ?maxVitA ?extraFactor)))) ; si estamos por debajo del min o encima del max
-	; (bind ?r (or ?r (or (<= ?vitB2 (* ?minVitB2 ?lowerFactor)) (> ?vitB2 (* ?maxVitB2 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitB3 (* ?minVitB3 ?lowerFactor)) (> ?vitB3 (* ?maxVitB3 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitB6 (* ?minVitB6 ?lowerFactor)) (> ?vitB6 (* ?maxVitB6 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitB9 (* ?minVitB9 ?lowerFactor)) (> ?vitB9 (* ?maxVitB9 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitB12 (* ?minVitB12 ?lowerFactor)) (> ?vitB12 (* ?maxVitB12 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitC (* ?minVitC ?lowerFactor)) (> ?vitC (* ?maxVitC ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitE (* ?minVitE ?lowerFactor)) (> ?vitE (* ?maxVitE ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?protein (* ?proteins ?lowerFactor)) (> ?protein (* ?proteins ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?saturated (* ?saturated ?lowerFactor)) (> ?saturated (* ?saturated ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?cholesterolMax (* ?cholesterol ?lowerFactor)) (> ?cholesterol (* ?cholesterol ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?carbs (* ?carbs ?lowerFactor)) (> ?carbs (* ?carbs ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?calories (* ?recommendedCalories ?lowerFactor)) (> ?calories (* ?recommendedCalories ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?calcium (* ?minCalcium ?lowerFactor)) (> ?calcium (* ?maxCalcium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?copper (* ?minCopper ?lowerFactor)) (> ?copper (* ?maxCopper ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?selenium (* ?minSelenium ?lowerFactor)) (> ?selenium (* ?maxSelenium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?sodium (* ?minSodium ?lowerFactor)) (> ?sodium (* ?maxSodium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?zinc (* ?minZinc ?lowerFactor)) (> ?zinc (* ?maxZinc ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?fiber (* ?minFiber ?lowerFactor)) (> ?fiber (* ?maxFiber ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?iron (* ?minIron ?lowerFactor)) (> ?iron (* ?maxIron ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?potassium (* ?minPotassium ?lowerFactor)) (> ?potassium (* ?maxPotassium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?magnesium (* ?minMagnesium ?lowerFactor)) (> ?magnesium (* ?maxMagnesium ?extraFactor)))))
+	(bind ?violatedLimits 0)
 
-	(if (not ?r) then
+	; poco repetitivo esto xd
+	(bind ?r ( or (<= ?vitA  (* ?minVitA ?lowerFactor)) (> ?vitA (* ?maxVitA ?extraFactor)))) ; si estamos por debajo del min o encima del max
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitB2 (* ?minVitB2 ?lowerFactor)) (> ?vitB2 (* ?maxVitB2 ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitB3 (* ?minVitB3 ?lowerFactor)) (> ?vitB3 (* ?maxVitB3 ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitB6 (* ?minVitB6 ?lowerFactor)) (> ?vitB6 (* ?maxVitB6 ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitB9 (* ?minVitB9 ?lowerFactor)) (> ?vitB9 (* ?maxVitB9 ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitB12 (* ?minVitB12 ?lowerFactor)) (> ?vitB12 (* ?maxVitB12 ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitC (* ?minVitC ?lowerFactor)) (> ?vitC (* ?maxVitC ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitE (* ?minVitE ?lowerFactor)) (> ?vitE (* ?maxVitE ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?protein (* ?proteins ?lowerFactor)) (> ?protein (* ?proteins ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?saturated (* ?saturated ?lowerFactor)) (> ?saturated (* ?saturated ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?cholesterolMax (* ?cholesterol ?lowerFactor)) (> ?cholesterol (* ?cholesterol ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?carbs (* ?carbs ?lowerFactor)) (> ?carbs (* ?carbs ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?calories (* ?recommendedCalories ?lowerFactor)) (> ?calories (* ?recommendedCalories ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?calcium (* ?minCalcium ?lowerFactor)) (> ?calcium (* ?maxCalcium ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?copper (* ?minCopper ?lowerFactor)) (> ?copper (* ?maxCopper ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?selenium (* ?minSelenium ?lowerFactor)) (> ?selenium (* ?maxSelenium ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?sodium (* ?minSodium ?lowerFactor)) (> ?sodium (* ?maxSodium ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?zinc (* ?minZinc ?lowerFactor)) (> ?zinc (* ?maxZinc ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?fiber (* ?minFiber ?lowerFactor)) (> ?fiber (* ?maxFiber ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?iron (* ?minIron ?lowerFactor)) (> ?iron (* ?maxIron ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?potassium (* ?minPotassium ?lowerFactor)) (> ?potassium (* ?maxPotassium ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?magnesium (* ?minMagnesium ?lowerFactor)) (> ?magnesium (* ?maxMagnesium ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+
+	(if (not (> ?violatedLimits 11)) then
 		(assert
 		(completeMenu 
 			(firstName ?first) 
@@ -843,36 +868,59 @@
 	(bind ?potassium (+ ?beveragePotassium ?appetizerPotassium))
 	(bind ?calories (+ ?beverageCalories ?appetizerCalories))
 
-	(bind ?extraFactor (* 0.25 1.4)) ; 25% de lo necesario al día con un lower de 1.4
-	(bind ?lowerFactor (* 0.25 0.7)) ; 25% de lo diario con un lower de 0.4
+	(bind ?extraFactor (* 0.25 2.0)) ; 25% de lo necesario al día con un lower de 1.4
+	(bind ?lowerFactor (* 0.25 0.4)) ; 25% de lo diario con un lower de 0.4
 
 	(bind ?violatedLimits 0)
 
+	; poco repetitivo esto xd
 	(bind ?r ( or (<= ?vitA  (* ?minVitA ?lowerFactor)) (> ?vitA (* ?maxVitA ?extraFactor)))) ; si estamos por debajo del min o encima del max
-	; (bind ?r (or ?r (or (<= ?vitB2 (* ?minVitB2 ?lowerFactor)) (> ?vitB2 (* ?maxVitB2 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitB3 (* ?minVitB3 ?lowerFactor)) (> ?vitB3 (* ?maxVitB3 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitB6 (* ?minVitB6 ?lowerFactor)) (> ?vitB6 (* ?maxVitB6 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitB9 (* ?minVitB9 ?lowerFactor)) (> ?vitB9 (* ?maxVitB9 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitB12 (* ?minVitB12 ?lowerFactor)) (> ?vitB12 (* ?maxVitB12 ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitC (* ?minVitC ?lowerFactor)) (> ?vitC (* ?maxVitC ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?vitE (* ?minVitE ?lowerFactor)) (> ?vitE (* ?maxVitE ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?protein (* ?proteins ?lowerFactor)) (> ?protein (* ?proteins ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?saturated (* ?saturated ?lowerFactor)) (> ?saturated (* ?saturated ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?cholesterolMax (* ?cholesterol ?lowerFactor)) (> ?cholesterol (* ?cholesterol ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?carbs (* ?carbs ?lowerFactor)) (> ?carbs (* ?carbs ?extraFactor)))))
-	(bind ?r (or ?r (or (<= ?calories (* ?recommendedCalories ?lowerFactor)) (> ?calories (* ?recommendedCalories ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?calcium (* ?minCalcium ?lowerFactor)) (> ?calcium (* ?maxCalcium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?copper (* ?minCopper ?lowerFactor)) (> ?copper (* ?maxCopper ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?selenium (* ?minSelenium ?lowerFactor)) (> ?selenium (* ?maxSelenium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?sodium (* ?minSodium ?lowerFactor)) (> ?sodium (* ?maxSodium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?zinc (* ?minZinc ?lowerFactor)) (> ?zinc (* ?maxZinc ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?fiber (* ?minFiber ?lowerFactor)) (> ?fiber (* ?maxFiber ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?iron (* ?minIron ?lowerFactor)) (> ?iron (* ?maxIron ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?potassium (* ?minPotassium ?lowerFactor)) (> ?potassium (* ?maxPotassium ?extraFactor)))))
-	; (bind ?r (or ?r (or (<= ?magnesium (* ?minMagnesium ?lowerFactor)) (> ?magnesium (* ?maxMagnesium ?extraFactor)))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitB2 (* ?minVitB2 ?lowerFactor)) (> ?vitB2 (* ?maxVitB2 ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitB3 (* ?minVitB3 ?lowerFactor)) (> ?vitB3 (* ?maxVitB3 ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitB6 (* ?minVitB6 ?lowerFactor)) (> ?vitB6 (* ?maxVitB6 ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitB9 (* ?minVitB9 ?lowerFactor)) (> ?vitB9 (* ?maxVitB9 ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitB12 (* ?minVitB12 ?lowerFactor)) (> ?vitB12 (* ?maxVitB12 ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitC (* ?minVitC ?lowerFactor)) (> ?vitC (* ?maxVitC ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?vitE (* ?minVitE ?lowerFactor)) (> ?vitE (* ?maxVitE ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?protein (* ?proteins ?lowerFactor)) (> ?protein (* ?proteins ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?saturated (* ?saturated ?lowerFactor)) (> ?saturated (* ?saturated ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?cholesterolMax (* ?cholesterol ?lowerFactor)) (> ?cholesterol (* ?cholesterol ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?carbs (* ?carbs ?lowerFactor)) (> ?carbs (* ?carbs ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?calories (* ?recommendedCalories ?lowerFactor)) (> ?calories (* ?recommendedCalories ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?calcium (* ?minCalcium ?lowerFactor)) (> ?calcium (* ?maxCalcium ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?copper (* ?minCopper ?lowerFactor)) (> ?copper (* ?maxCopper ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?selenium (* ?minSelenium ?lowerFactor)) (> ?selenium (* ?maxSelenium ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?sodium (* ?minSodium ?lowerFactor)) (> ?sodium (* ?maxSodium ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?zinc (* ?minZinc ?lowerFactor)) (> ?zinc (* ?maxZinc ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?fiber (* ?minFiber ?lowerFactor)) (> ?fiber (* ?maxFiber ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?iron (* ?minIron ?lowerFactor)) (> ?iron (* ?maxIron ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?potassium (* ?minPotassium ?lowerFactor)) (> ?potassium (* ?maxPotassium ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
+	(bind ?r (or (<= ?magnesium (* ?minMagnesium ?lowerFactor)) (> ?magnesium (* ?maxMagnesium ?extraFactor))))
+	(if ?r then (bind ?violatedLimits (+ ?violatedLimits 1)))
 
 	; ALWAYS GENERATE IT
-	; (if (not ?r) then
+	(if (not (> ?violatedLimits 11)) then
 		(assert
 			(simpleMenu 
 				(appetizerName ?appetizer) 
@@ -903,8 +951,8 @@
 			)
 		)
 		(assert (generateDaily 1))
-		(assert (maxRepetitions 3))
-	; )
+		(assert (maxRepetitions 4))
+	)
 )
 
 (defglobal
@@ -1000,17 +1048,18 @@
 	)
 
 	; No repetir platos en comida y cena
-	(test (or 
-			(not
-				(eq ?firstLunch ?firstDinner)
-			)
-			(not
-				(eq ?secondLunch ?secondDinner)
-			)
-		)
-	)
-	; (test (not(eq ?secondLunch ?secondDinner)))
-	; (test (not(eq ?dessertLunch ?dessertDinner)))
+	; (test (or 
+	; 		(not
+	; 			(eq ?firstLunch ?firstDinner)
+	; 		)
+	; 		(not
+	; 			(eq ?secondLunch ?secondDinner)
+	; 		)
+	; 	)
+	; )
+	(test (not(eq ?firstLunch ?firstDinner)))
+	(test (not(eq ?secondLunch ?secondDinner)))
+	(test (not(eq ?dessertLunch ?dessertDinner)))
 
 	; (completeMenu 
 	; 	(firstName ?firstDinner)
