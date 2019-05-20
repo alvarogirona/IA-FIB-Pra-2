@@ -580,6 +580,7 @@
 		(iron ?dessertIron)
 		(potassium ?dessertPotassium))
 	=>
+	
 	(assert
 		(completeMenu 
 			(firstName ?first) 
@@ -694,7 +695,7 @@
 		)
 	)
 	(assert (generateDaily 1))
-	(assert (maxRepetitions 1))
+	(assert (maxRepetitions 7))
 )
 
 (defglobal
@@ -702,6 +703,7 @@
 
 
 (defrule GENERATOR::generateMenu2 "Filter daily menus by calories, macronutrients and vitamins"
+	?generate <- (generateDaily 1)
 	(recommendedCalories ?recommendedCalories)
 	?desayuno <- (simpleMenu 
 		(appetizerName ?appetizer)
@@ -873,6 +875,9 @@
 
 	?t <-(generatedMenus ?gen)
 	=>
+
+	(printout t "ESTOY DENTRO" crlf)
+
 	(bind ?dailyVitA (+ (+ ?dinnerVitA ?lunchVitA) ?breakfastVitA))
 	(bind ?dailyVitB2 (+ (+ ?dinnerVitB2 ?lunchVitB2) ?breakfastVitB2)) 
 	(bind ?dailyVitB3 (+ (+ ?dinnerVitB3 ?lunchVitB3) ?breakfastVitB3))
@@ -924,13 +929,11 @@
 
 	;vitc
 	;carbs
-	;añadir ricos en calcio para los putos veganos
-
-	(assert (keepGenerating 1))
-	(printout t "ESTOY DENTRO" crlf)
+	;añadir ricos en calcio para los veganos
 
 	(if(not ?r) then
 		(printout t "generated" crlf)
+
 		; updating the dinner priorities
 		; First we retract 
 		(retract ?pfd)
@@ -953,6 +956,11 @@
 
 		;increase generated menus
 		(bind ?*menuGen* (+ ?*menuGen* 1))
+
+		; We got 7, do not generate more
+		(if (>= ?*menuGen* 7) then
+			(retract ?generate)
+		)
 		
 		; (bind ?newGen (+ ?gen 1))
 		; (retract ?t)
@@ -981,36 +989,14 @@
 	; 		 "secundo plato cena: "?secondDinner crlf
 	; 		 "postre cena: "?dessertDinner crlf crlf
 	; 	)
+	(assert (printable 1))
 )
 
-; Check if we generated 7 menus, if no it increases the repetitions amount
-(defrule checkAllGenerated
-
-	(declare (salience -9))
-	?k <- (keepGenerating 1)
-	?m <- (maxRepetitions ?n)
-
-	=>
-
-	(if (>= ?*menuGen* 7) then ; if we have 7 or more generated daily menus STOP
-		(retract ?k)
-		(assert (printable 1))
-		(printout t "esta todo generado" crlf)
-	else ; increase repetitions limit, generate more menus
-		(printout t "increasing rep limit" crlf)
-		(retract ?m)
-		(assert (maxRepetitions (+ ?n 1)))
-
-		;(bind ?*maxRepetitions* (+ ?*maxRepetitions* 1))
-	)
-)
-
-
-
+(defglobal )
 
 (defrule GENERATOR::printMenus "Rule to print the final menus generated"
 	(declare (salience -10))
-	(printable ?c)
+	?p <- (printable ?c)
 	(finalMenu 
 		(nameAppetizer ?appetizer)
 		(nameBeverage ?beverage)
@@ -1024,6 +1010,19 @@
 		(nameDessertDinner ?dessertDinner)
 	)
 	=>
+	(if (< ?c 7) then
+		(printout t "no son sufisientes" crlf)
+		(retract ?p)
+		(assert (printable (+ ?c 1)))
+	else ; ACABE NOMÁS
+		(printout t "ACABE NOMÁS" crlf)
+		(retract ?p)
+	)
+	; (if (< ?c 7) then
+	; 	(retract ?p)
+	; 	(assert (printable (+ ?p 1))
+	; )
+
 	(printout t crlf "Estoy trabajando " crlf
 		"appetizer: " ?appetizer crlf
 		"beverage: "?beverage crlf
