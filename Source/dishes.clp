@@ -1193,7 +1193,7 @@
 	(dishName "Soylent sabor soja")
 	(ingredients
 		[Soylent])
-	(ingredientsWeights 1)
+	(ingredientsWeights 0.7)
 	(link ""))
 ([SoylentVainilla2] of  Appetizer
 
@@ -1207,7 +1207,7 @@
 	(dishName "Soylent sabor vainilla")
 	(ingredients
 		[Soylent])
-	(ingredientsWeights 1)
+	(ingredientsWeights 0.7)
 	(link ""))
 ([SoylentFresa2] of  Appetizer
 
@@ -1221,7 +1221,7 @@
 	(dishName "Soylent sabor fresa")
 	(ingredients
 		[Soylent])
-	(ingredientsWeights 1)
+	(ingredientsWeights 0.7)
 	(link ""))
 ([SoylentChocolate2] of  Appetizer
 
@@ -1235,6 +1235,6 @@
 	(dishName "Soylent sabor chocolate")
 	(ingredients
 		[Soylent])
-	(ingredientsWeights 1)
+	(ingredientsWeights 0.7)
 	(link ""))
 )

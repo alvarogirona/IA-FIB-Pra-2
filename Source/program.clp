@@ -365,6 +365,7 @@
 			)
 	)
 	(assert (dishPriority (dishName ?name) (priority 1)))
+	(assert (generateDaily 1))
 )
 
 (defrule GENERATOR::filterDiabetes "Rule to filter dishes that are not available for diabetic people"
@@ -958,7 +959,6 @@
 
 			)
 		)
-		(assert (generateDaily 1))
 		(assert (maxRepetitions 4))
 	)
 )
@@ -999,7 +999,7 @@
 	)
 	; (test (not(eq ?firstLunch ?firstDinner)))
 	; (test (not(eq ?secondLunch ?secondDinner)))
-	(test (not(eq ?dessertLunch ?dessertDinner)))
+	; (test (not(eq ?dessertLunch ?dessertDinner)))
 
 	(maxRepetitions ?maxRepetitions)
 	; ||||||||| CHECKING REPETITIONS |||||||||||
@@ -1023,20 +1023,32 @@
 	(test (<= ?dessertLP ?maxRepetitions))
 	
 	=>
-
-	(printout t "ESTOY DENTRO" crlf)
-
-	(printout t "generated" crlf)
-
-	;increase generated menus
-	(bind ?*menuGen* (+ ?*menuGen* 1))
-
-	(printout t ?*menuGen* crlf)
-	; We got 7, do not generate more
 	(if (>= ?*menuGen* 7) then
 		(retract ?generate)
-
+		;(assert (generateDaily 2))
+		(assert (printable 1))
 	else
+		(printout t "ESTOY DENTRO" crlf)
+
+		(printout t "generated" crlf)
+
+		;increase generated menus
+		(bind ?*menuGen* (+ ?*menuGen* 1))
+
+		(printout t ?*menuGen* crlf)
+		; We got 7, do not generate more
+
+		(assert (finalMenu
+			(nameAppetizer ?appetizer)
+			(nameBeverage ?beverage)
+			(nameFirstLunch ?firstLunch)
+			(nameSecondLunch ?secondLunch)
+			(nameDessertLunch ?dessertLunch)
+			(nameFirstDinner ?firstDinner)
+			(nameSecondDinner ?secondDinner)
+			(nameDessertDinner ?dessertDinner)
+		))
+	
 		; updating the dinner priorities
 		; First we retract 
 		(retract ?pfd)
@@ -1057,22 +1069,6 @@
 		(assert (dishPriority (dishName ?secondLunch) (priority (+ ?secondLP 1))))
 		(assert (dishPriority (dishName ?dessertLunch) (priority (+ ?dessertLP 1))))
 	)
-	
-	(assert (finalMenu
-		(nameAppetizer ?appetizer)
-		(nameBeverage ?beverage)
-		(nameFirstLunch ?firstLunch)
-		(nameSecondLunch ?secondLunch)
-		(nameDessertLunch ?dessertLunch)
-		(nameFirstDinner ?firstDinner)
-		(nameSecondDinner ?secondDinner)
-		(nameDessertDinner ?dessertDinner)
-	))
-
-
-	(assert (printable 1))
-
-
 )
 
 (defglobal 
