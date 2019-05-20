@@ -14,6 +14,11 @@
 	(slot vitE)
 )
 
+(deftemplate dishPriority
+	(slot dishName)
+	(slot priority)
+)
+
 (deftemplate macronutrientsAmount
 	(slot name)
 	(slot protein)
