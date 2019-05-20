@@ -266,6 +266,60 @@
 		[AceiteOliva])
 	(ingredientsWeights 375.0 48.75 12.5 0.25 10.0)
 	(link "https://www.hogarmania.com/cocina/recetas/postres/201606/crema-fria-mango-33155.html"))
+([Postre100] of  Dessert
+
+	(availability 8 9 10 11)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegetarian"
+		"dysphagia"
+		"diabetes"
+    )
+	(dishName "Crema fría de naranja")
+	(ingredients
+		[Mango]
+		[Huevo]
+		[Azucar]
+		[Sal]
+		[AceiteOliva])
+	(ingredientsWeights 375.0 48.75 12.5 0.25 10.0)
+	(link ""))
+([Postre25] of  Dessert
+
+	(availability 8 9 10 11)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegetarian"
+		"dysphagia"
+		"diabetes"
+    )
+	(dishName "Crema fría de pera")
+	(ingredients
+		[Mango]
+		[Huevo]
+		[Azucar]
+		[Sal]
+		[AceiteOliva])
+	(ingredientsWeights 375.0 48.75 12.5 0.25 10.0)
+	(link ""))
+([Postre23] of  Dessert
+
+	(availability 8 9 10 11)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegetarian"
+		"dysphagia"
+		"diabetes"
+    )
+	(dishName "Crema fría de fresa")
+	(ingredients
+		[Mango]
+		[Huevo]
+		[Azucar]
+		[Sal]
+		[AceiteOliva])
+	(ingredientsWeights 375.0 48.75 12.5 0.25 10.0)
+	(link ""))
 
 ([Postre3] of  Dessert
 
@@ -997,8 +1051,7 @@
 	(ingredientsWeights 1)
 	(link ""))
 
-)
-([SoylentMango] of  SecondCourse
+([SoylentMango1] of  SecondCourse
 
 	(availability 1 2 3 4 5 6 7 9 10 11 12)
 	(dishClassification Spanish)
@@ -1013,7 +1066,6 @@
 	(ingredientsWeights 1)
 	(link ""))
 
-)
 ([SoylentFresa] of  FirstCourse
 
 	(availability 1 2 3 4 5 6 7 9 10 11 12)
@@ -1029,7 +1081,7 @@
 	(ingredientsWeights 1)
 	(link ""))
 
-([SoylentFresa] of  SecondCourse
+([SoylentFresa1] of  SecondCourse
 
 	(availability 1 2 3 4 5 6 7 9 10 11 12)
 	(dishClassification Spanish)
@@ -1058,7 +1110,7 @@
 		[Soylent])
 	(ingredientsWeights 1)
 	(link ""))
-([SoylentChocolate] of  SecondCourse
+([SoylentChocolate1] of  SecondCourse
 
 	(availability 1 2 3 4 5 6 7 9 10 11 12)
 	(dishClassification Spanish)
@@ -1087,7 +1139,7 @@
 		[Soylent])
 	(ingredientsWeights 1)
 	(link ""))
-([SoylentVainilla] of  SecondCourse
+([SoylentVainilla1] of  SecondCourse
 
 	(availability 1 2 3 4 5 6 7 9 10 11 12)
 	(dishClassification Spanish)
@@ -1115,7 +1167,7 @@
 		[Soylent])
 	(ingredientsWeights 1)
 	(link ""))
-([SoylentManzana] of  SecondCourse
+([SoylentManzana1] of  SecondCourse
 
 	(availability 1 2 3 4 5 6 7 9 10 11 12)
 	(dishClassification Spanish)
@@ -1125,6 +1177,62 @@
 		"dysphagia"
     )
 	(dishName "Soylent sabor manzana")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+([SoylentSoja] of  Appetizer
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor soja")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+([SoylentVainilla2] of  Appetizer
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor vainilla")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+([SoylentFresa2] of  Appetizer
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor fresa")
+	(ingredients
+		[Soylent])
+	(ingredientsWeights 1)
+	(link ""))
+([SoylentChocolate2] of  Appetizer
+
+	(availability 1 2 3 4 5 6 7 9 10 11 12)
+	(dishClassification Spanish)
+    (dishAttributes
+        "vegan"
+        "vegetarian"
+		"dysphagia"
+    )
+	(dishName "Soylent sabor chocolate")
 	(ingredients
 		[Soylent])
 	(ingredientsWeights 1)
