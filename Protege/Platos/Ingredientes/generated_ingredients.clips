@@ -1,20 +1,15 @@
-; Fri May 17 05:03:39 CEST 2019
-; 
-;+ (version "3.5")
-;+ (build "Build 663")
 
-([AceiteOliva] of  Ingredient
-
+([AceiteOliva] of Ingredient
 	(calcium 1.0)
 	(calories 884.0)
 	(carbohydrates 0.0)
 	(cholesterol 0.0)
 	(copper 0.0)
 	(fiber 0.0)
-	(ingredientName "Aceite de oliva")
 	(iron 0.56)
 	(magnesium 0.0)
 	(monounsaturatedFat 73.0)
+	(name "Aceite de oliva")
 	(polyunsaturatedFat 11.0)
 	(potassium 1.0)
 	(protein 0.0)
@@ -31,18 +26,17 @@
 	(vitamineE 14.35)
 	(zinc 0.0))
 
-([AceitunaNegra] of  Ingredient
-
+([AceitunaNegra] of Ingredient
 	(calcium 52.0)
 	(calories 145.0)
 	(carbohydrates 3.84)
 	(cholesterol 0.0)
 	(copper 0.12)
 	(fiber 3.3)
-	(ingredientName "Oliva negra")
 	(iron 0.49)
 	(magnesium 11.0)
-	(monounsaturatedFat 14.0)
+	(monounsaturatedFat 14)
+	(name "Oliva negra")
 	(polyunsaturatedFat 2.23)
 	(potassium 91.0)
 	(protein 1.03)
@@ -51,26 +45,25 @@
 	(sodium 2250.0)
 	(vitamineA 20.0)
 	(vitamineB12 0.0)
-	(vitamineB2 0.0070)
+	(vitamineB2 0.007)
 	(vitamineB3 0.237)
-	(vitamineB6 0.018235294)
+	(vitamineB6 0.018235294117647058)
 	(vitamineB9 3.0)
 	(vitamineC 0.0)
 	(vitamineE 3.81)
 	(zinc 0.04))
 
-([Aguacate] of  Ingredient
-
+([Aguacate] of Ingredient
 	(calcium 12.0)
 	(calories 160.0)
 	(carbohydrates 8.53)
 	(cholesterol 0.0)
 	(copper 0.19)
 	(fiber 6.7)
-	(ingredientName "Aguacate")
 	(iron 0.55)
 	(magnesium 29.0)
 	(monounsaturatedFat 9.8)
+	(name "Aguacate")
 	(polyunsaturatedFat 1.81)
 	(potassium 507.0)
 	(protein 2.0)
@@ -81,24 +74,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.13)
 	(vitamineB3 1.738)
-	(vitamineB6 0.15117647)
+	(vitamineB6 0.1511764705882353)
 	(vitamineB9 81.0)
-	(vitamineC 0.11111111)
+	(vitamineC 0.1111111111111111)
 	(vitamineE 2.07)
 	(zinc 0.64))
 
-([Ajo] of  Ingredient
-
+([Ajo] of Ingredient
 	(calcium 181.0)
 	(calories 149.0)
 	(carbohydrates 33.06)
 	(cholesterol 0.0)
 	(copper 0.299)
 	(fiber 2.1)
-	(ingredientName "Ajo")
 	(iron 1.7)
 	(magnesium 25.0)
 	(monounsaturatedFat 0.01)
+	(name "Ajo")
 	(polyunsaturatedFat 0.249)
 	(potassium 401.0)
 	(protein 6.36)
@@ -109,24 +101,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.11)
 	(vitamineB3 0.7)
-	(vitamineB6 0.7264706)
+	(vitamineB6 0.7264705882352942)
 	(vitamineB9 3.0)
-	(vitamineC 0.34666666)
+	(vitamineC 0.3466666666666667)
 	(vitamineE 0.08)
 	(zinc 1.16))
 
-([Almendra] of  Ingredient
-
+([Almendra] of Ingredient
 	(calcium 269.0)
 	(calories 579.0)
 	(carbohydrates 21.55)
 	(cholesterol 0.0)
 	(copper 1.031)
 	(fiber 12.5)
-	(ingredientName "Almendra")
 	(iron 3.71)
 	(magnesium 270.0)
 	(monounsaturatedFat 31.551)
+	(name "Almendra")
 	(polyunsaturatedFat 12.329)
 	(potassium 733.0)
 	(protein 21.15)
@@ -137,123 +128,25 @@
 	(vitamineB12 0.0)
 	(vitamineB2 1.138)
 	(vitamineB3 3.618)
-	(vitamineB6 0.08058824)
+	(vitamineB6 0.08058823529411765)
 	(vitamineB9 44.0)
 	(vitamineC 0.0)
 	(vitamineE 25.63)
 	(zinc 3.12))
 
-([Aperitivo1] of  Appetizer
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Manzana")
-	(ingredients [Manzana])
-	(ingredientsWeights 200.0))
-
-([Aperitivo10] of  Appetizer
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Tostada con mermelada de fresa")
-	(ingredients
-		[Pan]
-		[MermeladaFresa])
-	(ingredientsWeights 100.0 10.0))
-
-([Aperitivo2] of  Appetizer
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Naranja")
-	(ingredients [Naranja])
-	(ingredientsWeights 200.0))
-
-([Aperitivo3] of  Appetizer
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Bocadillo jamón")
-	(ingredients
-		[Jamon]
-		[Pan])
-	(ingredientsWeights 20.0 100.0))
-
-([Aperitivo4] of  Appetizer
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Bocadillo pavo")
-	(ingredients
-		[Pavo]
-		[Pan])
-	(ingredientsWeights 20.0 100.0))
-
-([Aperitivo5] of  Appetizer
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Bocadillo queso")
-	(ingredients
-		[Queso]
-		[Pan])
-	(ingredientsWeights 20.0 100.0))
-
-([Aperitivo6] of  Appetizer
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Tostada con mantequilla")
-	(ingredients
-		[MantequillaSinSal]
-		[Pan])
-	(ingredientsWeights 20.0 100.0))
-
-([Aperitivo7] of  Appetizer
-
-	(availability 1 2 3 4 5)
-	(dishClassification Spanish)
-	(dishName "Tostada queso fresco con fruta")
-	(ingredients
-		[Pan]
-		[Queso]
-		[Fresa])
-	(ingredientsWeights 100.0 20.0 40.0))
-
-([Aperitivo8] of  Appetizer
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Porridge")
-	(ingredients
-		[Avena]
-		[Leche])
-	(ingredientsWeights 30.0 100.0))
-
-([Aperitivo9] of  Appetizer
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Tostada con margarina")
-	(ingredients
-		[Pan]
-		[Margarina])
-	(ingredientsWeights 100.0 7.0))
-
-([Atun] of  Ingredient
-
+([Atun] of Ingredient
 	(calcium 8.0)
 	(calories 144.0)
 	(carbohydrates 0.0)
 	(cholesterol 38.0)
 	(copper 0.086)
 	(fiber 0.0)
-	(ingredientName "Atún")
 	(iron 1.02)
 	(magnesium 50.0)
 	(monounsaturatedFat 1.6)
+	(name "Atún")
 	(polyunsaturatedFat 1.433)
-	(potassium 252.0)
+	(potassium 252)
 	(protein 23.33)
 	(saturedFat 1.257)
 	(selenium 36.5)
@@ -262,24 +155,23 @@
 	(vitamineB12 9.43)
 	(vitamineB2 0.251)
 	(vitamineB3 8.654)
-	(vitamineB6 0.26764706)
+	(vitamineB6 0.2676470588235294)
 	(vitamineB9 2.0)
 	(vitamineC 0.0)
 	(vitamineE 1.0)
 	(zinc 0.6))
 
-([Avellana] of  Ingredient
-
+([Avellana] of Ingredient
 	(calcium 441.0)
 	(calories 628.0)
 	(carbohydrates 22.98)
 	(cholesterol 0.0)
 	(copper 1.2)
 	(fiber 9.8)
-	(ingredientName "Avellana")
 	(iron 3.12)
 	(magnesium 235.0)
 	(monounsaturatedFat 45.652)
+	(name "Avellana")
 	(polyunsaturatedFat 7.92)
 	(potassium 680.0)
 	(protein 14.89)
@@ -290,52 +182,50 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.16)
 	(vitamineB3 3.19)
-	(vitamineB6 0.32352942)
+	(vitamineB6 0.3235294117647059)
 	(vitamineB9 0.0)
 	(vitamineC 0.0)
 	(vitamineE 0.0)
 	(zinc 2.06))
 
-([Avena] of  Ingredient
-
+([Avena] of Ingredient
 	(calcium 52.0)
 	(calories 379.0)
 	(carbohydrates 67.7)
 	(cholesterol 0.0)
 	(copper 0.391)
 	(fiber 10.1)
-	(ingredientName "Avena")
 	(iron 4.25)
 	(magnesium 138.0)
-	(monounsaturatedFat 1.98)
-	(polyunsaturatedFat 2.3)
+	(monounsaturatedFat 1.980)
+	(name "Avena")
+	(polyunsaturatedFat 2.300)
 	(potassium 362.0)
 	(protein 13.15)
-	(saturedFat 1.11)
+	(saturedFat 1.110)
 	(selenium 28.9)
 	(sodium 6.0)
 	(vitamineA 0.0)
 	(vitamineB12 0.0)
 	(vitamineB2 0.155)
 	(vitamineB3 1.125)
-	(vitamineB6 0.05882353)
+	(vitamineB6 0.05882352941176471)
 	(vitamineB9 32.0)
 	(vitamineC 0.0)
 	(vitamineE 0.42)
 	(zinc 3.64))
 
-([Azucar] of  Ingredient
-
+([Azucar] of Ingredient
 	(calcium 83.0)
 	(calories 380.0)
 	(carbohydrates 98.09)
 	(cholesterol 0.0)
 	(copper 0.047)
 	(fiber 0.0)
-	(ingredientName "Azúcar")
 	(iron 0.71)
 	(magnesium 9.0)
 	(monounsaturatedFat 0.0)
+	(name "Azúcar")
 	(polyunsaturatedFat 0.0)
 	(potassium 133.0)
 	(protein 0.12)
@@ -346,25 +236,24 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.0)
 	(vitamineB3 0.11)
-	(vitamineB6 0.024117647)
+	(vitamineB6 0.024117647058823532)
 	(vitamineB9 1.0)
 	(vitamineC 0.0)
 	(vitamineE 0.0)
 	(zinc 0.03))
 
-([Bacalao] of  Ingredient
-
+([Bacalao] of Ingredient
 	(calcium 14.0)
 	(calories 85.0)
 	(carbohydrates 0.0)
 	(cholesterol 52.0)
 	(copper 0.027)
 	(fiber 0.0)
-	(ingredientName "Bacalao")
 	(iron 0.32)
 	(magnesium 26.0)
-	(monounsaturatedFat 0.35)
-	(polyunsaturatedFat 0.3)
+	(monounsaturatedFat 0.350)
+	(name "Bacalao")
+	(polyunsaturatedFat 0.300)
 	(potassium 437.0)
 	(protein 17.66)
 	(saturedFat 0.197)
@@ -374,78 +263,25 @@
 	(vitamineB12 3.6)
 	(vitamineB2 0.114)
 	(vitamineB3 1.9)
-	(vitamineB6 0.1764706)
+	(vitamineB6 0.17647058823529413)
 	(vitamineB9 9.0)
 	(vitamineC 0.0)
 	(vitamineE 0.0)
 	(zinc 0.45))
 
-([Bebida1] of  Beverage
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Vaso de leche")
-	(ingredients [Leche])
-	(ingredientsWeights 225.0))
-
-([Bebida2] of  Beverage
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Té")
-	(ingredients [Te])
-	(ingredientsWeights 3.0))
-
-([Bebida3] of  Beverage
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Té con leche")
-	(ingredients
-		[Te]
-		[Leche])
-	(ingredientsWeights 3.0 100.0))
-
-([Bebida4] of  Beverage
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Café")
-	(ingredients [Cafe])
-	(ingredientsWeights 5.0))
-
-([Bebida5] of  Beverage
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Café con leche")
-	(ingredients
-		[Cafe]
-		[Leche])
-	(ingredientsWeights 5.0 100.0))
-
-([Bebida6] of  Beverage
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Zumo natural naranja")
-	(ingredients [Naranja])
-	(ingredientsWeights 250.0))
-
-([Berenjena] of  Ingredient
-
+([Berenjena] of Ingredient
 	(calcium 9.0)
 	(calories 25.0)
 	(carbohydrates 5.88)
 	(cholesterol 0.0)
 	(copper 0.081)
 	(fiber 3.0)
-	(ingredientName "Berenjena")
 	(iron 0.23)
 	(magnesium 14.0)
 	(monounsaturatedFat 0.016)
+	(name "Berenjena")
 	(polyunsaturatedFat 0.076)
-	(potassium 229.0)
+	(potassium 229)
 	(protein 0.98)
 	(saturedFat 0.034)
 	(selenium 0.3)
@@ -454,24 +290,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.037)
 	(vitamineB3 0.649)
-	(vitamineB6 0.049411766)
+	(vitamineB6 0.049411764705882356)
 	(vitamineB9 22.0)
-	(vitamineC 0.024444444)
+	(vitamineC 0.024444444444444446)
 	(vitamineE 0.3)
 	(zinc 0.16))
 
-([Cacahuete] of  Ingredient
-
+([Cacahuete] of Ingredient
 	(calcium 92.0)
 	(calories 567.0)
 	(carbohydrates 16.13)
 	(cholesterol 0.0)
 	(copper 1.144)
 	(fiber 8.5)
-	(ingredientName "Cacahuete")
 	(iron 4.58)
 	(magnesium 168.0)
 	(monounsaturatedFat 24.426)
+	(name "Cacahuete")
 	(polyunsaturatedFat 15.558)
 	(potassium 705.0)
 	(protein 25.8)
@@ -482,24 +317,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.135)
 	(vitamineB3 12.066)
-	(vitamineB6 0.20470588)
+	(vitamineB6 0.20470588235294115)
 	(vitamineB9 240.0)
 	(vitamineC 0.0)
 	(vitamineE 8.33)
 	(zinc 3.27))
 
-([Cafe] of  Ingredient
-
+([Cafe] of Ingredient
 	(calcium 2.0)
 	(calories 9.0)
 	(carbohydrates 1.69)
 	(cholesterol 0.0)
 	(copper 0.05)
 	(fiber 0.0)
-	(ingredientName "Cafe")
 	(iron 0.13)
 	(magnesium 80.0)
-	(monounsaturatedFat 0.0)
+	(monounsaturatedFat 0.000)
+	(name "Cafe")
 	(polyunsaturatedFat 0.092)
 	(potassium 115.0)
 	(protein 0.1)
@@ -510,24 +344,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.177)
 	(vitamineB3 5.207)
-	(vitamineB6 0.0011764705)
+	(vitamineB6 0.0011764705882352942)
 	(vitamineB9 1.0)
-	(vitamineC 0.0022222223)
+	(vitamineC 0.0022222222222222222)
 	(vitamineE 0.0)
 	(zinc 0.05))
 
-([Calabacin] of  Ingredient
-
+([Calabacin] of Ingredient
 	(calcium 16.0)
 	(calories 17.0)
 	(carbohydrates 3.11)
 	(cholesterol 0.0)
 	(copper 0.053)
 	(fiber 1.0)
-	(ingredientName "Calabacín")
 	(iron 0.37)
 	(magnesium 18.0)
 	(monounsaturatedFat 0.011)
+	(name "Calabacín")
 	(polyunsaturatedFat 0.091)
 	(potassium 261.0)
 	(protein 1.21)
@@ -538,25 +371,24 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.094)
 	(vitamineB3 0.451)
-	(vitamineB6 0.095882356)
+	(vitamineB6 0.09588235294117647)
 	(vitamineB9 24.0)
-	(vitamineC 0.19888888)
+	(vitamineC 0.19888888888888887)
 	(vitamineE 0.12)
 	(zinc 0.32))
 
-([Calabaza] of  Ingredient
-
+([Calabaza] of Ingredient
 	(calcium 21.0)
 	(calories 26.0)
 	(carbohydrates 6.5)
 	(cholesterol 0.0)
 	(copper 0.127)
 	(fiber 0.5)
-	(ingredientName "Calabaza")
 	(iron 0.8)
 	(magnesium 12.0)
 	(monounsaturatedFat 0.013)
-	(polyunsaturatedFat 0.0050)
+	(name "Calabaza")
+	(polyunsaturatedFat 0.005)
 	(potassium 340.0)
 	(protein 1.0)
 	(saturedFat 0.052)
@@ -566,24 +398,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.11)
 	(vitamineB3 0.6)
-	(vitamineB6 0.035882354)
+	(vitamineB6 0.03588235294117647)
 	(vitamineB9 16.0)
 	(vitamineC 0.1)
 	(vitamineE 1.06)
 	(zinc 0.32))
 
-([Calamar] of  Ingredient
-
+([Calamar] of Ingredient
 	(calcium 32.0)
 	(calories 92.0)
 	(carbohydrates 3.08)
 	(cholesterol 233.0)
 	(copper 1.891)
 	(fiber 0.0)
-	(ingredientName "Calamar")
 	(iron 0.68)
 	(magnesium 33.0)
 	(monounsaturatedFat 0.107)
+	(name "Calamar")
 	(polyunsaturatedFat 0.524)
 	(potassium 246.0)
 	(protein 15.58)
@@ -594,25 +425,24 @@
 	(vitamineB12 1.3)
 	(vitamineB2 0.412)
 	(vitamineB3 2.175)
-	(vitamineB6 0.032941177)
+	(vitamineB6 0.03294117647058824)
 	(vitamineB9 5.0)
-	(vitamineC 0.052222222)
+	(vitamineC 0.052222222222222225)
 	(vitamineE 1.2)
 	(zinc 1.53))
 
-([CaldoPollo] of  Ingredient
-
+([CaldoPollo] of Ingredient
 	(calcium 4.0)
 	(calories 6.0)
 	(carbohydrates 0.44)
 	(cholesterol 2.0)
 	(copper 0.015)
 	(fiber 0.0)
-	(ingredientName "Caldo de pollo")
 	(iron 0.07)
 	(magnesium 1.0)
 	(monounsaturatedFat 0.019)
-	(polyunsaturatedFat 0.0090)
+	(name "Caldo de pollo")
+	(polyunsaturatedFat 0.009)
 	(potassium 18.0)
 	(protein 0.64)
 	(saturedFat 0.013)
@@ -628,19 +458,18 @@
 	(vitamineE 0.04)
 	(zinc 0.07))
 
-([CaldoVerdura] of  Ingredient
-
+([CaldoVerdura] of Ingredient
 	(calcium 0.0)
 	(calories 5.0)
 	(carbohydrates 1.28)
 	(cholesterol 0.0)
 	(copper 0.0)
 	(fiber 0.0)
-	(ingredientName "Caldo de Verdura")
 	(iron 0.0)
 	(magnesium 0.0)
-	(monounsaturatedFat 0.0060)
-	(polyunsaturatedFat 0.0040)
+	(monounsaturatedFat 0.006)
+	(name "Caldo de Verdura")
+	(polyunsaturatedFat 0.004)
 	(potassium 20.0)
 	(protein 0.0)
 	(saturedFat 0.031)
@@ -656,19 +485,18 @@
 	(vitamineE 0.0)
 	(zinc 0.0))
 
-([Canonigo] of  Ingredient
-
+([Canonigo] of Ingredient
 	(calcium 33.0)
 	(calories 17.0)
 	(carbohydrates 3.29)
 	(cholesterol 0.0)
 	(copper 0.048)
 	(fiber 2.1)
-	(ingredientName "Canonigo")
 	(iron 0.97)
 	(magnesium 14.0)
 	(monounsaturatedFat 0.012)
-	(polyunsaturatedFat 0.16)
+	(name "Canonigo")
+	(polyunsaturatedFat 0.160)
 	(potassium 247.0)
 	(protein 1.23)
 	(saturedFat 0.039)
@@ -678,24 +506,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.067)
 	(vitamineB3 0.313)
-	(vitamineB6 0.04352941)
+	(vitamineB6 0.04352941176470588)
 	(vitamineB9 136.0)
-	(vitamineC 0.044444446)
+	(vitamineC 0.044444444444444446)
 	(vitamineE 0.13)
 	(zinc 0.23))
 
-([CarrilleraCerdo] of  Ingredient
-
+([CarrilleraCerdo] of Ingredient
 	(calcium 19.0)
 	(calories 171.0)
 	(carbohydrates 0.0)
 	(cholesterol 89.0)
 	(copper 0.082)
 	(fiber 0.0)
-	(ingredientName "Carrillera cerdo")
 	(iron 1.14)
 	(magnesium 6.0)
 	(monounsaturatedFat 5.134)
+	(name "Carrillera cerdo")
 	(polyunsaturatedFat 1.198)
 	(potassium 47.0)
 	(protein 19.11)
@@ -706,24 +533,23 @@
 	(vitamineB12 0.51)
 	(vitamineB2 0.068)
 	(vitamineB3 1.1)
-	(vitamineB6 0.037647057)
+	(vitamineB6 0.037647058823529415)
 	(vitamineB9 1.0)
 	(vitamineC 0.0)
 	(vitamineE 0.17)
 	(zinc 2.38))
 
-([Castana] of  Ingredient
-
+([Castana] of Ingredient
 	(calcium 18.0)
 	(calories 224.0)
 	(carbohydrates 49.07)
 	(cholesterol 0.0)
 	(copper 0.363)
 	(fiber 0.0)
-	(ingredientName "Castaña")
 	(iron 1.41)
 	(magnesium 84.0)
 	(monounsaturatedFat 0.581)
+	(name "Castaña")
 	(polyunsaturatedFat 0.288)
 	(potassium 447.0)
 	(protein 4.2)
@@ -734,24 +560,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.18)
 	(vitamineB3 0.8)
-	(vitamineB6 0.24117647)
+	(vitamineB6 0.2411764705882353)
 	(vitamineB9 68.0)
 	(vitamineC 0.4)
 	(vitamineE 0.0)
 	(zinc 0.87))
 
-([Cebolla] of  Ingredient
-
+([Cebolla] of Ingredient
 	(calcium 23.0)
 	(calories 40.0)
 	(carbohydrates 9.34)
 	(cholesterol 0.0)
 	(copper 0.039)
 	(fiber 1.7)
-	(ingredientName "Cebolla")
 	(iron 0.21)
 	(magnesium 10.0)
 	(monounsaturatedFat 0.013)
+	(name "Cebolla")
 	(polyunsaturatedFat 0.017)
 	(potassium 146.0)
 	(protein 1.1)
@@ -762,24 +587,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.027)
 	(vitamineB3 0.116)
-	(vitamineB6 0.07058824)
+	(vitamineB6 0.07058823529411765)
 	(vitamineB9 19.0)
-	(vitamineC 0.08222222)
+	(vitamineC 0.08222222222222222)
 	(vitamineE 0.02)
 	(zinc 0.17))
 
-([Cebolleta] of  Ingredient
-
+([Cebolleta] of Ingredient
 	(calcium 72.0)
 	(calories 32.0)
 	(carbohydrates 7.34)
 	(cholesterol 0.0)
 	(copper 0.083)
 	(fiber 2.6)
-	(ingredientName "Cebolleta")
 	(iron 1.48)
 	(magnesium 20.0)
 	(monounsaturatedFat 0.027)
+	(name "Cebolleta")
 	(polyunsaturatedFat 0.074)
 	(potassium 276.0)
 	(protein 1.83)
@@ -790,24 +614,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.08)
 	(vitamineB3 0.525)
-	(vitamineB6 0.035882354)
+	(vitamineB6 0.03588235294117647)
 	(vitamineB9 64.0)
-	(vitamineC 0.20888889)
+	(vitamineC 0.2088888888888889)
 	(vitamineE 0.55)
 	(zinc 0.39))
 
-([Cerdo] of  Ingredient
-
+([Cerdo] of Ingredient
 	(calcium 19.0)
 	(calories 171.0)
 	(carbohydrates 0.0)
 	(cholesterol 89.0)
 	(copper 0.082)
 	(fiber 0.0)
-	(ingredientName "Cerdo")
 	(iron 1.14)
 	(magnesium 6.0)
 	(monounsaturatedFat 5.134)
+	(name "Cerdo")
 	(polyunsaturatedFat 1.198)
 	(potassium 47.0)
 	(protein 19.11)
@@ -818,52 +641,50 @@
 	(vitamineB12 0.51)
 	(vitamineB2 0.068)
 	(vitamineB3 1.1)
-	(vitamineB6 0.037647057)
+	(vitamineB6 0.037647058823529415)
 	(vitamineB9 1.0)
 	(vitamineC 0.0)
 	(vitamineE 0.17)
 	(zinc 2.38))
 
-([Champinon] of  Ingredient
-
+([Champinon] of Ingredient
 	(calcium 3.0)
 	(calories 22.0)
 	(carbohydrates 3.87)
 	(cholesterol 0.0)
 	(copper 0.286)
 	(fiber 1.3)
-	(ingredientName "Champiñon")
 	(iron 0.31)
 	(magnesium 0.0)
 	(monounsaturatedFat 0.044)
+	(name "Champiñon")
 	(polyunsaturatedFat 0.296)
 	(potassium 364.0)
 	(protein 2.11)
-	(saturedFat 0.01)
+	(saturedFat 0.010)
 	(selenium 18.6)
 	(sodium 9.0)
 	(vitamineA 0.0)
 	(vitamineB12 0.05)
 	(vitamineB2 0.13)
 	(vitamineB3 4.494)
-	(vitamineB6 0.08705882)
+	(vitamineB6 0.08705882352941176)
 	(vitamineB9 28.0)
 	(vitamineC 0.0)
 	(vitamineE 0.02)
 	(zinc 0.53))
 
-([Codillo] of  Ingredient
-
+([Codillo] of Ingredient
 	(calcium 5.0)
 	(calories 133.0)
 	(carbohydrates 0.0)
 	(cholesterol 61.0)
 	(copper 0.093)
 	(fiber 0.0)
-	(ingredientName "Codillo")
 	(iron 2.14)
 	(magnesium 24.0)
 	(monounsaturatedFat 2.152)
+	(name "Codillo")
 	(polyunsaturatedFat 0.277)
 	(potassium 378.0)
 	(protein 21.41)
@@ -880,19 +701,18 @@
 	(vitamineE 0.17)
 	(zinc 4.97))
 
-([ColaBacalao] of  Ingredient
-
+([ColaBacalao] of Ingredient
 	(calcium 14.0)
 	(calories 85.0)
 	(carbohydrates 0.0)
 	(cholesterol 52.0)
 	(copper 0.027)
 	(fiber 0.0)
-	(ingredientName "Cola bacalao")
 	(iron 0.32)
 	(magnesium 26.0)
-	(monounsaturatedFat 0.35)
-	(polyunsaturatedFat 0.3)
+	(monounsaturatedFat 0.350)
+	(name "Cola bacalao")
+	(polyunsaturatedFat 0.300)
 	(potassium 437.0)
 	(protein 17.66)
 	(saturedFat 0.197)
@@ -902,28 +722,27 @@
 	(vitamineB12 3.6)
 	(vitamineB2 0.114)
 	(vitamineB3 1.9)
-	(vitamineB6 0.1764706)
+	(vitamineB6 0.17647058823529413)
 	(vitamineB9 9.0)
 	(vitamineC 0.0)
 	(vitamineE 0.0)
 	(zinc 0.45))
 
-([Conejo] of  Ingredient
-
+([Conejo] of Ingredient
 	(calcium 18.0)
 	(calories 173.0)
 	(carbohydrates 0.0)
 	(cholesterol 123.0)
 	(copper 0.176)
 	(fiber 0.0)
-	(ingredientName "Conejo")
 	(iron 4.85)
 	(magnesium 31.0)
-	(monounsaturatedFat 0.95)
-	(polyunsaturatedFat 0.68)
+	(monounsaturatedFat 0.950)
+	(name "Conejo")
+	(polyunsaturatedFat 0.680)
 	(potassium 343.0)
 	(protein 33.02)
-	(saturedFat 1.05)
+	(saturedFat 1.050)
 	(selenium 15.2)
 	(sodium 45.0)
 	(vitamineA 0.0)
@@ -936,18 +755,17 @@
 	(vitamineE 0.41)
 	(zinc 2.38))
 
-([Escarola] of  Ingredient
-
+([Escarola] of Ingredient
 	(calcium 52.0)
 	(calories 17.0)
 	(carbohydrates 3.35)
 	(cholesterol 0.0)
 	(copper 0.099)
 	(fiber 3.1)
-	(ingredientName "Escarola")
 	(iron 0.83)
 	(magnesium 15.0)
-	(monounsaturatedFat 0.0040)
+	(monounsaturatedFat 0.004)
+	(name "Escarola")
 	(polyunsaturatedFat 0.087)
 	(potassium 314.0)
 	(protein 1.25)
@@ -958,24 +776,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.075)
 	(vitamineB3 0.4)
-	(vitamineB6 0.011764706)
+	(vitamineB6 0.011764705882352941)
 	(vitamineB9 142.0)
-	(vitamineC 0.072222225)
+	(vitamineC 0.07222222222222222)
 	(vitamineE 0.44)
 	(zinc 0.79))
 
-([Espagueti] of  Ingredient
-
+([Espagueti] of Ingredient
 	(calcium 21.0)
 	(calories 371.0)
 	(carbohydrates 74.67)
 	(cholesterol 0.0)
 	(copper 0.289)
 	(fiber 3.2)
-	(ingredientName "Espagueti")
 	(iron 3.3)
 	(magnesium 53.0)
 	(monounsaturatedFat 0.171)
+	(name "Espagueti")
 	(polyunsaturatedFat 0.564)
 	(potassium 223.0)
 	(protein 13.04)
@@ -986,24 +803,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.4)
 	(vitamineB3 7.177)
-	(vitamineB6 0.08352941)
+	(vitamineB6 0.08352941176470588)
 	(vitamineB9 391.0)
 	(vitamineC 0.0)
 	(vitamineE 0.11)
 	(zinc 1.41))
 
-([Espinaca] of  Ingredient
-
+([Espinaca] of Ingredient
 	(calcium 99.0)
 	(calories 23.0)
 	(carbohydrates 3.63)
 	(cholesterol 0.0)
 	(copper 0.13)
 	(fiber 2.2)
-	(ingredientName "Espinaca")
 	(iron 2.71)
 	(magnesium 79.0)
-	(monounsaturatedFat 0.01)
+	(monounsaturatedFat 0.010)
+	(name "Espinaca")
 	(polyunsaturatedFat 0.165)
 	(potassium 558.0)
 	(protein 2.86)
@@ -1014,52 +830,50 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.189)
 	(vitamineB3 0.724)
-	(vitamineB6 0.11470588)
+	(vitamineB6 0.11470588235294119)
 	(vitamineB9 194.0)
-	(vitamineC 0.3122222)
+	(vitamineC 0.31222222222222223)
 	(vitamineE 2.03)
 	(zinc 0.53))
 
-([Fresa] of  Ingredient
-
+([Fresa] of Ingredient
 	(calcium 6.0)
 	(calories 254.0)
 	(carbohydrates 66.3)
 	(cholesterol 0.0)
 	(copper 0.032)
 	(fiber 0.7)
-	(ingredientName "Fresa")
 	(iron 0.28)
 	(magnesium 4.0)
 	(monounsaturatedFat 0.014)
-	(polyunsaturatedFat 0.05)
+	(name "Fresa")
+	(polyunsaturatedFat 0.050)
 	(potassium 51.0)
 	(protein 0.2)
-	(saturedFat 0.0050)
+	(saturedFat 0.005)
 	(selenium 0.8)
 	(sodium 21.0)
 	(vitamineA 1.0)
 	(vitamineB12 0.0)
 	(vitamineB2 0.024)
 	(vitamineB3 0.161)
-	(vitamineB6 0.0070588235)
+	(vitamineB6 0.007058823529411765)
 	(vitamineB9 6.0)
-	(vitamineC 0.15222222)
+	(vitamineC 0.1522222222222222)
 	(vitamineE 0.1)
 	(zinc 0.06))
 
-([Gamba] of  Ingredient
-
+([Gamba] of Ingredient
 	(calcium 91.0)
 	(calories 83.0)
 	(carbohydrates 0.0)
 	(cholesterol 97.0)
 	(copper 0.814)
 	(fiber 0.0)
-	(ingredientName "Gamba")
 	(iron 0.5)
 	(magnesium 36.0)
 	(monounsaturatedFat 0.129)
+	(name "Gamba")
 	(polyunsaturatedFat 0.258)
 	(potassium 259.0)
 	(protein 17.88)
@@ -1070,24 +884,23 @@
 	(vitamineB12 3.33)
 	(vitamineB2 0.093)
 	(vitamineB3 2.747)
-	(vitamineB6 0.0917647)
+	(vitamineB6 0.09176470588235294)
 	(vitamineB9 51.0)
-	(vitamineC 0.036666665)
+	(vitamineC 0.03666666666666667)
 	(vitamineE 1.84)
 	(zinc 3.81))
 
-([Garbanzo] of  Ingredient
-
+([Garbanzo] of Ingredient
 	(calcium 45.0)
 	(calories 387.0)
 	(carbohydrates 57.82)
 	(cholesterol 0.0)
 	(copper 0.912)
 	(fiber 10.8)
-	(ingredientName "Garbanzo")
 	(iron 4.86)
 	(magnesium 166.0)
 	(monounsaturatedFat 1.504)
+	(name "Garbanzo")
 	(polyunsaturatedFat 2.983)
 	(potassium 846.0)
 	(protein 22.39)
@@ -1098,24 +911,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.106)
 	(vitamineB3 1.762)
-	(vitamineB6 0.28941175)
+	(vitamineB6 0.28941176470588237)
 	(vitamineB9 437.0)
 	(vitamineC 0.0)
 	(vitamineE 0.83)
 	(zinc 2.81))
 
-([Guisante] of  Ingredient
-
+([Guisante] of Ingredient
 	(calcium 25.0)
 	(calories 81.0)
 	(carbohydrates 14.45)
 	(cholesterol 0.0)
 	(copper 0.176)
 	(fiber 5.1)
-	(ingredientName "Guisante")
 	(iron 1.47)
 	(magnesium 33.0)
 	(monounsaturatedFat 0.035)
+	(name "Guisante")
 	(polyunsaturatedFat 0.187)
 	(potassium 244.0)
 	(protein 5.42)
@@ -1126,26 +938,25 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.132)
 	(vitamineB3 2.09)
-	(vitamineB6 0.09941176)
+	(vitamineB6 0.09941176470588237)
 	(vitamineB9 65.0)
-	(vitamineC 0.44444445)
+	(vitamineC 0.4444444444444444)
 	(vitamineE 0.13)
 	(zinc 1.24))
 
-([Harina] of  Ingredient
-
+([Harina] of Ingredient
 	(calcium 15.0)
 	(calories 361.0)
 	(carbohydrates 72.53)
 	(cholesterol 0.0)
 	(copper 0.182)
 	(fiber 2.4)
-	(ingredientName "Harina")
 	(iron 0.9)
 	(magnesium 25.0)
-	(monounsaturatedFat 0.14)
+	(monounsaturatedFat 0.140)
+	(name "Harina")
 	(polyunsaturatedFat 0.727)
-	(potassium 100.0)
+	(potassium 100)
 	(protein 11.98)
 	(saturedFat 0.244)
 	(selenium 39.7)
@@ -1154,52 +965,50 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.06)
 	(vitamineB3 1.0)
-	(vitamineB6 0.021764705)
+	(vitamineB6 0.02176470588235294)
 	(vitamineB9 33.0)
 	(vitamineC 0.0)
 	(vitamineE 0.4)
 	(zinc 0.85))
 
-([Higo] of  Ingredient
-
+([Higo] of Ingredient
 	(calcium 35.0)
 	(calories 74.0)
 	(carbohydrates 19.18)
 	(cholesterol 0.0)
 	(copper 0.07)
 	(fiber 2.9)
-	(ingredientName "Higo")
 	(iron 0.37)
 	(magnesium 17.0)
 	(monounsaturatedFat 0.066)
+	(name "Higo")
 	(polyunsaturatedFat 0.144)
-	(potassium 232.0)
+	(potassium 232)
 	(protein 0.75)
-	(saturedFat 0.06)
+	(saturedFat 0.060)
 	(selenium 0.2)
 	(sodium 1.0)
 	(vitamineA 7.0)
 	(vitamineB12 0.0)
 	(vitamineB2 0.05)
 	(vitamineB3 0.4)
-	(vitamineB6 0.066470586)
+	(vitamineB6 0.06647058823529411)
 	(vitamineB9 6.0)
-	(vitamineC 0.022222223)
+	(vitamineC 0.022222222222222223)
 	(vitamineE 0.11)
 	(zinc 0.15))
 
-([Huevo] of  Ingredient
-
+([Huevo] of Ingredient
 	(calcium 56.0)
 	(calories 143.0)
 	(carbohydrates 0.72)
 	(cholesterol 372.0)
 	(copper 0.072)
 	(fiber 0.0)
-	(ingredientName "Huevo")
 	(iron 1.75)
 	(magnesium 12.0)
 	(monounsaturatedFat 3.658)
+	(name "Huevo")
 	(polyunsaturatedFat 1.911)
 	(potassium 138.0)
 	(protein 12.56)
@@ -1216,74 +1025,71 @@
 	(vitamineE 1.05)
 	(zinc 1.29))
 
-([Jamon] of  Ingredient
-
+([Jamon] of Ingredient
 	(calcium 7.0)
 	(calories 180.0)
 	(carbohydrates 4.2)
 	(cholesterol 59.0)
 	(copper 0.06)
 	(fiber 0.0)
-	(ingredientName "Jamon")
 	(iron 0.83)
 	(magnesium 16.0)
-	(monounsaturatedFat 8.2)
-	(polyunsaturatedFat 2.11)
+	(monounsaturatedFat 8.200)
+	(name "Jamon")
+	(polyunsaturatedFat 2.110)
 	(potassium 319.0)
 	(protein 16.5)
-	(saturedFat 6.1)
+	(saturedFat 6.100)
 	(selenium 17.4)
 	(sodium 1194.0)
 	(vitamineA 0.0)
 	(vitamineB12 0.92)
 	(vitamineB2 0.204)
 	(vitamineB3 3.88)
-	(vitamineB6 0.20588236)
+	(vitamineB6 0.20588235294117646)
 	(vitamineB9 1.0)
 	(vitamineC 0.0)
 	(vitamineE 0.23)
 	(zinc 1.94))
 
-([JudiaVerde] of  Ingredient
-
+([JudiaVerde] of Ingredient
 	(calcium 37.0)
 	(calories 31.0)
 	(carbohydrates 6.97)
 	(cholesterol 0.0)
 	(copper 0.069)
 	(fiber 2.7)
-	(ingredientName "Judía verde")
 	(iron 1.03)
 	(magnesium 25.0)
-	(monounsaturatedFat 0.01)
+	(monounsaturatedFat 0.010)
+	(name "Judía verde")
 	(polyunsaturatedFat 0.113)
 	(potassium 211.0)
 	(protein 1.83)
-	(saturedFat 0.05)
+	(saturedFat 0.050)
 	(selenium 0.6)
 	(sodium 6.0)
 	(vitamineA 35.0)
 	(vitamineB12 0.0)
 	(vitamineB2 0.104)
 	(vitamineB3 0.734)
-	(vitamineB6 0.082941175)
+	(vitamineB6 0.08294117647058823)
 	(vitamineB9 33.0)
-	(vitamineC 0.13555555)
+	(vitamineC 0.13555555555555554)
 	(vitamineE 0.41)
 	(zinc 0.24))
 
-([Leche] of  Ingredient
-
+([Leche] of Ingredient
 	(calcium 101.0)
 	(calories 61.0)
 	(carbohydrates 4.46)
 	(cholesterol 14.0)
 	(copper 0.01)
 	(fiber 0.0)
-	(ingredientName "Leche")
 	(iron 0.05)
 	(magnesium 5.0)
 	(monounsaturatedFat 0.999)
+	(name "Leche")
 	(polyunsaturatedFat 0.128)
 	(potassium 253.0)
 	(protein 3.1)
@@ -1300,18 +1106,17 @@
 	(vitamineE 0.08)
 	(zinc 0.38))
 
-([LecheOveja] of  Ingredient
-
+([LecheOveja] of Ingredient
 	(calcium 101.0)
 	(calories 61.0)
 	(carbohydrates 4.46)
 	(cholesterol 14.0)
 	(copper 0.01)
 	(fiber 0.0)
-	(ingredientName "Leche de oveja")
 	(iron 0.05)
 	(magnesium 5.0)
 	(monounsaturatedFat 0.999)
+	(name "Leche de oveja")
 	(polyunsaturatedFat 0.128)
 	(potassium 253.0)
 	(protein 3.1)
@@ -1328,19 +1133,18 @@
 	(vitamineE 0.08)
 	(zinc 0.38))
 
-([Lechuga] of  Ingredient
-
+([Lechuga] of Ingredient
 	(calcium 33.0)
 	(calories 17.0)
 	(carbohydrates 3.29)
 	(cholesterol 0.0)
 	(copper 0.048)
 	(fiber 2.1)
-	(ingredientName "Lechuga")
 	(iron 0.97)
 	(magnesium 14.0)
 	(monounsaturatedFat 0.012)
-	(polyunsaturatedFat 0.16)
+	(name "Lechuga")
+	(polyunsaturatedFat 0.160)
 	(potassium 247.0)
 	(protein 1.23)
 	(saturedFat 0.039)
@@ -1350,24 +1154,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.067)
 	(vitamineB3 0.313)
-	(vitamineB6 0.04352941)
+	(vitamineB6 0.04352941176470588)
 	(vitamineB9 136.0)
-	(vitamineC 0.044444446)
+	(vitamineC 0.044444444444444446)
 	(vitamineE 0.13)
 	(zinc 0.23))
 
-([Levadura] of  Ingredient
-
+([Levadura] of Ingredient
 	(calcium 67.0)
 	(calories 185.0)
 	(carbohydrates 20.42)
 	(cholesterol 0.0)
 	(copper 0.245)
 	(fiber 6.5)
-	(ingredientName "Levadura")
 	(iron 4.04)
 	(magnesium 180.0)
 	(monounsaturatedFat 0.0)
+	(name "Levadura")
 	(polyunsaturatedFat 0.0)
 	(potassium 2100.0)
 	(protein 23.88)
@@ -1384,18 +1187,17 @@
 	(vitamineE 0.0)
 	(zinc 4.19))
 
-([Limon] of  Ingredient
-
+([Limon] of Ingredient
 	(calcium 26.0)
 	(calories 29.0)
 	(carbohydrates 9.32)
 	(cholesterol 0.0)
 	(copper 0.037)
 	(fiber 2.8)
-	(ingredientName "Limón")
 	(iron 0.6)
 	(magnesium 8.0)
 	(monounsaturatedFat 0.011)
+	(name "Limón")
 	(polyunsaturatedFat 0.089)
 	(potassium 138.0)
 	(protein 1.1)
@@ -1406,24 +1208,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.02)
 	(vitamineB3 0.1)
-	(vitamineB6 0.047058824)
+	(vitamineB6 0.047058823529411764)
 	(vitamineB9 11.0)
-	(vitamineC 0.5888889)
+	(vitamineC 0.5888888888888889)
 	(vitamineE 0.15)
 	(zinc 0.06))
 
-([Mandarina] of  Ingredient
-
+([Mandarina] of Ingredient
 	(calcium 37.0)
 	(calories 53.0)
 	(carbohydrates 13.34)
 	(cholesterol 0.0)
 	(copper 0.042)
 	(fiber 1.8)
-	(ingredientName "Mandarina")
 	(iron 0.15)
 	(magnesium 12.0)
-	(monounsaturatedFat 0.06)
+	(monounsaturatedFat 0.060)
+	(name "Mandarina")
 	(polyunsaturatedFat 0.065)
 	(potassium 166.0)
 	(protein 0.81)
@@ -1434,24 +1235,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.036)
 	(vitamineB3 0.376)
-	(vitamineB6 0.04588235)
+	(vitamineB6 0.04588235294117647)
 	(vitamineB9 16.0)
-	(vitamineC 0.29666665)
+	(vitamineC 0.29666666666666663)
 	(vitamineE 0.2)
 	(zinc 0.07))
 
-([Mango] of  Ingredient
-
+([Mango] of Ingredient
 	(calcium 11.0)
 	(calories 60.0)
 	(carbohydrates 14.98)
 	(cholesterol 0.0)
 	(copper 0.111)
 	(fiber 1.6)
-	(ingredientName "Mango")
 	(iron 0.16)
 	(magnesium 10.0)
-	(monounsaturatedFat 0.14)
+	(monounsaturatedFat 0.140)
+	(name "Mango")
 	(polyunsaturatedFat 0.071)
 	(potassium 168.0)
 	(protein 0.82)
@@ -1462,25 +1262,24 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.038)
 	(vitamineB3 0.669)
-	(vitamineB6 0.07)
+	(vitamineB6 0.06999999999999999)
 	(vitamineB9 43.0)
-	(vitamineC 0.40444446)
+	(vitamineC 0.40444444444444444)
 	(vitamineE 0.9)
 	(zinc 0.09))
 
-([MantequillaSinSal] of  Ingredient
-
+([MantequillaSinSal] of Ingredient
 	(calcium 24.0)
 	(calories 717.0)
 	(carbohydrates 0.06)
 	(cholesterol 215.0)
 	(copper 0.016)
 	(fiber 0.0)
-	(ingredientName "Mantequilla sin sal")
 	(iron 0.02)
 	(magnesium 2.0)
-	(monounsaturatedFat 23.43)
-	(polyunsaturatedFat 3.01)
+	(monounsaturatedFat 23.430)
+	(name "Mantequilla sin sal")
+	(polyunsaturatedFat 3.010)
 	(potassium 24.0)
 	(protein 0.85)
 	(saturedFat 50.489)
@@ -1490,24 +1289,23 @@
 	(vitamineB12 0.17)
 	(vitamineB2 0.034)
 	(vitamineB3 0.042)
-	(vitamineB6 0.0017647059)
+	(vitamineB6 0.0017647058823529412)
 	(vitamineB9 3.0)
 	(vitamineC 0.0)
 	(vitamineE 2.32)
 	(zinc 0.09))
 
-([Manzana] of  Ingredient
-
+([Manzana] of Ingredient
 	(calcium 29.0)
 	(calories 25.0)
 	(carbohydrates 5.7)
 	(cholesterol 0.0)
 	(copper 0.016)
 	(fiber 0.0)
-	(ingredientName "Manzana")
 	(iron 0.07)
 	(magnesium 5.0)
 	(monounsaturatedFat 0.0)
+	(name "Manzana")
 	(polyunsaturatedFat 0.0)
 	(potassium 123.0)
 	(protein 0.6)
@@ -1520,23 +1318,22 @@
 	(vitamineB3 0.8)
 	(vitamineB6 0.0)
 	(vitamineB9 0.0)
-	(vitamineC 0.24777777)
+	(vitamineC 0.2477777777777778)
 	(vitamineE 0.0)
 	(zinc 0.06))
 
-([Margarina] of  Ingredient
-
+([Margarina] of Ingredient
 	(calcium 10.0)
 	(calories 727.0)
 	(carbohydrates 0.77)
 	(cholesterol 12.0)
 	(copper 0.01)
 	(fiber 0.0)
-	(ingredientName "Margarina")
 	(iron 0.04)
 	(magnesium 1.0)
 	(monounsaturatedFat 30.292)
-	(polyunsaturatedFat 24.17)
+	(name "Margarina")
+	(polyunsaturatedFat 24.170)
 	(potassium 22.0)
 	(protein 0.31)
 	(saturedFat 14.198)
@@ -1546,52 +1343,50 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.023)
 	(vitamineB3 0.022)
-	(vitamineB6 0.0052941176)
+	(vitamineB6 0.005294117647058823)
 	(vitamineB9 2.0)
-	(vitamineC 0.0011111111)
+	(vitamineC 0.0011111111111111111)
 	(vitamineE 3.88)
 	(zinc 0.03))
 
-([Membrillo] of  Ingredient
-
+([Membrillo] of Ingredient
 	(calcium 11.0)
 	(calories 57.0)
 	(carbohydrates 15.3)
 	(cholesterol 0.0)
 	(copper 0.13)
 	(fiber 1.9)
-	(ingredientName "Membrillo")
 	(iron 0.7)
 	(magnesium 8.0)
 	(monounsaturatedFat 0.036)
-	(polyunsaturatedFat 0.05)
+	(name "Membrillo")
+	(polyunsaturatedFat 0.050)
 	(potassium 197.0)
 	(protein 0.4)
-	(saturedFat 0.01)
+	(saturedFat 0.010)
 	(selenium 0.6)
 	(sodium 4.0)
 	(vitamineA 2.0)
 	(vitamineB12 0.0)
 	(vitamineB2 0.03)
 	(vitamineB3 0.2)
-	(vitamineB6 0.023529412)
+	(vitamineB6 0.023529411764705882)
 	(vitamineB9 3.0)
-	(vitamineC 0.16666667)
+	(vitamineC 0.16666666666666666)
 	(vitamineE 0.0)
 	(zinc 0.04))
 
-([MermeladaFresa] of  Ingredient
-
+([MermeladaFresa] of Ingredient
 	(calcium 9.0)
 	(calories 132.0)
 	(carbohydrates 53.6)
 	(cholesterol 0.0)
 	(copper 0.024)
 	(fiber 2.5)
-	(ingredientName "Mermelada de fresa")
 	(iron 0.4)
 	(magnesium 5.0)
 	(monounsaturatedFat 0.042)
+	(name "Mermelada de fresa")
 	(polyunsaturatedFat 0.151)
 	(potassium 69.0)
 	(protein 0.3)
@@ -1602,24 +1397,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.0)
 	(vitamineB3 0.0)
-	(vitamineB6 0.011764706)
+	(vitamineB6 0.011764705882352941)
 	(vitamineB9 9.0)
 	(vitamineC 0.0)
 	(vitamineE 0.09)
 	(zinc 0.06))
 
-([Miel] of  Ingredient
-
+([Miel] of Ingredient
 	(calcium 6.0)
 	(calories 304.0)
 	(carbohydrates 82.4)
 	(cholesterol 0.0)
 	(copper 0.036)
 	(fiber 0.2)
-	(ingredientName "Miel")
 	(iron 0.42)
 	(magnesium 2.0)
 	(monounsaturatedFat 0.0)
+	(name "Miel")
 	(polyunsaturatedFat 0.0)
 	(potassium 52.0)
 	(protein 0.3)
@@ -1630,25 +1424,24 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.038)
 	(vitamineB3 0.121)
-	(vitamineB6 0.014117647)
+	(vitamineB6 0.01411764705882353)
 	(vitamineB9 2.0)
-	(vitamineC 0.0055555557)
+	(vitamineC 0.005555555555555556)
 	(vitamineE 0.0)
 	(zinc 0.22))
 
-([Mora] of  Ingredient
-
+([Mora] of Ingredient
 	(calcium 29.0)
 	(calories 43.0)
 	(carbohydrates 9.61)
 	(cholesterol 0.0)
 	(copper 0.165)
 	(fiber 5.3)
-	(ingredientName "Mora")
 	(iron 0.62)
 	(magnesium 20.0)
 	(monounsaturatedFat 0.047)
-	(polyunsaturatedFat 0.28)
+	(name "Mora")
+	(polyunsaturatedFat 0.280)
 	(potassium 162.0)
 	(protein 1.39)
 	(saturedFat 0.014)
@@ -1658,24 +1451,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.026)
 	(vitamineB3 0.646)
-	(vitamineB6 0.01764706)
+	(vitamineB6 0.01764705882352941)
 	(vitamineB9 25.0)
-	(vitamineC 0.23333333)
+	(vitamineC 0.23333333333333334)
 	(vitamineE 1.17)
 	(zinc 0.53))
 
-([Mostaza] of  Ingredient
-
+([Mostaza] of Ingredient
 	(calcium 63.0)
 	(calories 60.0)
 	(carbohydrates 5.83)
 	(cholesterol 0.0)
 	(copper 0.074)
 	(fiber 4.0)
-	(ingredientName "Mostaza")
 	(iron 1.61)
 	(magnesium 48.0)
 	(monounsaturatedFat 2.182)
+	(name "Mostaza")
 	(polyunsaturatedFat 0.774)
 	(potassium 152.0)
 	(protein 3.74)
@@ -1686,24 +1478,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.07)
 	(vitamineB3 0.565)
-	(vitamineB6 0.04117647)
+	(vitamineB6 0.0411764705882353)
 	(vitamineB9 7.0)
-	(vitamineC 0.0033333334)
+	(vitamineC 0.003333333333333333)
 	(vitamineE 0.36)
 	(zinc 0.64))
 
-([Naranja] of  Ingredient
-
+([Naranja] of Ingredient
 	(calcium 43.0)
 	(calories 46.0)
 	(carbohydrates 11.54)
 	(cholesterol 0.0)
 	(copper 0.039)
 	(fiber 2.4)
-	(ingredientName "Naranja")
 	(iron 0.09)
 	(magnesium 10.0)
 	(monounsaturatedFat 0.039)
+	(name "Naranja")
 	(polyunsaturatedFat 0.042)
 	(potassium 169.0)
 	(protein 0.7)
@@ -1720,18 +1511,17 @@
 	(vitamineE 0.18)
 	(zinc 0.08))
 
-([Nata] of  Ingredient
-
+([Nata] of Ingredient
 	(calcium 101.0)
 	(calories 257.0)
 	(carbohydrates 12.49)
 	(cholesterol 76.0)
 	(copper 0.01)
 	(fiber 0.0)
-	(ingredientName "Nata")
 	(iron 0.05)
 	(magnesium 11.0)
 	(monounsaturatedFat 6.418)
+	(name "Nata")
 	(polyunsaturatedFat 0.825)
 	(potassium 147.0)
 	(protein 3.2)
@@ -1742,24 +1532,23 @@
 	(vitamineB12 0.29)
 	(vitamineB2 0.065)
 	(vitamineB3 0.07)
-	(vitamineB6 0.024117647)
+	(vitamineB6 0.024117647058823532)
 	(vitamineB9 3.0)
 	(vitamineC 0.0)
 	(vitamineE 0.64)
 	(zinc 0.37))
 
-([NataLiquida] of  Ingredient
-
+([NataLiquida] of Ingredient
 	(calcium 1.0)
 	(calories 71.0)
 	(carbohydrates 9.1)
 	(cholesterol 34.0)
 	(copper 0.0)
 	(fiber 0.0)
-	(ingredientName "Nata líquida")
 	(iron 0.56)
 	(magnesium 0.0)
 	(monounsaturatedFat 2.95)
+	(name "Nata líquida")
 	(polyunsaturatedFat 0.32)
 	(potassium 132.0)
 	(protein 0.8)
@@ -1776,19 +1565,18 @@
 	(vitamineE 0.28)
 	(zinc 0.05))
 
-([Nuez] of  Ingredient
-
+([Nuez] of Ingredient
 	(calcium 71.0)
 	(calories 500.0)
 	(carbohydrates 47.59)
 	(cholesterol 0.0)
 	(copper 0.0)
 	(fiber 3.6)
-	(ingredientName "Nuez")
 	(iron 1.29)
 	(magnesium 0.0)
 	(monounsaturatedFat 5.357)
-	(polyunsaturatedFat 25.0)
+	(name "Nuez")
+	(polyunsaturatedFat 25.000)
 	(potassium 232.0)
 	(protein 8.28)
 	(saturedFat 3.571)
@@ -1804,18 +1592,17 @@
 	(vitamineE 0.0)
 	(zinc 0.0))
 
-([Oregano] of  Ingredient
-
+([Oregano] of Ingredient
 	(calcium 1597.0)
 	(calories 265.0)
 	(carbohydrates 68.92)
 	(cholesterol 0.0)
 	(copper 0.633)
 	(fiber 42.5)
-	(ingredientName "Oregano")
 	(iron 36.8)
 	(magnesium 270.0)
 	(monounsaturatedFat 0.716)
+	(name "Oregano")
 	(polyunsaturatedFat 1.369)
 	(potassium 1260.0)
 	(protein 9.0)
@@ -1826,52 +1613,50 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.528)
 	(vitamineB3 4.64)
-	(vitamineB6 0.6141176)
+	(vitamineB6 0.6141176470588235)
 	(vitamineB9 237.0)
-	(vitamineC 0.025555555)
+	(vitamineC 0.025555555555555554)
 	(vitamineE 18.26)
 	(zinc 2.69))
 
-([Pan] of  Ingredient
-
+([Pan] of Ingredient
 	(calcium 684.0)
 	(calories 238.0)
 	(carbohydrates 43.91)
 	(cholesterol 0.0)
 	(copper 0.149)
 	(fiber 9.2)
-	(ingredientName "Pan")
 	(iron 4.89)
 	(magnesium 26.0)
 	(monounsaturatedFat 0.393)
+	(name "Pan")
 	(polyunsaturatedFat 0.973)
 	(potassium 127.0)
 	(protein 10.66)
-	(saturedFat 0.63)
+	(saturedFat 0.630)
 	(selenium 16.1)
 	(sodium 478.0)
 	(vitamineA 0.0)
 	(vitamineB12 0.0)
 	(vitamineB2 0.255)
 	(vitamineB3 4.455)
-	(vitamineB6 0.047058824)
+	(vitamineB6 0.047058823529411764)
 	(vitamineB9 162.0)
 	(vitamineC 0.0)
 	(vitamineE 0.38)
 	(zinc 0.95))
 
-([Pasta] of  Ingredient
-
+([Pasta] of Ingredient
 	(calcium 21.0)
 	(calories 371.0)
 	(carbohydrates 74.67)
 	(cholesterol 0.0)
 	(copper 0.289)
 	(fiber 3.2)
-	(ingredientName "Pasta")
 	(iron 3.3)
 	(magnesium 53.0)
 	(monounsaturatedFat 0.171)
+	(name "Pasta")
 	(polyunsaturatedFat 0.564)
 	(potassium 223.0)
 	(protein 13.04)
@@ -1882,24 +1667,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.4)
 	(vitamineB3 7.177)
-	(vitamineB6 0.08352941)
+	(vitamineB6 0.08352941176470588)
 	(vitamineB9 391.0)
 	(vitamineC 0.0)
 	(vitamineE 0.11)
 	(zinc 1.41))
 
-([Patata] of  Ingredient
-
+([Patata] of Ingredient
 	(calcium 30.0)
 	(calories 58.0)
 	(carbohydrates 12.44)
 	(cholesterol 0.0)
 	(copper 0.423)
 	(fiber 2.5)
-	(ingredientName "Patata")
 	(iron 3.24)
 	(magnesium 23.0)
-	(monounsaturatedFat 0.0020)
+	(monounsaturatedFat 0.002)
+	(name "Patata")
 	(polyunsaturatedFat 0.043)
 	(potassium 413.0)
 	(protein 2.57)
@@ -1910,25 +1694,24 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.038)
 	(vitamineB3 1.033)
-	(vitamineB6 0.14058824)
+	(vitamineB6 0.14058823529411765)
 	(vitamineB9 17.0)
-	(vitamineC 0.12666667)
+	(vitamineC 0.12666666666666668)
 	(vitamineE 0.0)
 	(zinc 0.35))
 
-([Pavo] of  Ingredient
-
+([Pavo] of Ingredient
 	(calcium 11.0)
 	(calories 139.0)
 	(carbohydrates 3.34)
 	(cholesterol 68.0)
 	(copper 0.05)
 	(fiber 0.1)
-	(ingredientName "Pavo")
 	(iron 4.2)
 	(magnesium 14.0)
-	(monounsaturatedFat 1.93)
-	(polyunsaturatedFat 1.42)
+	(monounsaturatedFat 1.930)
+	(name "Pavo")
+	(polyunsaturatedFat 1.420)
 	(potassium 345.0)
 	(protein 16.3)
 	(saturedFat 1.395)
@@ -1938,24 +1721,23 @@
 	(vitamineB12 0.24)
 	(vitamineB2 0.25)
 	(vitamineB3 3.527)
-	(vitamineB6 0.15882353)
+	(vitamineB6 0.15882352941176472)
 	(vitamineB9 5.0)
 	(vitamineC 0.09)
 	(vitamineE 0.22)
 	(zinc 2.16))
 
-([PechugaPollo] of  Ingredient
-
+([PechugaPollo] of Ingredient
 	(calcium 5.0)
 	(calories 120.0)
 	(carbohydrates 0.0)
 	(cholesterol 73.0)
 	(copper 0.037)
 	(fiber 0.0)
-	(ingredientName "Pechuga de pollo")
 	(iron 0.37)
 	(magnesium 28.0)
 	(monounsaturatedFat 0.689)
+	(name "Pechuga de pollo")
 	(polyunsaturatedFat 0.424)
 	(potassium 334.0)
 	(protein 22.5)
@@ -1966,24 +1748,23 @@
 	(vitamineB12 0.21)
 	(vitamineB2 0.177)
 	(vitamineB3 9.6)
-	(vitamineB6 0.47705883)
+	(vitamineB6 0.4770588235294118)
 	(vitamineB9 9.0)
 	(vitamineC 0.0)
 	(vitamineE 0.56)
 	(zinc 0.68))
 
-([Pera] of  Ingredient
-
+([Pera] of Ingredient
 	(calcium 9.0)
 	(calories 57.0)
 	(carbohydrates 15.23)
 	(cholesterol 0.0)
 	(copper 0.082)
 	(fiber 3.1)
-	(ingredientName "Pera")
 	(iron 0.18)
 	(magnesium 7.0)
 	(monounsaturatedFat 0.084)
+	(name "Pera")
 	(polyunsaturatedFat 0.094)
 	(potassium 116.0)
 	(protein 0.36)
@@ -1994,24 +1775,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.026)
 	(vitamineB3 0.161)
-	(vitamineB6 0.017058823)
+	(vitamineB6 0.017058823529411765)
 	(vitamineB9 7.0)
-	(vitamineC 0.04777778)
+	(vitamineC 0.04777777777777777)
 	(vitamineE 0.12)
 	(zinc 0.1))
 
-([Perejil] of  Ingredient
-
+([Perejil] of Ingredient
 	(calcium 138.0)
 	(calories 36.0)
 	(carbohydrates 6.33)
 	(cholesterol 0.0)
 	(copper 0.149)
 	(fiber 3.3)
-	(ingredientName "Perejil")
 	(iron 6.2)
 	(magnesium 50.0)
 	(monounsaturatedFat 0.295)
+	(name "Perejil")
 	(polyunsaturatedFat 0.124)
 	(potassium 554.0)
 	(protein 2.97)
@@ -2022,54 +1802,52 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.098)
 	(vitamineB3 1.313)
-	(vitamineB6 0.052941177)
+	(vitamineB6 0.052941176470588235)
 	(vitamineB9 152.0)
-	(vitamineC 1.4777777)
+	(vitamineC 1.4777777777777779)
 	(vitamineE 0.75)
 	(zinc 1.07))
 
-([Pimienta] of  Ingredient
-
+([Pimienta] of Ingredient
 	(calcium 61.0)
 	(calories 281.0)
 	(carbohydrates 51.42)
 	(cholesterol 0.0)
 	(copper 0.508)
 	(fiber 21.6)
-	(ingredientName "Pimienta")
 	(iron 10.93)
 	(magnesium 113.0)
 	(monounsaturatedFat 0.492)
+	(name "Pimienta")
 	(polyunsaturatedFat 4.511)
-	(potassium 2411.0)
+	(potassium 2411)
 	(protein 11.86)
-	(saturedFat 0.82)
+	(saturedFat 0.820)
 	(selenium 2.9)
 	(sodium 43.0)
 	(vitamineA 1022.0)
 	(vitamineB12 0.0)
 	(vitamineB2 2.255)
 	(vitamineB3 6.403)
-	(vitamineB6 2.0794117)
+	(vitamineB6 2.0794117647058825)
 	(vitamineB9 69.0)
-	(vitamineC 0.022222223)
+	(vitamineC 0.022222222222222223)
 	(vitamineE 0.0)
 	(zinc 1.42))
 
-([PimientoPiquillo] of  Ingredient
-
+([PimientoPiquillo] of Ingredient
 	(calcium 7.0)
 	(calories 31.0)
 	(carbohydrates 6.03)
-	(cholesterol 0.0)
+	(cholesterol 0)
 	(copper 0.017)
 	(fiber 2.1)
-	(ingredientName "Pimiento piquillo")
 	(iron 0.43)
 	(magnesium 12.0)
-	(monounsaturatedFat 0.0070)
+	(monounsaturatedFat 0.007)
+	(name "Pimiento piquillo")
 	(polyunsaturatedFat 0.156)
-	(potassium 211.0)
+	(potassium 211)
 	(protein 0.99)
 	(saturedFat 0.059)
 	(selenium 0.1)
@@ -2078,26 +1856,25 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.085)
 	(vitamineB3 0.979)
-	(vitamineB6 0.17117646)
+	(vitamineB6 0.1711764705882353)
 	(vitamineB9 46.0)
-	(vitamineC 1.4188889)
+	(vitamineC 1.4188888888888889)
 	(vitamineE 1.58)
 	(zinc 0.25))
 
-([PimientoRojo] of  Ingredient
-
+([PimientoRojo] of Ingredient
 	(calcium 7.0)
 	(calories 31.0)
 	(carbohydrates 6.03)
-	(cholesterol 0.0)
+	(cholesterol 0)
 	(copper 0.017)
 	(fiber 2.1)
-	(ingredientName "Pimiento rojo")
 	(iron 0.43)
 	(magnesium 12.0)
-	(monounsaturatedFat 0.0070)
+	(monounsaturatedFat 0.007)
+	(name "Pimiento rojo")
 	(polyunsaturatedFat 0.156)
-	(potassium 211.0)
+	(potassium 211)
 	(protein 0.99)
 	(saturedFat 0.059)
 	(selenium 0.1)
@@ -2106,26 +1883,25 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.085)
 	(vitamineB3 0.979)
-	(vitamineB6 0.17117646)
+	(vitamineB6 0.1711764705882353)
 	(vitamineB9 46.0)
-	(vitamineC 1.4188889)
+	(vitamineC 1.4188888888888889)
 	(vitamineE 1.58)
 	(zinc 0.25))
 
-([PimientoVerde] of  Ingredient
-
+([PimientoVerde] of Ingredient
 	(calcium 10.0)
 	(calories 20.0)
 	(carbohydrates 4.64)
-	(cholesterol 0.0)
+	(cholesterol 0)
 	(copper 0.066)
 	(fiber 1.7)
-	(ingredientName "Pimiento verde")
 	(iron 0.34)
 	(magnesium 10.0)
-	(monounsaturatedFat 0.0080)
+	(monounsaturatedFat 0.008)
+	(name "Pimiento verde")
 	(polyunsaturatedFat 0.062)
-	(potassium 175.0)
+	(potassium 175)
 	(protein 0.86)
 	(saturedFat 0.058)
 	(selenium 0.0)
@@ -2134,26 +1910,25 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.028)
 	(vitamineB3 0.48)
-	(vitamineB6 0.13176471)
+	(vitamineB6 0.13176470588235295)
 	(vitamineB9 10.0)
-	(vitamineC 0.8933333)
+	(vitamineC 0.8933333333333334)
 	(vitamineE 0.37)
 	(zinc 0.13))
 
-([Pinon] of  Ingredient
-
+([Pinon] of Ingredient
 	(calcium 16.0)
 	(calories 673.0)
 	(carbohydrates 13.08)
-	(cholesterol 0.0)
+	(cholesterol 0)
 	(copper 1.324)
 	(fiber 3.7)
-	(ingredientName "Piñón")
 	(iron 5.53)
 	(magnesium 251.0)
 	(monounsaturatedFat 18.764)
+	(name "Piñón")
 	(polyunsaturatedFat 34.071)
-	(potassium 597.0)
+	(potassium 597)
 	(protein 13.69)
 	(saturedFat 4.899)
 	(selenium 0.7)
@@ -2162,24 +1937,23 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.227)
 	(vitamineB3 4.387)
-	(vitamineB6 0.05529412)
+	(vitamineB6 0.05529411764705883)
 	(vitamineB9 34.0)
-	(vitamineC 0.008888889)
+	(vitamineC 0.008888888888888889)
 	(vitamineE 9.33)
 	(zinc 6.45))
 
-([Pollo] of  Ingredient
-
+([Pollo] of Ingredient
 	(calcium 5.0)
 	(calories 120.0)
 	(carbohydrates 0.0)
 	(cholesterol 73.0)
 	(copper 0.037)
 	(fiber 0.0)
-	(ingredientName "Pollo")
 	(iron 0.37)
 	(magnesium 28.0)
 	(monounsaturatedFat 0.689)
+	(name "Pollo")
 	(polyunsaturatedFat 0.424)
 	(potassium 334.0)
 	(protein 22.5)
@@ -2190,439 +1964,52 @@
 	(vitamineB12 0.21)
 	(vitamineB2 0.177)
 	(vitamineB3 9.6)
-	(vitamineB6 0.47705883)
+	(vitamineB6 0.4770588235294118)
 	(vitamineB9 9.0)
 	(vitamineC 0.0)
 	(vitamineE 0.56)
 	(zinc 0.68))
 
-([Postre1] of  Dessert
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Flan de leche")
-	(ingredients
-		[Leche]
-		[Huevo]
-		[Pinon]
-		[Membrillo]
-		[Nata]
-		[Azucar])
-	(ingredientsWeights 62.5 32.5 18.75 2.5 12.5 25.0 3.125)
-	(link "https://www.hogarmania.com/cocina/recetas/postres/201503/flan-leche-oveja-28433.html"))
-
-([Postre10] of  Dessert
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Yogurt natural")
-	(ingredients [Yogurt])
-	(ingredientsWeights 150.0))
-
-([Postre2] of  Dessert
-
-	(availability 8 9 10 11)
-	(dishClassification Spanish)
-	(dishName "Crema fría de mango")
-	(ingredients
-		[Mango]
-		[Huevo]
-		[Azucar]
-		[Sal]
-		[AceiteOliva])
-	(ingredientsWeights 375.0 48.75 12.5 0.25 10.0)
-	(link "https://www.hogarmania.com/cocina/recetas/postres/201606/crema-fria-mango-33155.html"))
-
-([Postre3] of  Dessert
-
-	(availability 2 3 4 5)
-	(dishClassification Spanish)
-	(dishName "Bizcocho de cacahuete borracho")
-	(ingredients
-		[Harina]
-		[Cacahuete]
-		[Azucar]
-		[Huevo]
-		[AceiteOliva]
-		[Levadura]
-		[Mango]
-		[Fresa])
-	(ingredientsWeights 20.0 10.0 20.0 6.5 6.0 1.6 50.0 42.0)
-	(link "https://www.hogarmania.com/cocina/recetas/postres/201904/bizcocho-cacahuete-borracho-42992.html"))
-
-([Postre4] of  Dessert
-
-	(availability 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Manzana")
-	(ingredients [Manzana])
-	(ingredientsWeights 200.0))
-
-([Postre5] of  Dessert
-
-	(availability 7 8 9 10)
-	(dishClassification Spanish)
-	(dishName "Pera")
-	(ingredients [Pera])
-	(ingredientsWeights 150.0))
-
-([Postre6] of  Dessert
-
-	(availability 1 2 3 4 5 11 12)
-	(dishClassification Spanish)
-	(dishName "Naranja")
-	(ingredients [Naranja])
-	(ingredientsWeights 250.0))
-
-([Postre7] of  Dessert
-
-	(availability 1 2 3 11 12)
-	(dishClassification Spanish)
-	(dishName "Mandarina")
-	(ingredients [Mandarina])
-	(ingredientsWeights 90.0))
-
-([Postre8] of  Dessert
-
-	(availability 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Bizcocho de castañas")
-	(ingredients
-		[Castana]
-		[Harina]
-		[Huevo]
-		[Levadura]
-		[Azucar]
-		[MantequillaSinSal])
-	(ingredientsWeights 50.0 31.25 32.5 6.0 25.0 5.0)
-	(link "https://www.hogarmania.com/cocina/recetas/postres/201810/bizcocho-castanas-41373.html"))
-
-([Postre9] of  Dessert
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Flan de huevo")
-	(ingredients
-		[Huevo]
-		[Azucar]
-		[Leche]
-		[Nata])
-	(ingredientsWeights 19.5 30.0 50.0 12.0)
-	(link "https://www.hogarmania.com/cocina/recetas/postres/201808/flan-huevo-40923.html"))
-
-([Primero] of  FirstCourse
-
-	(dishClassification Japanese))
-
-([Primero1] of  FirstCourse
-
-	(availability 2)
-	(dishClassification Spanish)
-	(dishName "Ensalada de lechugas variadas, aguacate y fresas")
-	(ingredients
-		[Lechuga]
-		[Fresa]
-		[AceiteOliva]
-		[Sal]
-		[Aguacate]
-		[Pan]
-		[Vinagre])
-	(ingredientsWeights 75.0 25.0 10.0 3.0 50.0 30.0 10.0)
-	(link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201905/ensalada-lechugas-variadas-aguacate-fresas-43254.html"))
-
-([Primero10] of  FirstCourse
-
-	(dishClassification Japanese)
-	(dishName "Ensalada de calabacín, canónigos y queso")
-	(ingredients
-		[Calabacin]
-		[Queso]
-		[AceiteOliva]
-		[Sal]
-		[Canonigo]
-		[Membrillo]
-		[Vinagre])
-	(ingredientsWeights 50.0 25.0 10.0 3.0 25.0 25.0 10.0)
-	(link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201904/ensalada-calabacin-canonigos-queso-43010.html"))
-
-([Primero11] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Crema de calabacín con queso")
-	(ingredients
-		[Calabacin]
-		[Patata]
-		[Cebolla]
-		[AceiteOliva]
-		[Sal]
-		[QuesoPhiladelphia])
-	(ingredientsWeights 100.0 50.0 40.0 10.0 3.0 30.0)
-	(link "https://www.pequerecetas.com/receta/crema-calabacin-queso-thermomix/"))
-
-([Primero12] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Salmorejo")
-	(ingredients
-		[Tomate]
-		[Pan]
-		[AceiteOliva]
-		[Ajo])
-	(ingredientsWeights 200.0 50.0 40.0 4.0)
-	(link "https://www.pequerecetas.com/receta/salmorejo/"))
-
-([Primero13] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Puré de calabaza")
-	(ingredients
-		[Calabaza]
-		[Cebolleta]
-		[AceiteOliva]
-		[Ajo])
-	(ingredientsWeights 200.0 50.0 40.0 4.0)
-	(link "https://www.pequerecetas.com/receta/salmorejo/"))
-
-([Primero14] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Puré de verduras")
-	(ingredients
-		[Zanahoria]
-		[Calabacin]
-		[Puerro]
-		[JudiaVerde]
-		[Patata]
-		[Sal]
-		[QuesoPhiladelphia]
-		[AceiteOliva])
-	(ingredientsWeights 70.0 50.0 60.0 40.0 3.0 30.0 4.0)
-	(link "https://www.pequerecetas.com/receta/pure-de-verduras-sano-y-delicioso/"))
-
-([Primero15] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Sopa de ajo")
-	(ingredients
-		[Ajo]
-		[Pan]
-		[Huevo]
-		[CaldoPollo])
-	(ingredientsWeights 30.0 50.0 50.0 250.0)
-	(link "http://recetasdecocina.elmundo.es/2015/10/sopa-ajo-castellana-receta-casera.html"))
-
-([Primero16] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Sopa de cebolla")
-	(ingredients
-		[Cebolla]
-		[AceiteOliva]
-		[Ajo]
-		[CaldoPollo])
-	(ingredientsWeights 120.0 10.0 10.0 250.0)
-	(link "http://recetasdecocina.elmundo.es/2015/02/sopa-de-cebolla-receta-facil.html"))
-
-([Primero17] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Sopa de pollo y pasta")
-	(ingredients
-		[CaldoPollo]
-		[PimientoVerde]
-		[Cebolla]
-		[Pollo]
-		[Pasta])
-	(ingredientsWeights 250.0 40.0 30.0 50.0 50.0)
-	(link "http://recetasdecocina.elmundo.es/2013/09/sopa-pollo-receta-facil.html"))
-
-([Primero2] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Ensalada de rabanitos y salmón")
-	(ingredients
-		[Lechuga]
-		[SalmonAhumado]
-		[AceiteOliva]
-		[Sal]
-		[Rabanito]
-		[AceitunaNegra]
-		[Mostaza])
-	(ingredientsWeights 75.0 25.0 10.0 3.0 70.0 19.2 15.0)
-	(link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201905/ensalada-rabanitos-salmon-43230.html"))
-
-([Primero3] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Pastel de espinacas con provenzal de queso")
-	(ingredients
-		[Espinaca]
-		[Zanahoria]
-		[QuesoParmesano]
-		[Harina]
-		[AceiteOliva]
-		[Pimienta]
-		[Ajo]
-		[Pan]
-		[Ajo]
-		[Leche]
-		[Sal])
-	(ingredientsWeights 333.33 50.0 10.0 6.66 10.0 10.0 60.0 5.0 2.0 100.0 3.0)
-	(link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201905/pastel-espinacas-provenzal-queso-43222.html"))
-
-([Primero4] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Patatas con bacalao")
-	(ingredients
-		[Patata]
-		[ColaBacalao]
-		[Cebolla]
-		[Ajo]
-		[Sal]
-		[Bacalao]
-		[Puerro]
-		[Tomate]
-		[PimientoVerde]
-		[AceiteOliva]
-		[Perejil])
-	(ingredientsWeights 250.0 60.0 100.0 2.0 3.0 100.0 25.0 110.0 45.0 10.0 1.0)
-	(link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201905/patatas-bacalao-43198.html"))
-
-([Primero5] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Ensalada de escarola, aguacate y nueces")
-	(ingredients
-		[Escarola]
-		[Nuez]
-		[Vinagre]
-		[Aguacate]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 75.0 15.0 10.0 50.0 10.0 3.0)
-	(link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201904/ensalada-escarola-aguacate-nueces-43182.html"))
-
-([Primero6] of  FirstCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Ensalada de lechugas variadas con higos, moras y avellanas")
-	(ingredients
-		[Lechuga]
-		[Mora]
-		[AceiteOliva]
-		[Miel]
-		[Higo]
-		[Avellana]
-		[Vinagre]
-		[Sal])
-	(ingredientsWeights 50.0 0.6 10.0 10.0 160.0 7.5 10.0 3.0)
-	(link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201904/ensalada-lechugas-variadas-higos-moras-43086.html"))
-
-([Primero7] of  FirstCourse
-
-	(dishClassification Spanish)
-	(dishName "Garbanzos con calabacín y huevo escalfado")
-	(ingredients
-		[Garbanzo]
-		[Zanahoria]
-		[Ajo]
-		[Huevo]
-		[AceiteOliva]
-		[Oregano]
-		[Cebolla]
-		[Puerro]
-		[Calabacin]
-		[CaldoVerdura]
-		[Sal]
-		[Perejil])
-	(ingredientsWeights 62.5 25.0 22.5 60.0 10.0 1.0 25.0 25.0 50.0 2000.0 3.0 1.0)
-	(link "https://www.hogarmania.com/cocina/recetas/legumbres/201904/garbanzos-calabacin-huevo-escalfado-43082.html"))
-
-([Primero8] of  FirstCourse
-
-	(dishClassification Spanish)
-	(dishName "Ensalada de escarola, cebolla y cacahuetes")
-	(ingredients
-		[Escarola]
-		[AceitunaNegra]
-		[AceiteOliva]
-		[Sal]
-		[Cebolla]
-		[Cacahuete]
-		[Vinagre])
-	(ingredientsWeights 75.0 14.4 10.0 3.0 25.0 10.0 10.0)
-	(link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201904/ensalada-escarola-cebolla-cacahuetes-43076.html"))
-
-([Primero9] of  FirstCourse
-
-	(dishClassification Japanese)
-	(dishName "Ensalada de lechugas variadas, pasta y fresas")
-	(ingredients
-		[Lechuga]
-		[Fresa]
-		[AceiteOliva]
-		[Sal]
-		[Pasta]
-		[Nuez]
-		[Vinagre])
-	(ingredientsWeights 75.0 50.0 10.0 3.0 25.0 10.0 10.0)
-	(link "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/201904/ensalada-lechugas-variadas-pasta-fresas-42998.html"))
-
-([Puerro] of  Ingredient
-
+([Puerro] of Ingredient
 	(calcium 59.0)
 	(calories 61.0)
 	(carbohydrates 14.15)
-	(cholesterol 0.0)
+	(cholesterol 0)
 	(copper 0.12)
 	(fiber 1.8)
-	(ingredientName "Puerro")
 	(iron 2.1)
 	(magnesium 28.0)
 	(monounsaturatedFat 0.166)
-	(polyunsaturatedFat 0.0040)
-	(potassium 180.0)
+	(name "Puerro")
+	(polyunsaturatedFat 0.004)
+	(potassium 180)
 	(protein 1.5)
-	(saturedFat 0.04)
+	(saturedFat 0.040)
 	(selenium 1.0)
 	(sodium 20.0)
 	(vitamineA 83.0)
 	(vitamineB12 0.0)
 	(vitamineB2 0.03)
 	(vitamineB3 0.4)
-	(vitamineB6 0.13705882)
+	(vitamineB6 0.1370588235294118)
 	(vitamineB9 64.0)
-	(vitamineC 0.13333334)
+	(vitamineC 0.13333333333333333)
 	(vitamineE 0.92)
 	(zinc 0.12))
 
-([Queso] of  Ingredient
-
+([Queso] of Ingredient
 	(calcium 756.0)
 	(calories 351.0)
 	(carbohydrates 2.14)
 	(cholesterol 69.0)
 	(copper 0.026)
 	(fiber 0.0)
-	(ingredientName "Queso")
 	(iron 0.52)
 	(magnesium 28.0)
 	(monounsaturatedFat 7.393)
+	(name "Queso")
 	(polyunsaturatedFat 0.769)
-	(potassium 138.0)
+	(potassium 138)
 	(protein 25.58)
 	(saturedFat 17.078)
 	(selenium 14.5)
@@ -2631,26 +2018,25 @@
 	(vitamineB12 1.46)
 	(vitamineB2 0.321)
 	(vitamineB3 0.156)
-	(vitamineB6 0.042941175)
+	(vitamineB6 0.04294117647058823)
 	(vitamineB9 10.0)
 	(vitamineC 0.0)
 	(vitamineE 0.23)
 	(zinc 3.23))
 
-([QuesoParmesano] of  Ingredient
-
+([QuesoParmesano] of Ingredient
 	(calcium 853.0)
 	(calories 420.0)
 	(carbohydrates 13.91)
 	(cholesterol 86.0)
 	(copper 0.04)
 	(fiber 0.0)
-	(ingredientName "Queso Parmesano")
 	(iron 0.49)
 	(magnesium 34.0)
-	(monounsaturatedFat 7.13)
+	(monounsaturatedFat 7.130)
+	(name "Queso Parmesano")
 	(polyunsaturatedFat 1.386)
-	(potassium 180.0)
+	(potassium 180)
 	(protein 28.42)
 	(saturedFat 15.371)
 	(selenium 34.4)
@@ -2659,24 +2045,23 @@
 	(vitamineB12 1.4)
 	(vitamineB2 0.358)
 	(vitamineB3 0.08)
-	(vitamineB6 0.04764706)
+	(vitamineB6 0.04764705882352942)
 	(vitamineB9 6.0)
 	(vitamineC 0.0)
 	(vitamineE 0.53)
 	(zinc 4.2))
 
-([QuesoPhiladelphia] of  Ingredient
-
+([QuesoPhiladelphia] of Ingredient
 	(calcium 98.0)
 	(calories 342.0)
 	(carbohydrates 4.07)
 	(cholesterol 101.0)
 	(copper 0.019)
 	(fiber 0.0)
-	(ingredientName "Queso Philadelphia")
 	(iron 0.38)
 	(magnesium 9.0)
 	(monounsaturatedFat 8.907)
+	(name "Queso Philadelphia")
 	(polyunsaturatedFat 1.483)
 	(potassium 132.0)
 	(protein 5.93)
@@ -2687,24 +2072,23 @@
 	(vitamineB12 0.25)
 	(vitamineB2 0.125)
 	(vitamineB3 0.145)
-	(vitamineB6 0.020588236)
+	(vitamineB6 0.02058823529411765)
 	(vitamineB9 11.0)
 	(vitamineC 0.0)
 	(vitamineE 0.29)
 	(zinc 0.51))
 
-([Rabanito] of  Ingredient
-
+([Rabanito] of Ingredient
 	(calcium 25.0)
 	(calories 16.0)
 	(carbohydrates 3.4)
-	(cholesterol 0.0)
+	(cholesterol 0)
 	(copper 0.05)
 	(fiber 1.6)
-	(ingredientName "Rabanito")
 	(iron 0.34)
 	(magnesium 10.0)
 	(monounsaturatedFat 0.017)
+	(name "Rabanito")
 	(polyunsaturatedFat 0.048)
 	(potassium 270.0)
 	(protein 0.68)
@@ -2715,52 +2099,50 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.039)
 	(vitamineB3 0.254)
-	(vitamineB6 0.041764706)
+	(vitamineB6 0.04176470588235294)
 	(vitamineB9 25.0)
-	(vitamineC 0.16444445)
+	(vitamineC 0.16444444444444445)
 	(vitamineE 0.0)
 	(zinc 0.28))
 
-([Rape] of  Ingredient
-
+([Rape] of Ingredient
 	(calcium 8.0)
 	(calories 76.0)
 	(carbohydrates 0.0)
 	(cholesterol 25.0)
 	(copper 0.028)
 	(fiber 0.0)
-	(ingredientName "Rape")
 	(iron 0.32)
 	(magnesium 21.0)
-	(monounsaturatedFat 0.24)
-	(polyunsaturatedFat 0.61)
-	(potassium 400.0)
+	(monounsaturatedFat 0.240)
+	(name "Rape")
+	(polyunsaturatedFat 0.610)
+	(potassium 400)
 	(protein 14.48)
-	(saturedFat 0.34)
+	(saturedFat 0.340)
 	(selenium 36.5)
 	(sodium 18.0)
 	(vitamineA 12.0)
 	(vitamineB12 0.9)
 	(vitamineB2 0.06)
 	(vitamineB3 2.1)
-	(vitamineB6 0.14117648)
+	(vitamineB6 0.1411764705882353)
 	(vitamineB9 7.0)
-	(vitamineC 0.011111111)
+	(vitamineC 0.011111111111111112)
 	(vitamineE 0.0)
 	(zinc 0.41))
 
-([Sal] of  Ingredient
-
+([Sal] of Ingredient
 	(calcium 24.0)
 	(calories 0.0)
 	(carbohydrates 0.0)
 	(cholesterol 0.0)
 	(copper 0.03)
 	(fiber 0.0)
-	(ingredientName "Sal")
 	(iron 0.33)
 	(magnesium 1.0)
 	(monounsaturatedFat 0.0)
+	(name "Sal")
 	(polyunsaturatedFat 0.0)
 	(potassium 8.0)
 	(protein 0.0)
@@ -2777,18 +2159,17 @@
 	(vitamineE 0.0)
 	(zinc 0.1))
 
-([SalmonAhumado] of  Ingredient
-
+([SalmonAhumado] of Ingredient
 	(calcium 11.0)
 	(calories 117.0)
 	(carbohydrates 0.0)
 	(cholesterol 23.0)
 	(copper 0.23)
 	(fiber 0.0)
-	(ingredientName "Salmón Ahumado")
 	(iron 0.85)
 	(magnesium 18.0)
 	(monounsaturatedFat 2.023)
+	(name "Salmón Ahumado")
 	(polyunsaturatedFat 0.995)
 	(potassium 175.0)
 	(protein 18.28)
@@ -2799,364 +2180,104 @@
 	(vitamineB12 3.26)
 	(vitamineB2 0.101)
 	(vitamineB3 4.72)
-	(vitamineB6 0.16352941)
+	(vitamineB6 0.1635294117647059)
 	(vitamineB9 2.0)
 	(vitamineC 0.0)
 	(vitamineE 1.35)
 	(zinc 0.31))
 
-([Second1] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Conejo guisado al estilo mediterráneo")
-	(ingredients
-		[Conejo]
-		[Tomate]
-		[Zanahoria]
-		[Cebolla]
-		[Ajo]
-		[Almendra]
-		[PimientoVerde]
-		[AceitunaNegra]
-		[VinoBlanco]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 250.0 275.0 40.0 25.0 2.0 10.0 90.0 75.0 20.0 3.0 1.0)
-	(link "https://www.cocina-familiar.com/conejo-guisado-al-estilo-mediterraneo.html"))
-
-([Second10] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Tortilla de patata y calabacín")
-	(ingredients
-		[Patata]
-		[Huevo]
-		[Calabacin]
-		[Cebolla]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 90.0 90.0 30.0 30.0 3.0 2.0)
-	(link "https://www.cocina-familiar.com/tortilla-de-patata-y-calabacin-con-parmesano.html"))
-
-([Second11] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Pollo con salsa de limón")
-	(ingredients
-		[Pollo]
-		[Limon]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 200.0 10.0 3.0 2.0)
-	(link "https://www.cocina-familiar.com/pollo-con-salsa-de-limon.html"))
-
-([Second12] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Pollo a la plancha")
-	(ingredients
-		[Pollo]
-		[Sal]
-		[AceiteOliva])
-	(ingredientsWeights 200.0 3.0 2.0)
-	(link "https://cookpad.com/es/recetas/7254856-pechuga-de-pollo-a-la-plancha?via=search&search_term=pechuga%20de%20pollo%20a%20la%20plancha"))
-
-([Second13] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Hamburguesa de cerdo a la plancha")
-	(ingredients
-		[Cerdo]
-		[Sal]
-		[AceiteOliva])
-	(ingredientsWeights 175.0 3.0 2.0))
-
-([Second14] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Hamburguesa de ternera a la plancha")
-	(ingredients
-		[Ternera]
-		[Sal]
-		[AceiteOliva])
-	(ingredientsWeights 175.0 3.0 2.0))
-
-([Second15] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Hamburguesa de pollo a la plancha")
-	(ingredients
-		[Cerdo]
-		[Sal]
-		[AceiteOliva])
-	(ingredientsWeights 175.0 3.0 2.0))
-
-([Second2] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Atún con tomate y pimientos")
-	(ingredients
-		[Atun]
-		[TomateFrito]
-		[PimientoPiquillo]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 250.0 125.0 75.0 10.0 1.0)
-	(link "https://www.cocina-familiar.com/atun-con-tomate-y-pimientos.html"))
-
-([Second3] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish French)
-	(dishName "Pechuga de pollo a la mostaza con patatas")
-	(ingredients
-		[PechugaPollo]
-		[Patata]
-		[Mostaza]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 100.0 280.0 10.0 3.0 1.0)
-	(link "https://www.cocina-familiar.com/pechugas-de-pollo-a-la-mostaza-con-patatas.html"))
-
-([Second4] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Berenjena rellena de pisto")
-	(ingredients
-		[Berenjena]
-		[Calabacin]
-		[PimientoRojo]
-		[Tomate]
-		[Zanahoria]
-		[Ajo]
-		[Champinon]
-		[Queso]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 80.0 70.0 80.0 50.0 25.0 2.0 20.0 10.0 3.0 2.0)
-	(link "https://www.cocina-familiar.com/berenjenas-rellenas-de-pisto-receta-para-dieta.html"))
-
-([Second5] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Carrilleras con salsa y puré de patata casero")
-	(ingredients
-		[CarrilleraCerdo]
-		[PimientoVerde]
-		[Zanahoria]
-		[Cebolla]
-		[Ajo]
-		[Patata]
-		[TomateFrito]
-		[VinoBlanco]
-		[NataLiquida]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 75.0 70.0 20.0 38.0 2.0 150.0 87.5 15.0 4.0 3.0 2.0)
-	(link "https://www.cocina-familiar.com/carrilleras-con-salsa-picante-y-pure-de-patata-casero.html"))
-
-([Second6] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Estofado de ternera con patatas")
-	(ingredients
-		[Ternera]
-		[Patata]
-		[PimientoRojo]
-		[PimientoVerde]
-		[Zanahoria]
-		[Cebolla]
-		[Ajo]
-		[Guisante]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 150.0 100.0 50.0 50.0 40.0 30.0 2.0 15.0 3.0 2.0)
-	(link "https://www.cocina-familiar.com/estofado-de-ternera-con-patatas.html"))
-
-([Second7] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Codillo de cerdo asado con verduras a la plancha")
-	(ingredients
-		[Codillo]
-		[PimientoVerde]
-		[PimientoRojo]
-		[Berenjena]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 150.0 40.0 40.0 40.0 3.0 2.0)
-	(link "https://www.cocina-familiar.com/codillo-de-cerdo-asado-con-verduras-a-la-plancha.html"))
-
-([Second8] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Suquet de pescado y marisco")
-	(ingredients
-		[Rape]
-		[Calamar]
-		[Gamba]
-		[Zanahoria]
-		[Puerro]
-		[Tomate]
-		[Ajo]
-		[Patata]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 250.0 100.0 50.0 40.0 40.0 40.0 2.0 200.0 3.0 2.0)
-	(link "https://www.cocina-familiar.com/suquet-de-pescado-y-marisco.html"))
-
-([Second9] of  SecondCourse
-
-	(availability 1 2 3 4 5 6 7 8 9 10 11 12)
-	(dishClassification Spanish)
-	(dishName "Albóndigas de pollo con salsa de tomate")
-	(ingredients
-		[PechugaPollo]
-		[Leche]
-		[Huevo]
-		[TomateFrito]
-		[AceiteOliva]
-		[Sal])
-	(ingredientsWeights 75.0 12.0 15.0 30.0 3.0 2.0)
-	(link "https://www.cocina-familiar.com/albondigas-de-pollo-con-salsa-de-tomate.html"))
-
-([Te] of  Ingredient
-
-	(calcium 0.0)
-	(calories 0.0)
-	(carbohydrates 0.0)
-	(cholesterol 0.0)
-	(copper 0.0)
-	(fiber 0.0)
-	(ingredientName "Té")
-	(iron 0.0)
-	(magnesium 0.0)
-	(monounsaturatedFat 0.0)
-	(polyunsaturatedFat 0.0)
-	(potassium 0.0)
-	(protein 0.0)
-	(saturedFat 0.0)
-	(selenium 0.0)
-	(sodium 0.0)
-	(vitamineA 0.0)
-	(vitamineB12 0.0)
-	(vitamineB2 0.0)
-	(vitamineB3 0.0)
-	(vitamineB6 0.0)
-	(vitamineB9 0.0)
-	(vitamineC 0.0)
-	(vitamineE 0.0)
-	(zinc 0.0))
-
-([Ternera] of  Ingredient
-
+([Ternera] of Ingredient
 	(calcium 12.0)
 	(calories 197.0)
 	(carbohydrates 0.0)
-	(cholesterol 49.0)
+	(cholesterol 49)
 	(copper 0.088)
 	(fiber 0.0)
-	(ingredientName "Ternera")
 	(iron 1.37)
 	(magnesium 31.0)
 	(monounsaturatedFat 6.159)
+	(name "Ternera")
 	(polyunsaturatedFat 0.732)
 	(potassium 198.0)
 	(protein 18.58)
 	(saturedFat 5.108)
 	(selenium 13.1)
-	(sodium 103.0)
+	(sodium 103)
 	(vitamineA 0.0)
 	(vitamineB12 2.28)
 	(vitamineB2 0.28)
 	(vitamineB3 5.52)
-	(vitamineB6 0.26235294)
+	(vitamineB6 0.2623529411764706)
 	(vitamineB9 3.0)
 	(vitamineC 0.0)
 	(vitamineE 0.49)
 	(zinc 2.51))
 
-([Tomate] of  Ingredient
-
+([Tomate] of Ingredient
 	(calcium 10.0)
 	(calories 18.0)
 	(carbohydrates 3.89)
 	(cholesterol 0.0)
 	(copper 0.059)
 	(fiber 1.2)
-	(ingredientName "Tomate")
 	(iron 0.27)
 	(magnesium 11.0)
 	(monounsaturatedFat 0.046)
+	(name "Tomate")
 	(polyunsaturatedFat 0.124)
-	(potassium 237.0)
+	(potassium  237.0)
 	(protein 0.88)
-	(saturedFat 0.028)
+	(saturedFat  0.028)
 	(selenium 0.0)
-	(sodium 5.0)
+	(sodium  5.0)
 	(vitamineA 42.0)
 	(vitamineB12 0.0)
 	(vitamineB2 0.019)
 	(vitamineB3 0.594)
-	(vitamineB6 0.047058824)
+	(vitamineB6 0.047058823529411764)
 	(vitamineB9 15.0)
-	(vitamineC 0.15222222)
+	(vitamineC 0.1522222222222222)
 	(vitamineE 0.54)
 	(zinc 0.17))
 
-([TomateFrito] of  Ingredient
-
+([TomateFrito] of Ingredient
 	(calcium 20.0)
 	(calories 104.0)
 	(carbohydrates 19.79)
 	(cholesterol 3.0)
 	(copper 0.13)
 	(fiber 5.9)
-	(ingredientName "Tomate Frito")
 	(iron 0.8)
 	(magnesium 12.0)
 	(monounsaturatedFat 0.0)
+	(name "Tomate Frito")
 	(polyunsaturatedFat 0.0)
 	(potassium 0.0)
 	(protein 2.5)
-	(saturedFat 0.33)
+	(saturedFat 0.330)
 	(selenium 1.1)
 	(sodium 667.0)
 	(vitamineA 34.0)
 	(vitamineB12 0.0)
 	(vitamineB2 0.07)
 	(vitamineB3 1.6)
-	(vitamineB6 0.09411765)
+	(vitamineB6 0.09411764705882353)
 	(vitamineB9 9.0)
-	(vitamineC 0.17777778)
+	(vitamineC 0.17777777777777778)
 	(vitamineE 1.92)
 	(zinc 0.16))
 
-([Vinagre] of  Ingredient
-
+([Vinagre] of Ingredient
 	(calcium 7.0)
 	(calories 21.0)
 	(carbohydrates 0.93)
 	(cholesterol 0.0)
-	(copper 0.0080)
+	(copper 0.008)
 	(fiber 0.0)
-	(ingredientName "Vinagre")
 	(iron 0.2)
 	(magnesium 5.0)
 	(monounsaturatedFat 0.0)
+	(name "Vinagre")
 	(polyunsaturatedFat 0.0)
 	(potassium 73.0)
 	(protein 0.0)
@@ -3173,18 +2294,17 @@
 	(vitamineE 0.0)
 	(zinc 0.04))
 
-([VinoBlanco] of  Ingredient
-
+([VinoBlanco] of Ingredient
 	(calcium 9.0)
 	(calories 82.0)
 	(carbohydrates 2.6)
 	(cholesterol 0.0)
-	(copper 0.0040)
+	(copper 0.004)
 	(fiber 0.0)
-	(ingredientName "Vino blanco")
 	(iron 0.27)
 	(magnesium 10.0)
 	(monounsaturatedFat 0.0)
+	(name "Vino blanco")
 	(polyunsaturatedFat 0.0)
 	(potassium 71.0)
 	(protein 0.07)
@@ -3195,26 +2315,25 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.015)
 	(vitamineB3 0.108)
-	(vitamineB6 0.029411765)
+	(vitamineB6 0.029411764705882356)
 	(vitamineB9 1.0)
 	(vitamineC 0.0)
 	(vitamineE 0.0)
 	(zinc 0.12))
 
-([Yogurt] of  Ingredient
-
+([Yogurt] of Ingredient
 	(calcium 199.0)
 	(calories 56.0)
 	(carbohydrates 7.68)
 	(cholesterol 2.0)
 	(copper 0.015)
 	(fiber 0.0)
-	(ingredientName "Yogurt")
 	(iron 0.09)
 	(magnesium 19.0)
 	(monounsaturatedFat 0.049)
-	(polyunsaturatedFat 0.0050)
-	(potassium 255.0)
+	(name "Yogurt")
+	(polyunsaturatedFat 0.005)
+	(potassium 255)
 	(protein 5.73)
 	(saturedFat 0.116)
 	(selenium 3.6)
@@ -3223,24 +2342,23 @@
 	(vitamineB12 0.61)
 	(vitamineB2 0.234)
 	(vitamineB3 0.124)
-	(vitamineB6 0.03117647)
+	(vitamineB6 0.031176470588235295)
 	(vitamineB9 12.0)
 	(vitamineC 0.01)
 	(vitamineE 0.0)
 	(zinc 0.97))
 
-([Zanahoria] of  Ingredient
-
+([Zanahoria] of Ingredient
 	(calcium 33.0)
 	(calories 41.0)
 	(carbohydrates 9.58)
 	(cholesterol 0.0)
 	(copper 0.045)
 	(fiber 2.8)
-	(ingredientName "Zanahoria")
 	(iron 0.3)
 	(magnesium 12.0)
 	(monounsaturatedFat 0.012)
+	(name "Zanahoria")
 	(polyunsaturatedFat 0.102)
 	(potassium 320.0)
 	(protein 0.93)
@@ -3251,8 +2369,8 @@
 	(vitamineB12 0.0)
 	(vitamineB2 0.058)
 	(vitamineB3 0.983)
-	(vitamineB6 0.08117647)
+	(vitamineB6 0.08117647058823531)
 	(vitamineB9 19.0)
-	(vitamineC 0.06555556)
+	(vitamineC 0.06555555555555556)
 	(vitamineE 0.66)
 	(zinc 0.24))

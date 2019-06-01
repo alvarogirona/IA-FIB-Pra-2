@@ -1,4 +1,4 @@
-; Fri May 17 05:03:39 CEST 2019
+; Thu May 16 01:40:55 CEST 2019
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -15,11 +15,6 @@
 	(multislot availability
 		(type INTEGER)
 		(cardinality 1 12)
-		(create-accessor read-write))
-	(single-slot ingredientName
-		(type STRING)
-		(default "")
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot secondCourse
 		(type INSTANCE)
@@ -57,7 +52,7 @@
 		(create-accessor read-write))
 	(single-slot breakfast
 		(type INSTANCE)
-;+		(allowed-classes)
+;+		(allowed-classes SimpleMenu)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot iode
@@ -121,6 +116,11 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot middaySnack
+		(type INSTANCE)
+;+		(allowed-classes SimpleMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot protein
 		(type FLOAT)
 		(default 0.0)
@@ -139,6 +139,11 @@
 		(type SYMBOL)
 		(allowed-values curated raw)
 		(create-accessor read-write))
+	(single-slot afternoonSnack
+		(type INSTANCE)
+;+		(allowed-classes SimpleMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot vitamineK
 		(type FLOAT)
 		(default 0.0)
@@ -151,7 +156,7 @@
 		(create-accessor read-write))
 	(single-slot dinner
 		(type INSTANCE)
-;+		(allowed-classes)
+;+		(allowed-classes CompleteMenu)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot firstCourse
@@ -188,9 +193,6 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot dishAttributes
-		(type STRING)
-		(create-accessor read-write))
 	(single-slot monounsaturatedFat
 		(type FLOAT)
 		(default 0.0)
@@ -198,12 +200,17 @@
 		(create-accessor read-write))
 	(single-slot lunch
 		(type INSTANCE)
-;+		(allowed-classes)
+;+		(allowed-classes CompleteMenu)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot ingredientsWeights
 		(type FLOAT)
 		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+		(default "")
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot dishClassification
 		(type SYMBOL)
@@ -275,9 +282,6 @@
 (defclass Dish
 	(is-a USER)
 	(role abstract)
-	(multislot dishAttributes
-		(type STRING)
-		(create-accessor read-write))
 	(multislot ingredientsWeights
 		(type FLOAT)
 		(cardinality 1 ?VARIABLE)
@@ -329,15 +333,18 @@
 (defclass Ingredient
 	(is-a USER)
 	(role concrete)
-	(single-slot ingredientName
-		(type STRING)
-		(default "")
-;+		(cardinality 1 1)
+	(multislot properties
+		(type SYMBOL)
+		(allowed-values curated raw)
 		(create-accessor read-write))
 	(single-slot potassium
 		(type FLOAT)
 		(default 0.0)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot ingredientClassification
+		(type SYMBOL)
+		(allowed-values dysphagia hyperlipidemia hypertriglyceridemia highDensityLipoprotein ischemicCardiopathy arterialHypertension diabetes osteoporosis inflammatoryJoints goutHyperuricemia)
 		(create-accessor read-write))
 	(single-slot cholesterol
 		(type FLOAT)
@@ -372,6 +379,11 @@
 	(single-slot vitamineB6
 		(type FLOAT)
 		(default 0.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+		(default "")
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot fiber
@@ -454,3 +466,61 @@
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
+
+(defclass DailyMenu
+	(is-a USER)
+	(role concrete)
+	(single-slot dinner
+		(type INSTANCE)
+;+		(allowed-classes CompleteMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot breakfast
+		(type INSTANCE)
+;+		(allowed-classes SimpleMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot lunch
+		(type INSTANCE)
+;+		(allowed-classes CompleteMenu)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass SimpleMenu
+	(is-a USER)
+	(role concrete)
+	(multislot appetizer
+		(type INSTANCE)
+;+		(allowed-classes Appetizer)
+		(create-accessor read-write))
+	(multislot beverage
+		(type INSTANCE)
+;+		(allowed-classes Beverage)
+		(create-accessor read-write)))
+
+(defclass CompleteMenu
+	(is-a USER)
+	(role concrete)
+	(single-slot firstCourse
+		(type INSTANCE)
+;+		(allowed-classes FirstCourse)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot beverage
+		(type INSTANCE)
+;+		(allowed-classes Beverage)
+		(create-accessor read-write))
+	(single-slot dessert
+		(type INSTANCE)
+;+		(allowed-classes Dessert)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot secondCourse
+		(type INSTANCE)
+;+		(allowed-classes SecondCourse)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass %3AUNDEFINED
+	(is-a USER)
+	(role concrete))

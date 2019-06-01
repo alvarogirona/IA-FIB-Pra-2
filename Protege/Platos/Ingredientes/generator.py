@@ -60,7 +60,7 @@ def create_ingredient_instance(row):
     }
 
     # quitar chromium, iode, molybdenum, vitaminD, vitamineK
-    # añadir kcals, monounsaturatedFat, v
+    # añadir Cholesterol, MonounsaturatedFat, PolyunsaturatedFat, Potassium, SaturatedFat, Sodium
     name = row[indexes["Name"]]
     calcium = row[indexes["Calcium_mg"]]
     calories = row[indexes["Energy_kcal"]]
@@ -91,46 +91,44 @@ def create_ingredient_instance(row):
     # quitar chromium, iode, molybdenum, vitaminD, vitamineK
     template = f"""
 ([{instance_name}] of Ingredient
-	(calcium {calcium})
-	(calories {calories})
-	(carbohydrates {carbohydrates})
-	(cholesterol {cholesterol})
-	(copper {copper})
-	(fiber {fiber})
-	(iron {iron})
-	(magnesium {magnesium})
-	(monounsaturatedFat {monounsaturatedFat})
-	(name "{name}")
-	(polyunsaturatedFat {polyunsaturatedFat})
-	(potassium {potassium})
-	(protein {protein})
-	(saturedFat {saturedFat})
-	(selenium {selenium})
-	(sodium {sodium})
-	(vitamineA {vitamineA})
-	(vitamineB12 {vitamineB12})
-	(vitamineB2 {vitamineB2})
-	(vitamineB3 {vitamineB3})
-	(vitamineB6 {vitamineB6})
-	(vitamineB9 {vitamineB9})
-	(vitamineC {vitamineC})
-	(vitamineE {vitamineE})
-	(zinc {zinc}))\n"""
+    (calcium {calcium})
+    (calories {calories})
+    (carbohydrates {carbohydrates})
+    (cholesterol {cholesterol})
+    (copper {copper})
+    (fiber {fiber})
+    (iron {iron})
+    (magnesium {magnesium})
+    (monounsaturatedFat {monounsaturatedFat})
+    (ingredientName "{name}")
+    (polyunsaturatedFat {polyunsaturatedFat})
+    (potassium {potassium})
+    (protein {protein})
+    (saturedFat {saturedFat})
+    (selenium {selenium})
+    (sodium {sodium})
+    (vitamineA {vitamineA})
+    (vitamineB12 {vitamineB12})
+    (vitamineB2 {vitamineB2})
+    (vitamineB3 {vitamineB3})
+    (vitamineB6 {vitamineB6})
+    (vitamineB9 {vitamineB9})
+    (vitamineC {vitamineC})
+    (vitamineE {vitamineE})
+    (zinc {zinc}))\n"""
 
     return template
 
 ingredients_file = open('ingredients.csv', 'r+')
 
 csv_reader = csv.reader(ingredients_file, delimiter=',')
+next(csv_reader)
+csv_reader = sorted(csv_reader, key=lambda row: (row[1]))
 
 output_file = open('generated_ingredients.clips', 'w+')
 
 line_count = 0
 for row in csv_reader:
-    if line_count == 0:
-        print(f'Column names are {", ".join(row)}')
-    else:
-        instance = create_ingredient_instance(row)
-        output_file.write(instance)
-        print(instance)
-    line_count += 1
+    instance = create_ingredient_instance(row)
+    output_file.write(instance)
+    print(instance)
